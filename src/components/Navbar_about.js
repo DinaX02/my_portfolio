@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
 
-const Navbar = ()=> {
+const NavbarAbout = ()=> {
 
     const [isOpen, setIsOpen] = useState(false);
     return(
@@ -13,6 +13,7 @@ const Navbar = ()=> {
             <div className={`nav-items ${isOpen && "open"}`}>
                 <a href="#projetos">Projetos </a>
                 <Link to={"/aboutme"}>Sobre mim</Link>
+                <a href="#skills">Skills</a>
                 <a href="#contactos">Contactos</a>
                  <div className="space_search_bar">
         </div>
@@ -24,7 +25,7 @@ const Navbar = ()=> {
     )
 }
 
-export default Navbar
+export default NavbarAbout
 
 
 

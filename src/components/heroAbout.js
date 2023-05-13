@@ -3,23 +3,21 @@ import "../App.css";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-const HeroHomepage = () => {
+const HeroAbout = () => {
   return (
     <div className="hero_homepage_div">
       <div className="hero">
         <div className="content_hero">
-        <h1>Olá, sou o <span className="cor_nome">Dinis.</span></h1>
+        <h1>About me <span className="cor_nome">Dinis.</span></h1>
         <p>
           Tenho como objetivo transformar as experiências digitais cativantes
-          através do meu <span className="effect_line">UX/UI Design</span> e <span className="effect_line_2">Desenvolvimento Front-end.</span>
+          através do meu <span className="cor_nome">UX/UI Design</span> e <span className="cor_nome">Desenvolvimento Front-end.</span>
         </p>
-        <div>
-        <Link to={"/aboutme"}><button className="btn_hero">Mais sobre mim</button></Link></div>
         </div>
       </div>
 
       <div className="scroll_icon btn_plus btn_minus">
-        <a href="#intro">
+        <a href="#percurso">
         <div className="btn_scrolll">
         <motion.div
               animate={{
@@ -39,4 +37,4 @@ const HeroHomepage = () => {
   );
 };
 
-export default HeroHomepage;
+export default HeroAbout;
