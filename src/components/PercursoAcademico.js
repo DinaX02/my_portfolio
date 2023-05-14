@@ -11,76 +11,7 @@ const PercursoAcademico = () => {
       </p>
       <h1 className="big_title">Percurso Académico.</h1>
 
-   {/*    <div className="timeline">
 
-        <div className="container_timeline left-container">
-         <img src={imgTimeline}/>   
-          <div className="text_box_timeline">
-            <h2>Artes</h2>
-            <p>Ensino Secundário</p>
-            <span className="left-container-arrow"></span>
-          </div>
-        </div>
-
-        <div className="container_timeline right-container">
-        <img src={imgTimeline}/>  
-          <div className="text_box_timeline">
-            <h2>Web Design</h2>
-            <p>Primeiro contacto com UX/UI Design</p>
-            <span className="right-container-arrow"></span>
-          </div>
-        </div>
-        
-        <div className="container_timeline left-container">
-        <img src={imgTimeline}/>  
-          <div className="text_box_timeline">
-            <h2>Desenvolvimento Web</h2>
-            <p>Primeiro contacto com HTML / CSS / Bootstrap</p>
-            <span className="left-container-arrow"></span>
-          </div>
-        </div>
-        
-        <div className="container_timeline right-container">
-        <img src={imgTimeline}/>  
-          <div className="text_box_timeline">
-            <h2>Desenvolvimento Web - Programação</h2>
-            <p>Primeiro contacto com JavaScript</p>
-            <span className="right-container-arrow"></span>
-          </div>
-        </div>
-
-        <div className="container_timeline left-container">
-        <img src={imgTimeline}/>  
-          <div className="text_box_timeline">
-            <h2>Ambientes 3D</h2>
-            <p>Primeiro contacto com Unity3D e Blender</p>
-            <span className="left-container-arrow"></span>
-          </div>
-        </div>
-
-        <div className="container_timeline right-container">
-        <img src={imgTimeline}/>  
-          <div className="text_box_timeline">
-            <h2>Desenvolvimento Web - Programação</h2>
-            <p>Primeiro contacto com React js</p>
-            <span className="right-container-arrow"></span>
-          </div>
-        </div>
-        
-        <div className="container_timeline left-container">
-        <img src={imgTimeline}/>  
-          <div className="text_box_timeline">
-          <h2>Desenvolvimento Web - Programação</h2>
-            <p>Primeiro contacto com React Native</p>
-            <span className="left-container-arrow"></span>
-        </div>
-        
-        
-        
-      </div>
-
-
-</div>*/}
 <VerticalTimeline>
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
@@ -101,7 +32,7 @@ const PercursoAcademico = () => {
         icon={<i className="fas fa-paint-brush"></i>}
       >
         <h3 className="vertical-timeline-element-title">Web Design</h3>
-        <p>Experiências iniciais com design de interfaces e experiência do utilizador.</p>
+        <p>Primeiro contacto com design de interfaces e experiência do utilizador.</p>
       </VerticalTimelineElement>
 
       <VerticalTimelineElement
@@ -134,7 +65,7 @@ const PercursoAcademico = () => {
         icon={<i className="fab fa-js-square"></i>}
       >
         <h3 className="vertical-timeline-element-title">Ambients 3D</h3>
-        <p>Prineiro contacto com Unity3D e Blender.</p>
+        <p>Primeiro contacto com Unity3D e Blender.</p>
       </VerticalTimelineElement>
  
       <VerticalTimelineElement

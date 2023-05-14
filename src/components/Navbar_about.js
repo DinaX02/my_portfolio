@@ -11,7 +11,7 @@ const NavbarAbout = ()=> {
             <strong><Link to={"/"}>Dinis Antunes</Link></strong>
             </span>
             <div className={`nav-items ${isOpen && "open"}`}>
-                <a href="#projetos">Projetos </a>
+            <Link to={"/#projetos"}>Projetos </Link>
                 <Link to={"/aboutme"}>Sobre mim</Link>
                 <a href="#skills">Skills</a>
                 <a href="#contactos">Contactos</a>

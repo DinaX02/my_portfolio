@@ -22,8 +22,8 @@ const projects = [
   },
   {
     id: 3,
-    title: "Projeto 3",
-    description: "Vestibulum quis turpis molestie, tempus mi a, efficitur sapien.",
+    title: "Submerso",
+    description: " Primeiro projeto em javaScript.",
     type: "Front-end",
     image: ProjectKoruImg,
     link: "/project_3",

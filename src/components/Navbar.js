@@ -13,6 +13,7 @@ const Navbar = ()=> {
             <div className={`nav-items ${isOpen && "open"}`}>
                 <a href="#projetos">Projetos </a>
                 <Link to={"/aboutme"}>Sobre mim</Link>
+                <Link to={"/aboutme#skills"}>Skills</Link>
                 <a href="#contactos">Contactos</a>
                  <div className="space_search_bar">
         </div>
