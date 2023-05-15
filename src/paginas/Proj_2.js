@@ -4,17 +4,19 @@ import ContentP2 from "../components/content_proj2";
 import InfoProj2 from "../components/infoProj2";
 import Footer from "../components/Footer";
 import "../App.css";
-import NavbarAbout from "../components/Navbar_about";
+import Contactos from "../components/Contactos";
+import NavbarProject from "../components/Navbar_project";
 
 const Project_2 = ()=> {
 
 
     return(
         <div>
-            <NavbarAbout />
+            <NavbarProject />
             <HeroProject_2/>
             <ContentP2/>
             <InfoProj2/>
+            <Contactos/>
             <Footer/>
         </div>
     )

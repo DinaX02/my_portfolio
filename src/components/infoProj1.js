@@ -2,7 +2,10 @@ import React from "react";
 import "../App.css";
 import  MId_fi_1 from "../assets/mid-fi_img_1.PNG"
 import MId_fi_2 from "../assets/mid-fi_img_2.PNG"
-
+import MId_fi_3 from "../assets/mid-fi_img_3.PNG"
+import  Hi_fi_1 from "../assets/hi-fi_img2.PNG"
+import Hi_fi_2 from "../assets/hi-fi_img3.PNG"
+import Hi_fi_3 from "../assets/hi-fi_img4.PNG"
 
 
 const InfoProj1 = ()=> {
@@ -51,14 +54,30 @@ Entendemos que este tipo de utilizador terá como principais objetivos na aplica
 <img className="storyboardd" src={MId_fi_1}/>
 </div>
 <div>
+<img className="storyboardd" src={MId_fi_3}/>
+</div>
+<div>
 <img className="storyboardd" src={MId_fi_2}/>
 </div>  
 </div>
-<p className="legendas centrar_leg"><strong className="strong_koru">Legenda:</strong> Modelo protótipos mid-fi</p>
+<p className="legendas centrar_leg"><strong className="strong_koru">Legenda:</strong> Modelos protótipos mid-fi</p>
 <p className="introductionP1">Protótipos Hi-fi</p>
 
-<p className="content_proj11111">Ao criar wireframes de média fidelidade, consegui ilustrar funcionalidades e o fluxo da aplicação, aperfeiçoando ainda mais a interface do utilizador e identificar eventuais falhas funcionais nas fases iniciais.</p>
+<p className="content_proj11111">Antes de realizar os testes de usabilidade, converti os protótipos de mid-fi para Hi-fi, criando assim os flows de utilização do protótipo usando o Figma.</p>
 
+
+<div className="niveis_subb">
+<div>
+<img className="storyboardd" src={Hi_fi_1}/>
+</div>
+<div>
+<img className="storyboardd" src={Hi_fi_2}/>
+</div>
+<div>
+<img className="storyboardd" src={Hi_fi_3}/>
+</div>  
+</div>
+<p className="legendas centrar_leg"><strong className="strong_koru">Legenda:</strong> Modelos protótipos Hi-fi</p>
 {/* 
 <div className="btn_next_projects">
 <Link to={"/project_2"}><button className="btn_viewmore">Ver Projeto Zetflicks</button></Link>

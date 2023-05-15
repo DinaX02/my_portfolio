@@ -24,17 +24,20 @@ html{
   margin-right: 2em;
   margin-left: 20px;
   position: relative;
+  border-bottom: 5px solid #5331B2;
 }
 
+.Navbar_project{
+  height: 90px;
+  display: flex;
+  overflow: hidden !important;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 2em;
+  margin-left: 20px;
+  position: relative;
+}
 
-.Navbar:after {
-  content: "";
-  position: absolute; /* definindo como posição absoluta */
-  bottom: 0; /* alinhando na parte inferior do elemento pai */
-  left: 0; /* alinhando no canto esquerdo do elemento pai */
-  width: 100vw; /* definindo a largura como 100% */
-  height: 5px; /* definindo a altura da linha */
-  background-image: linear-gradient(to bottom right, #5331B2, #807DFF);}
 
 
 
@@ -62,6 +65,15 @@ a {
   color: #2e2e2e;
 }
 
+.Navbar_project > .nav-logo {
+  font-weight: 700;
+  font-size: 21px;
+  /*margin: 15px;*/
+  color: #2e2e2e;
+}
+
+
+
 .Navbar > .nav-items > a {
   color: #2e2e2e;
   font-size: 16px;
@@ -71,9 +83,29 @@ a {
   opacity: 0.9;
 }
 
+
+
+.Navbar_project > .nav-items > a {
+  color: #2e2e2e;
+  font-size: 16px;
+  text-decoration: none;
+  margin: 15px;
+  position: relative;
+  opacity: 0.9;
+}
+
+
+
 .Navbar > .nav-items > a:hover {
   opacity: 1;
 }
+
+
+.Navbar_project > .nav-items > a:hover {
+  opacity: 1;
+}
+
+
 
 .Navbar > .nav-items > a::before {
   content: "";
@@ -86,6 +118,19 @@ a {
   transition: all 0.45s;
 }
 
+
+.Navbar_project > .nav-items > a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #2e2e2e;
+  transition: all 0.45s;
+}
+
+
 .ola {
   margin-right: 2em;
 }
@@ -94,7 +139,17 @@ a {
   width: 100%;
 }
 
+.Navbar_project > .nav-items > a:hover::before {
+  width: 100%;
+}
+
+
+
 .Navbar > .nav-toggle {
+  display: none;
+}
+
+.Navbar_project > .nav-toggle {
   display: none;
 }
 
@@ -118,17 +173,42 @@ a {
 
   .content_skills{
     max-width: 100% !important;
+    
   }
 .img_contact{
   width: 100% !important;
 }
 
   .Navbar {
+    position: static;
+    justify-content: space-between;
+    border-bottom: 5px solid  #5331B2;
+  }
+
+  .Navbar_project {
+    position: static;
     justify-content: space-between;
   }
 
   .Navbar > .nav-items {
-    border-top: 2px solid  #525252;
+    border-top: 5px solid  #5331B2;
+    overflow: hidden !important;
+    position: absolute;
+    top: 90px;
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    left: 0;
+    width: 100%;
+    /*text-align: right; para --> menu direita*/
+    height: calc(100vh - 90px);
+    transform: translateX(-100%);
+    transition: all 0.45s;
+    z-index: 5;
+  }
+
+  .Navbar_project > .nav-items {
+    border-top: 5px solid  #5331B2;
     overflow: hidden !important;
     position: absolute;
     top: 90px;
@@ -148,7 +228,17 @@ a {
     margin-left: 36px;
   }
 
+  
+  .Navbar_project > .nav-items > a {
+    margin-left: 36px;
+  }
+
+
   .Navbar > .nav-items > a::before {
+    background: transparent;
+  }
+
+  .Navbar_project > .nav-items > a::before {
     background: transparent;
   }
 
@@ -156,7 +246,21 @@ a {
     transform: translateX(0);
   }
 
+  .Navbar_project > .nav-items.open {
+    transform: translateX(0);
+  }
+
   .Navbar > .nav-toggle {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 0.4em;
+  }
+
+  .Navbar_project > .nav-toggle {
     display: flex;
     width: 50px;
     height: 50px;
@@ -595,7 +699,7 @@ margin: auto;
   border-radius: 10px;
   width: 450px;
   margin-left: 30px;
- 
+  margin-bottom: 1em;
 }
 
 .storyboardd_zetflciks{
@@ -929,11 +1033,22 @@ height: auto;
 }
 
 
+@media only screen and (max-width: 550px) {
+
+  .img-pc_movies{
+    width: 350px;
+  }
+  }
+
+
+
+
 
 @media only screen and (max-width: 350px) {
 
   .storyboardd{
 padding-left: 0 !important;
+margin-left: 0 !important;
   }
 
 

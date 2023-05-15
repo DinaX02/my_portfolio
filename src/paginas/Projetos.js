@@ -1,7 +1,8 @@
 import React from "react";
-import NavbarAbout from "../components/Navbar_about";
+import NavbarProjectPage from "../components/Navbar_projPage";
 import ProjectssALONEE from "../components/Projectsss";
 import Footer from "../components/Footer";
+import Contactos from "../components/Contactos";
 import "../App.css";
 
 const Projetoss = ()=> {
@@ -9,8 +10,9 @@ const Projetoss = ()=> {
 
     return(
         <div>
-            <NavbarAbout />
+            <NavbarProjectPage/>
 <ProjectssALONEE/>
+<Contactos/>
 <Footer/>
         </div>
     )

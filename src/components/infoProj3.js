@@ -23,8 +23,8 @@ Em grande parte, devido ao público-alvo, este jogo é de baixa dificuldade, per
 
 <p className="big_titleP1">Funcionalidades.</p>
 
-<p className="content_proj11111">Projeto desenvolvido na Unidade curricular de Laboratório Multimédia 3, onde se tinha que desenvolver um jogo em JavaScript. Assim nasceu o Submerso, um jogo didático que se <strong className="strong_submerso">aconcelha jogar com 150% zoom </strong>(devido ao facto de não ser um projeto responsive) que conta com 3 níveis diferentes:
-<br></br><br></br>O <strong className="strong_submerso">nível 1 </strong>é um genero de <strong className="strong_submerso">endless runner</strong> onde o jogador tem que atravessar a ria, sem colidir com nenhum objeto, no <strong className="strong_submerso">nível 2 o jogador tem que salvar todos os membros da sua família</strong>  que se encontram em diferentes andares da sua casa e por fim o <strong className="strong_submerso">nível 3 é um quizz</strong>, onde o jogador tem que mostrar o seu conhecimento sobre problemas ambientais para derrotar o negacionista.</p>
+<p className="content_proj11111">Projeto desenvolvido na Unidade curricular de Laboratório Multimédia 3, onde se tinha que desenvolver um jogo em JavaScript. Assim nasceu o Submerso, um jogo didático, que se <strong className="strong_submerso">aconcelha jogar com zoom entre os 125 e os 150% </strong>(devido ao facto de não ser um projeto responsive), e que conta com 3 níveis diferentes:
+<br></br><br></br>O <strong className="strong_submerso">nível 1 </strong>é um género de <strong className="strong_submerso">endless runner</strong> onde o jogador tem que atravessar a ria, sem colidir com nenhum objeto, no <strong className="strong_submerso">nível 2 o jogador tem que salvar todos os membros da sua família</strong> e por fim o <strong className="strong_submerso">nível 3 é um quizz</strong>, onde o jogador tem que mostrar o seu conhecimento sobre problemas ambientais para derrotar o negacionista.</p>
 <div className="niveis_subb">
 <div>
 <img className="storyboardd" src={Nivel1_sub}/>

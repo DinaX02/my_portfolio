@@ -29,11 +29,11 @@ Uma grande vantagem do Zetflicks é que permite ao utilizador usufruir dessas fu
 <div className="niveis_subb_zetflicks">
 <div>
 <img className="storyboardd" src={Zetflciks_1}/>
-<p className="legendas_zetflicks"><strong>Legenda:</strong> Filtragem de Filmes por categorias</p>
+<p className="legendas_zetflicks"><strong>Legenda:</strong> Filtragem de Filmes</p>
 </div>
 <div>
 <img className="storyboardd" src={Zetflciks_2}/>
-<p className="legendas_zetflicks"><strong>Legenda:</strong> Pesquisa de filmes /series para adicionar</p>
+<p className="legendas_zetflicks"><strong>Legenda:</strong> Pesquisa de filmes</p>
 </div>
 <div>
 <img className="storyboardd" src={Zetflciks_3}/>

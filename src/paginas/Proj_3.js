@@ -1,19 +1,21 @@
 import React from "react";
 import "../App.css";
 import HeroProject_3 from "../components/hero_proj3.js";
-import NavbarAbout from "../components/Navbar_about";
+import NavbarProject from "../components/Navbar_project";
 import ContentP3 from "../components/content_proj3";
 import InfoProj3 from "../components/infoProj3";
+import Contactos from "../components/Contactos";
 import Footer from "../components/Footer";
 const Project_3 = ()=> {
 
 
     return(
         <div>
-           <NavbarAbout/> 
+           <NavbarProject/> 
            <HeroProject_3/>
            <ContentP3/>
            <InfoProj3/>
+           <Contactos/>
            <Footer/>
         </div>
     )
