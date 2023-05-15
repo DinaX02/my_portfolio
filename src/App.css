@@ -23,7 +23,22 @@ html{
   align-items: center;
   margin-right: 2em;
   margin-left: 20px;
+  position: relative;
 }
+
+
+.Navbar:after {
+  content: "";
+  position: absolute; /* definindo como posição absoluta */
+  bottom: 0; /* alinhando na parte inferior do elemento pai */
+  left: 0; /* alinhando no canto esquerdo do elemento pai */
+  width: 100vw; /* definindo a largura como 100% */
+  height: 5px; /* definindo a altura da linha */
+  background-image: linear-gradient(to bottom right, #5331B2, #807DFF);}
+
+
+
+
 a {
   text-decoration: none !important;
   color: #0c0909;
@@ -237,6 +252,28 @@ margin: auto;
   align-items: center;
 }
 
+.header_proj2{
+  background: #0E0909;
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+.header_proj3{
+  background: #5F7872;
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+
+
 .titulo_proj{
 
 
@@ -254,6 +291,13 @@ margin: auto;
 }
 
 
+
+.img-pc_movies{
+  max-width: 460px;
+  height: auto;
+}
+
+
 .content_p111{
   margin-top: 20px;
   padding-left: 30px;
@@ -263,20 +307,23 @@ margin: auto;
 
 .seta_back_projects{
   padding: 5px;
+  margin-top: 5px;
 }
 
 
 .seta_rounded{
   margin-left: 20px;
-  border: 3px solid white;
+ /* border: 3px solid white;
   border-radius: 100%;
-  display: flex;
   padding-left: 5px;
-    padding-right: 5px;
+    padding-right: 5px;*/
     align-items: center;
+    display: flex;
 }
 
-
+.strong_p2{
+  color: #C60808;
+}
 
 
 
@@ -318,7 +365,35 @@ margin: auto;
   color: #7C2AE8;
 }
 
+
+.title_overview_3{
+  font-weight: 900;
+  font-size: 30px;
+  color: #428b73;
+}
+
+
+
+.title_overview_2{
+  font-weight: 900;
+  font-size: 30px;
+  color: #C60808;
+}
+
+
 .header_proj1 h1{
+  color: white;
+  margin-left: 30px;
+}
+
+
+.header_proj2 h1{
+  color: white;
+  margin-left: 30px;
+}
+
+
+.header_proj3 h1{
   color: white;
   margin-left: 30px;
 }
@@ -341,9 +416,10 @@ margin: auto;
   margin-top: 5px;
 }
 
+
 .hero h1{
   font-weight: 900;
-  color: #fff;
+  color: #2e2e2e;
   font-size: 40px;
   line-height: 98px;
   margin-top: 2px;
@@ -372,8 +448,21 @@ margin: auto;
   position: relative;
   /*justify-content: center;*/
   min-height: 90.7vh;
-  background: aquamarine;
+  background: white;
 }
+
+.hero_homepage_div::after{
+
+    content: "";
+    position: absolute; /* definindo como posição absoluta */
+    bottom: 0; /* alinhando na parte inferior do elemento pai */
+    left: 0; /* alinhando no canto esquerdo do elemento pai */
+    width: 100%; /* definindo a largura como 100% */
+    height: 4px; /* definindo a altura da linha */
+    background-image: linear-gradient(to bottom right, #5331B2, #807DFF); /* aplicando o gradiente */
+}
+
+
 
 .introduction {
   font-size: 20px;
@@ -382,6 +471,22 @@ margin: auto;
   padding-top: 4em;
   color: #595959;
 }
+
+
+
+
+.spacee_single_perojts{
+  margin-top: 56px;
+}
+
+
+.introduction_20{
+  font-size: 20px;
+  /* margin-left: 60px; */
+  padding-left: 30px;
+  color: #595959;
+}
+
 
 .big_title {
   padding-left: 30px;
@@ -425,6 +530,19 @@ margin: auto;
   margin-top: -2em;
 }
 
+
+
+.content_intro_heroAjustee {
+  padding-left: 30px;
+  padding-right: 14px;
+  font-size: 19px;
+  margin-bottom: 1.5em;
+  width: 85%;
+  margin-top: -2em;
+}
+
+
+
 .content_skills{
   padding-left: 30px;
   padding-right: 11px;
@@ -447,6 +565,103 @@ margin: auto;
   padding: 14px 16px;
   background: 
   linear-gradient(to bottom right, #5331B2, #807DFF);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #fff;
+  outline: none;
+  border-radius: 15px;
+  margin-top: 1em;
+  border: transparent;
+}
+
+
+.btn_viewmore_2{
+  padding: 14px 16px;
+  background: 
+  linear-gradient(to bottom right, #490505, #DB0000 );
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #fff;
+  outline: none;
+  border-radius: 15px;
+  margin-top: 1em;
+  border: transparent;
+}
+
+
+.storyboardd{
+  border-radius: 10px;
+  width: 450px;
+  margin-left: 30px;
+ 
+}
+
+.storyboardd_zetflciks{
+  border-radius: 10px;
+  width: 450px;
+  height: 250px;
+  margin-left: 30px;
+ 
+}
+
+.niveis_subb{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+
+.niveis_subb_zetflicks{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 4em;
+}
+
+
+
+.strong_submerso{
+  color:#428b73;
+}
+
+.legendas{
+  padding-left: 30px;
+  margin-bottom: 3em;
+}
+
+.legendas_zetflicks{
+  padding-left: 30px;
+  margin-bottom: 3em;
+}
+
+.centrar_leg{
+  margin: auto;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.legendas strong{
+
+  color: #428b73;;
+}
+
+
+.legendas_zetflicks strong{
+
+  color: #DB0000;;
+}
+
+
+.strong_koru{
+  color: #5331B2 !important;
+}
+
+.btn_viewmore_3{
+  padding: 14px 16px;
+  background: 
+  linear-gradient(to bottom right, #5E7970, #28a77c );
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 18px;
@@ -485,6 +700,11 @@ margin: auto;
 
 .img-phone{
   width: 50%;
+    margin-right: 20px;
+}
+
+.img-pc_movies{
+  width: 500px !important;
     margin-right: 20px;
 }
 
@@ -622,7 +842,7 @@ margin-bottom: 0.25rem;
 }
 
 .space_contacto{
-  border-top: 3px solid #525252;
+  border-top: 3px solid #5331B2;
   margin-top: 4em;
 }
 
@@ -712,6 +932,17 @@ height: auto;
 
 @media only screen and (max-width: 350px) {
 
+  .storyboardd{
+padding-left: 0 !important;
+  }
+
+
+  .img-pc_movies{
+    max-width: 280px;
+    height: auto;
+  }
+
+  
 .btn_next_projects{
   flex-direction: column !important;
 }
@@ -721,6 +952,24 @@ height: auto;
   margin:auto;
   text-align: center;
   margin-top: 1em;
+  display: none;
+}
+
+
+.header_proj2 h1{
+  color: white;
+  margin:auto;
+  text-align: center;
+  margin-top: 1em;
+  display: none;
+}
+
+.header_proj3 h1{
+  color: white;
+  margin:auto;
+  text-align: center;
+  margin-top: 1em;
+  display: none;
 }
 
 
@@ -748,6 +997,11 @@ height: auto;
 
 
 @media only screen and (max-width: 768px) {
+
+
+  .storyboardd{
+    width: 300px;
+  }
 
   .space_bg_ecra_2{
     margin-left: 0em !important;

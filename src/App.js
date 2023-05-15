@@ -3,8 +3,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from './paginas/Homepage';
 import About from './paginas/About';
 import Project_1 from './paginas/Proj_1';
-import Project_2 from './components/Proj_2';
-import Project_3 from './components/Proj_3';
+import Project_2 from './paginas/Proj_2';
+import Project_3 from './paginas/Proj_3';
+import Projetoss from './paginas/Projetos';
 function App() {
   return (
     <div className="App">
@@ -16,6 +17,7 @@ function App() {
           <Route path="/project_1" element={<Project_1/>} />
           <Route path="/project_2" element={<Project_2 />} />
           <Route path="/project_3" element={<Project_3 />} />
+          <Route path="/projectsss" element={<Projetoss />} />
         </Routes>
       </BrowserRouter>
     </div>

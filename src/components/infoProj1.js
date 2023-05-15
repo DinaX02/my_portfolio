@@ -1,14 +1,11 @@
 import React from "react";
 import "../App.css";
-
-import { Link } from "react-router-dom";
+import  MId_fi_1 from "../assets/mid-fi_img_1.PNG"
+import MId_fi_2 from "../assets/mid-fi_img_2.PNG"
 
 
 
 const InfoProj1 = ()=> {
-
-
-
     return(
 
 <div className="info_p11111">
@@ -36,7 +33,7 @@ Para idealizar a interação deste público-alvo criamos uma persona com determi
 Entendemos que este tipo de utilizador terá como principais objetivos na aplicação, recorrer ao sistema de voto, e analisar as posições do ranking de projetos em tempo real. Ou seja, acreditamos que esta persona não representa um público que procure uma interface completa de gestão do evento, optando por uma interface simples e intuitiva.
 </p>
 
-<p className="introductionP1">User FLow</p>
+<p className="introductionP1">User Flow</p>
 <p className="content_proj11111">Foi criado <i> user flows </i>para mostrar diferentes caminhos que o utilizador pode usar para completar a mesma tarefa e assim poder identificar possíveis problemas e melhorar a experiência geral do utilizador dentro da nossa aplicação.</p>
 <p className="introductionP1">Site Map</p>
 <p className="content_proj11111">Com base na pesquisa realizada no nosso <i>Benchmarking</i> , foi determinado o conteúdo que deveria ser incluído na nossa aplicação, criando assim o site map para poder
@@ -49,15 +46,27 @@ Entendemos que este tipo de utilizador terá como principais objetivos na aplica
 <p className="content_proj11111">Ao criar os wireframes de baixa fidelidade, obtive uma imagem clara do aspecto visual da aplicação e da forma como o utilizador irá navegar através dela.</p>
 <p className="introductionP1">Protótipos Mid-fi</p>
 <p className="content_proj11111">Ao criar wireframes de média fidelidade, consegui ilustrar funcionalidades e o fluxo da aplicação, aperfeiçoando ainda mais a interface do utilizador e identificar eventuais falhas funcionais nas fases iniciais.</p>
+<div className="niveis_subb">
+<div>
+<img className="storyboardd" src={MId_fi_1}/>
+</div>
+<div>
+<img className="storyboardd" src={MId_fi_2}/>
+</div>  
+</div>
+<p className="legendas centrar_leg"><strong className="strong_koru">Legenda:</strong> Modelo protótipos mid-fi</p>
 <p className="introductionP1">Protótipos Hi-fi</p>
+
 <p className="content_proj11111">Ao criar wireframes de média fidelidade, consegui ilustrar funcionalidades e o fluxo da aplicação, aperfeiçoando ainda mais a interface do utilizador e identificar eventuais falhas funcionais nas fases iniciais.</p>
 
-
+{/* 
 <div className="btn_next_projects">
 <Link to={"/project_2"}><button className="btn_viewmore">Ver Projeto Zetflicks</button></Link>
 <Link to={"/project_3"}><button className="btn_viewmore">Ver Projeto Submerso</button></Link>
+</div>*/}
+
 </div>
-</div>
+
     )
 }   
 

@@ -35,12 +35,11 @@ const projects = [
 
 
 
-const ProjectsHomePage = () => {
+const ProjectssALONEE = () => {
   return (
-    <div id="intro">
-      <p id="projetos"  className="introduction">Os meus trabalhos</p>
+    <div className="spacee_single_perojts" id="intro">
       <p className="big_title">Projetos.</p>
-      <p className="content_intro_hero2  space_bottt">
+      <p className="content_intro_heroAjustee  space_bottt">
         Os seguintes projetos mostram as minhas competências e experiência
         através de exemplos reais do meu trabalho. Cada projeto tem uma breve
         descrição e e os respetivos links para os seus protótipos com Live demo.
@@ -69,4 +68,4 @@ const ProjectsHomePage = () => {
   );
 };
 
-export default ProjectsHomePage;
+export default ProjectssALONEE;

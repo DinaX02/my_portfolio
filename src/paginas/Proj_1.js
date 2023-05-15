@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../components/Navbar";
+import NavbarAbout from "../components/Navbar_about";
 import HeroProject_1 from "../components/hero_proj1";
 import ContentP1 from "../components/content_proj1";
 import InfoProj1 from "../components/infoProj1";
@@ -11,7 +11,7 @@ const Project_1 = ()=> {
 
     return(
         <div>
-            <Navbar />
+            <NavbarAbout />
 <HeroProject_1/>
 <ContentP1/>
 <InfoProj1/>
