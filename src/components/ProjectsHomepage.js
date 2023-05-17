@@ -2,8 +2,9 @@ import React from "react";
 import ProjectKoruImg from "../assets/koru_project_img.png";
 import ZetflickstKoruImg from "../assets/zetflicks_proj_3.png";
 import SubmersoImg from "../assets/submerso_cover.PNG"
+import { Link } from "react-router-dom";
 import "../App.css";
-
+{/* 
 const projects = [
   {
     id: 1,
@@ -29,7 +30,7 @@ const projects = [
     image: SubmersoImg,
     link: "/project3",
   },
-];
+];*/}
 
 
 
@@ -51,19 +52,42 @@ const ProjectsHomePage = () => {
         forma eficaz.
       </p>
 
-<section className="portfolio">
-      {projects.map((project) => (
-        <div key={project.id} className="project-card">
-          <img src={project.image} alt={project.title} />
-          <div className="project-info">
-            <h2>{project.title}</h2>
-           {/*<p>{project.description}</p>*/} 
-            <span>{project.type}</span>
-            <a href={project.link}>Ver detalhes</a>
-          </div>
-        </div>
-      ))}
-    </section>
+      <section className="portfolio">
+
+<div className="project-card">
+  <img src={ProjectKoruImg} alt="koru" />
+  <div className="project-info">
+    <h2>Koru Mobile App</h2>
+   {/*<p>{project.description}</p>*/} 
+    <span>UX/UI Design</span>
+    <Link to={"/project1"}>Ver detalhes</Link>
+  </div>
+</div>
+
+
+
+<div className="project-card">
+  <img src={ZetflickstKoruImg} alt="zetflicks" />
+  <div className="project-info">
+    <h2>Zetflicks</h2>
+   {/*<p>{project.description}</p>*/} 
+    <span>UI Design e Front-end</span>
+    <Link to={"/project2"}>Ver detalhes</Link>
+  </div>
+</div>
+
+
+
+<div className="project-card">
+  <img src={SubmersoImg} alt="submerso" />
+  <div className="project-info">
+    <h2>Submerso</h2>
+   {/*<p>{project.description}</p>*/} 
+    <span>Design e Front-end</span>
+    <Link to={"/project3"}>Ver detalhes</Link>
+  </div>
+</div>
+</section>
 
     </div>
   );
