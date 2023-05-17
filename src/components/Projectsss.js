@@ -11,7 +11,7 @@ const projects = [
     description: "The app focuses on the dynamics of",
     type: "UX/UI Design",
     image: ProjectKoruImg,
-    link: "/project_1",
+    link: "/project1",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const projects = [
     description: "Zetflicks é  ver filmes adicioná-los à sua Watchlist.",
     type: "UI Design e Front-end",
     image: ZetflickstKoruImg,
-    link: "/project_2",
+    link: "/project2",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const projects = [
     description: " Primeiro projeto em javaScript.",
     type: "Design e Front-end",
     image: SubmersoImg,
-    link: "/project_3",
+    link: "/project3",
   },
 ];
 
