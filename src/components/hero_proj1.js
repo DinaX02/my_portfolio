@@ -1,5 +1,5 @@
 import React from "react";
-import BackgroundKORU  from '../assets/background cover koru app (2).png';
+import BackgroundKORU  from '../assets/Koru Mobile App (2).png';
 import setaBack from '../assets/arrow_back_proj.svg'
 import { useParams, useNavigate } from "react-router-dom";
 import "../App.css";

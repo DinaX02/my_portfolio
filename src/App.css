@@ -155,6 +155,9 @@ a {
 
 @media (max-width: 700px) {
   
+  .perona_img{
+width: 80% !important;
+  }
 
   .card-container {
     display: flex;
@@ -314,6 +317,25 @@ a {
 }
 
 /* //////////// hero homepage //////////// */
+
+
+.btn_about_meee{
+  margin-left: 30px;
+}
+
+
+
+
+
+.dinis_img_about {
+  /* position: absolute; */
+  max-width: 400px;
+  width: 50vw;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  /* height: auto; */
+  border:  5px solid #5331B2;
+}
 
 .hero {
   padding-left: 20px;
@@ -518,6 +540,7 @@ margin: auto;
   display: flex;
   flex-direction: column;
   margin-top: 5px;
+  padding-left: 30px;
 }
 
 
@@ -555,6 +578,17 @@ margin: auto;
   background: white;
 }
 
+
+.hero_homepage_div_about {
+  /*display: flex;
+  position: relative;*/
+ flex-direction: row !important;
+  min-height: 90.7vh;
+  background: white;
+  border-bottom: 3px solid #5331B2;
+}
+
+
 .hero_homepage_div::after{
 
     content: "";
@@ -566,7 +600,31 @@ margin: auto;
     background-image: linear-gradient(to bottom right, #5331B2, #807DFF); /* aplicando o gradiente */
 }
 
+.hero_about{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 30px;
+  margin-top: 3rem;
+}
 
+.about_text{
+  display: flex;
+  flex-direction: column;
+margin-bottom: 30px;
+margin-right: 30px;
+width: 60%;
+  
+}
+
+.img_about_new{
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1em;
+  padding-right:1em ;
+}
 
 .introduction {
   font-size: 20px;
@@ -702,6 +760,13 @@ margin: auto;
   margin-bottom: 1em;
 }
 
+.perona_img{
+  border-radius: 10px;
+  width: 50%;
+  margin-bottom: 1em;
+}
+
+
 .storyboardd_zetflciks{
   border-radius: 10px;
   width: 450px;
@@ -776,7 +841,11 @@ margin: auto;
   border: transparent;
 }
 
-
+.dinis_img_about{
+  width: 400px;
+  border-radius: 50%;
+  height: auto;
+}
 
 .btn_hero{
   padding: 14px 16px;
@@ -791,6 +860,29 @@ margin: auto;
   margin-top: 4em;
   border: transparent;
 }
+
+
+.btn_hero_about{
+  width: 213.59px;
+  padding: 14px 16px;
+  background: 
+  linear-gradient(to bottom right, #5331B2, #807DFF);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #fff;
+  outline: none;
+  border-radius: 15px;
+  border: transparent;
+  margin-bottom: 3em;
+}
+
+
+.space_btn_About{
+  margin-right: 1em;
+}
+
+
 
 @media (min-width: 768px) {
 
@@ -828,6 +920,12 @@ margin: auto;
     color: #5331B2;
  
   }
+
+  .cor_nome_about{
+    color: #5331B2;
+ font-weight: 600
+  }
+
 
   .effect_line{
     font-weight: 700;
@@ -1012,7 +1110,48 @@ width: 50%;
 height: auto;
 }
 
+
+
+@media only screen and (max-width: 500px) {
+
+  .space_btn_About {
+    margin-right: 0em !important;
+}}
+
+
+
+
+
+
 @media only screen and (max-width: 450px) {
+
+  .btn_about_meee{
+    margin-left: 0;
+  }
+
+
+  .about_text h1{
+    margin-left: 10px !important;
+  }
+
+  .about_text p {
+    margin-right: 10px !important;
+    margin-left: 10px !important;
+}
+  
+  .about_text{
+    margin-left: 0px !important;
+  }
+
+  .dinis_img_about{
+    margin-left: 10px;
+
+  }
+
+.dinis_img_about{
+width: 280px !important ;
+}
+
   .icons_size_contact{
     width: 35px;
   }
@@ -1038,6 +1177,11 @@ height: auto;
   .img-pc_movies{
     width: 350px;
   }
+
+.content_hero{
+  padding-left: 0px !important;
+}
+
   }
 
 
@@ -1113,6 +1257,44 @@ margin-left: 0 !important;
 
 @media only screen and (max-width: 768px) {
 
+
+  .btn_about_meee{
+    text-align: center;
+  }
+
+.about_text{
+  width: 100%;
+}
+
+.about_text p{
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.about_text h1 {
+  margin-left: 30px;
+}
+
+  .dinis_img_about{
+    width: 300px;
+  }
+
+  
+  .scroll_icon{
+    display: none;
+  }
+
+
+.hero_about{
+  flex-direction: column;
+  
+}
+
+.img_about_new{
+  margin-bottom: 3em;
+  flex-basis: 50%;
+  margin-left: 0em;
+}
 
   .storyboardd{
     width: 300px;

@@ -22,6 +22,7 @@ const PercursoAcademico = () => {
       >
         <h3 className="vertical-timeline-element-title">Artes</h3>
         <p>Ensino Secundário.</p>
+        <small>2017-2020</small>
       </VerticalTimelineElement>
 
       <VerticalTimelineElement
@@ -33,6 +34,7 @@ const PercursoAcademico = () => {
       >
         <h3 className="vertical-timeline-element-title">Web Design</h3>
         <p>Primeiro contacto com design de interfaces e experiência do utilizador.</p>
+        <small>2020</small>
       </VerticalTimelineElement>
 
       <VerticalTimelineElement
@@ -44,6 +46,7 @@ const PercursoAcademico = () => {
       >
         <h3 className="vertical-timeline-element-title">Desenvolvimento Web</h3>
         <p>Primeiro contacto com HTML, CSS e Bootstrap.</p>
+        <small>2021</small>
       </VerticalTimelineElement>
 
       <VerticalTimelineElement
@@ -55,6 +58,7 @@ const PercursoAcademico = () => {
       >
         <h3 className="vertical-timeline-element-title">Desenvolvimento Web - Programação</h3>
         <p>Primeiro cont com JavaScript.</p>
+        <small>2021</small>
       </VerticalTimelineElement>
 
       <VerticalTimelineElement
@@ -66,6 +70,7 @@ const PercursoAcademico = () => {
       >
         <h3 className="vertical-timeline-element-title">Ambients 3D</h3>
         <p>Primeiro contacto com Unity3D e Blender.</p>
+        <small>2022</small>
       </VerticalTimelineElement>
  
       <VerticalTimelineElement
@@ -77,6 +82,7 @@ const PercursoAcademico = () => {
       >
         <h3 className="vertical-timeline-element-title">Desenvolvimento Web - Programação</h3>
         <p>Primeiro contacto com React js.</p>
+        <small>2022</small>
       </VerticalTimelineElement>
        
       <VerticalTimelineElement
@@ -88,6 +94,7 @@ const PercursoAcademico = () => {
       >
         <h3 className="vertical-timeline-element-title">Desenvolvimento Web - Programação</h3>
         <p>Primeiro contacto com React Native.</p>
+        <small>2023</small>
       </VerticalTimelineElement>
 
       </VerticalTimeline>

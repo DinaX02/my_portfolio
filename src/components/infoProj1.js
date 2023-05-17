@@ -1,12 +1,13 @@
 import React from "react";
 import "../App.css";
+import  Low_fi_1 from "../assets/wireframes_low_fi.PNG"
 import  MId_fi_1 from "../assets/mid-fi_img_1.PNG"
 import MId_fi_2 from "../assets/mid-fi_img_2.PNG"
 import MId_fi_3 from "../assets/mid-fi_img_3.PNG"
 import  Hi_fi_1 from "../assets/hi-fi_img2.PNG"
 import Hi_fi_2 from "../assets/hi-fi_img3.PNG"
 import Hi_fi_3 from "../assets/hi-fi_img4.PNG"
-
+import Persona from "../assets/Persona_koru.png"
 
 const InfoProj1 = ()=> {
     return(
@@ -35,6 +36,9 @@ Para idealizar a interação deste público-alvo criamos uma persona com determi
 <br></br><br></br>
 Entendemos que este tipo de utilizador terá como principais objetivos na aplicação, recorrer ao sistema de voto, e analisar as posições do ranking de projetos em tempo real. Ou seja, acreditamos que esta persona não representa um público que procure uma interface completa de gestão do evento, optando por uma interface simples e intuitiva.
 </p>
+<div className="niveis_subb">
+<img className="perona_img" src={Persona}/></div>
+<p className="legendas centrar_leg"><strong className="strong_koru">Legenda:</strong> Persona para alicação Koru</p>
 
 <p className="introductionP1">User Flow</p>
 <p className="content_proj11111">Foi criado <i> user flows </i>para mostrar diferentes caminhos que o utilizador pode usar para completar a mesma tarefa e assim poder identificar possíveis problemas e melhorar a experiência geral do utilizador dentro da nossa aplicação.</p>
@@ -45,8 +49,15 @@ Entendemos que este tipo de utilizador terá como principais objetivos na aplica
 <p className="big_titleP1">Wireframes.</p>
 <p className="content_proj11111">Uma vez decidida a arquitetura da nossa aplicação e site map avançei para o sketching dos wireframes, começando pela baixa fidelidade e progredindo para a média e alta fidelidade.</p>
 
-<p className="introductionP1">Crazy 8 Wireframes</p>
+<p className="introductionP1">Crazy 8's Wireframes</p>
 <p className="content_proj11111">Ao criar os wireframes de baixa fidelidade, obtive uma imagem clara do aspecto visual da aplicação e da forma como o utilizador irá navegar através dela.</p>
+
+<div className="niveis_subb">
+<div>
+<img className="storyboardd" src={Low_fi_1}/>
+</div></div>
+<p className="legendas centrar_leg"><strong className="strong_koru">Legenda:</strong> Wireframes Crazy 8's para Low-fi</p>
+
 <p className="introductionP1">Protótipos Mid-fi</p>
 <p className="content_proj11111">Ao criar wireframes de média fidelidade, consegui ilustrar funcionalidades e o fluxo da aplicação, aperfeiçoando ainda mais a interface do utilizador e identificar eventuais falhas funcionais nas fases iniciais.</p>
 <div className="niveis_subb">
@@ -60,7 +71,7 @@ Entendemos que este tipo de utilizador terá como principais objetivos na aplica
 <img className="storyboardd" src={MId_fi_2}/>
 </div>  
 </div>
-<p className="legendas centrar_leg"><strong className="strong_koru">Legenda:</strong> Modelos protótipos mid-fi</p>
+<p className="legendas centrar_leg"><strong className="strong_koru">Legenda:</strong> Modelos protótipos Mid-fi</p>
 <p className="introductionP1">Protótipos Hi-fi</p>
 
 <p className="content_proj11111">Antes de realizar os testes de usabilidade, converti os protótipos de mid-fi para Hi-fi, criando assim os flows de utilização do protótipo usando o Figma.</p>

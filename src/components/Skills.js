@@ -94,7 +94,7 @@ const Skills = () => {
 
   <div className="skills_data">
     <div className="skills_titles">
-      <h3 className="skills_name">Sketch</h3>
+      <h3 className="skills_name">Sketching</h3>
       <span className="skills_number">90%</span>
     </div>
 
