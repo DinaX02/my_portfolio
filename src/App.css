@@ -1035,6 +1035,12 @@ display: block !important;
   padding: 0.5rem;
 }
 
+
+.lateral_btn{
+  margin-left: 1em;
+}
+
+
 .inner_scroll{
  width: 0.75rem; 
  height: 0.75rem;

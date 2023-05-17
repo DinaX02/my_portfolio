@@ -19,7 +19,9 @@ const ContentP2 = ()=> {
           <li>React js</li>
           <li>TMDB API</li>
         </ul>
-        <a href="https://www.figma.com/proto/XvQjbPsxIYJKLmFfWOfHCg/MID-FI?node-id=739-840&scaling=scale-down&page-id=327%3A2&starting-point-node-id=739%3A840" target="blank"><button className="btn_viewmore_2">Live Demo</button></a>
+        <a href="https://lustrous-sundae-e630bd.netlify.app" target="blank"><button className="btn_viewmore_2">Live Demo</button></a>
+        <a href="https://github.com/DinaX02/MovieApp_project" target="blank"><button className="btn_viewmore_2 lateral_btn">Repositório GitHub</button></a>
+        
       </div>
 </div>
     )
