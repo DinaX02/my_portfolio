@@ -19,7 +19,7 @@ const ContentP1 = ()=> {
           <li>Papel e caneta (Wireframes)</li>
           <li>Abode illustrator</li>
         </ul>
-        <a href="https://www.figma.com/proto/XvQjbPsxIYJKLmFfWOfHCg/MID-FI?node-id=739-840&scaling=scale-down&page-id=327%3A2&starting-point-node-id=739%3A840" target="blank"><button className="btn_viewmore">Ver Protótipo</button></a>
+        <a href="https://www.figma.com/proto/XvQjbPsxIYJKLmFfWOfHCg/MID-FI?node-id=739-840&scaling=scale-down&page-id=327%3A2&starting-point-node-id=739%3A840" target="blank" rel="noopener noreferrer"><button className="btn_viewmore">Ver Protótipo</button></a>
       </div>
 </div>
     )

@@ -6,11 +6,14 @@ import Project_1 from './paginas/Proj_1';
 import Project_2 from './paginas/Proj_2';
 import Project_3 from './paginas/Proj_3';
 import Projetoss from './paginas/Projetos';
+import ScrollToTop from './components/scrollstart';
+
 function App() {
   return (
     <div className="App">
 
 <BrowserRouter>
+<ScrollToTop />
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/aboutme" element={<About />} />

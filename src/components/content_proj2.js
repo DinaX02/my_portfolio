@@ -21,8 +21,8 @@ const ContentP2 = ()=> {
           <li>React js</li>
           <li>TMDB API</li>
         </ul>
-        <a href="https://lustrous-sundae-e630bd.netlify.app" target="blank"><button className="btn_viewmore_2">Live Demo</button></a>
-        <a href="https://github.com/DinaX02/MovieApp_project" target="blank"><button className="btn_viewmore_2 lateral_btn">Repositório GitHub</button></a>
+        <a href="https://lustrous-sundae-e630bd.netlify.app" target="blank" rel="noopener noreferrer"><button className="btn_viewmore_2">Live Demo</button></a>
+        <a href="https://github.com/DinaX02/MovieApp_project" target="blank" rel="noopener noreferrer"><button className="btn_viewmore_2 lateral_btn">Repositório GitHub</button></a>
         
       </div>
 </div>

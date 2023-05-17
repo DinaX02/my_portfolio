@@ -19,7 +19,7 @@ const ContentP3 = ()=> {
           <li>Adobe Illustrator</li>
           <li>HTML, CSS e JavaScript</li>
         </ul>
-        <a href="https://cerkeira.github.io/submerso/menu/index_menu.html" target="blank"><button className="btn_viewmore_3">Live Demo</button></a>
+        <a href="https://cerkeira.github.io/submerso/menu/index_menu.html" target="blank" rel="noopener noreferrer"><button className="btn_viewmore_3">Live Demo</button></a>
       </div>
 </div>
     )
