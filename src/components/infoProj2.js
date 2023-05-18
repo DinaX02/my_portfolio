@@ -12,13 +12,7 @@ const InfoProj2 = ()=> {
 <div className="info_p11111">
 <p className="big_titleP1">Contextualização.</p>
 
-<p className="content_proj11111">	Este projeto visa desenvolver uma plataforma de votação desenhada principalmente para concursos onde os organizadores pretendem adicionar uma componente de interatividade para aumentar a participação e investimento em, por exemplo, projetos ou ideias.
-<br></br>
-A aplicação em desenvolvimento, no âmbito do Projeto Koru, é uma plataforma de acompanhamento de eventos que permite aos seus organizadores criar e gerir eventos de forma eficiente, enquanto fornece aos participantes do mesmo uma experiência personalizada e interativa.
-<br></br><br></br>
-O foco da aplicação é a dinâmica de votação nos projetos exibidos no evento em questão. Ou seja, este projeto tem como objetivo facilitar o processo de criar e gerir atividades de votação em projetos dentro de um evento ao vivo. Este sistema de votação passa por distribuir uma série de moedas pelo público do evento, permitindo a cada utilizador dividir os seus votos pelos seus projetos favoritos, objetivando manter o sistema de votação justo e democrático.
-<br></br><br></br>
-Este projeto prevê uma aplicação mobile, utilizada por participantes de eventos para votar em projetos e assistir ao live ranking das votações, e um website, utilizado pelos organizadores para gerir atividades, características do evento e projetos.
+<p className="content_proj11111">	Este projeto visa desenvolver uma plataforma web responsive, onde o utilizador poderá escolher entre "Movies" e "Tv shows" e ver os principais filmes e series nas diferentes categorias e adicionar os seus filmes / series favoritos à sua watchlist e mais tarde passa-los para a sua Watched list, o projeto foi desenvolvido com dados retirados da API TMDB, a Zetflciks permite ainda ver os detalhes do filme / serie que for selecionada onde poderá ver o "overview" e o "cast" que participou no projeto, no caso das series poderá ver o numero total de episódios e temporadas.
 </p>
 
 <p className="big_titleP1">Funcionalidades.</p>
