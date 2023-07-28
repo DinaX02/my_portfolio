@@ -1,9 +1,7 @@
 import React from "react";
 import "../App.css";
-import Zetflciks_1 from "../assets/zetflicks_img1.PNG"
-import Zetflciks_2 from "../assets/zetflicks_img2.PNG"
-import Zetflciks_3 from "../assets/zetflicks_img3.PNG"
-import imgVisaoGeRAL from "../assets/visao_geral.png"
+
+import imgZetflicksParallax_2 from "../assets/zetflicks_funcionalidades.png"
 
 
 const InfoProj2_2 = ()=> {
@@ -17,7 +15,7 @@ const InfoProj2_2 = ()=> {
 <p className="big_title">Funcionalidades.</p></div>
 <div className="instagram-container">
 
-<div className="instagram-info"> 
+<div className="instagram-info2"> 
 
 <p className="paragrafo_origens">As principais funcionalidades do Zetflicks encontram-se na parte da watchlist, onde o utilizador pode fazer a pesquisa dos seus filmes / series e pode escolher adiciona-los à sua Watchlist ou à Watched list, bem como remove-los se assim o entender. Uma grande vantagem do Zetflicks é que permite ao utilizador usufruir de todas as funcionalidades sem ser preciso efetuar qualquer registo, pois os seus filmes são todos guardados em LocalStorage.
 </p>
@@ -26,7 +24,7 @@ const InfoProj2_2 = ()=> {
 
 
 <div className="other-info">
-<img className="img_vision" src={imgVisaoGeRAL}/>
+<img className="img_vision2" src={imgZetflicksParallax_2}/>
 </div>
 </div>  
 {/* <p className="big_titleP1">Contextualização.</p>

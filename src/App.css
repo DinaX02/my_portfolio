@@ -558,6 +558,13 @@ padding-top: 1em;
   padding-bottom: 3em;
 }
 
+.info_p33333{
+  background-image: url("./assets/textura-blanca\ 2.jpg");
+  padding-top: 3em;
+  border-top: 3px solid #9747FF;
+  /* min-height: 100vh; */
+  padding-bottom: 2em;
+}
 
 
 .div_content_p1{
@@ -770,6 +777,11 @@ width: 60%;
 
 .img_vision{
   max-width: 540px;
+  text-align: center;
+}
+
+.img_vision2{
+  max-width: 440px;
   text-align: center;
 }
 
@@ -1331,10 +1343,18 @@ height: auto;
 
 @media only screen and (max-width: 450px) {
 
-
+  .links_koruu_2{
+    flex-direction: column !important;
+  }
+  
   .img_vision{
   max-width: 320px !important;
 }
+
+.img_vision2{
+  max-width: 320px !important;
+}
+
   .btn_about_meee{
     margin-left: 0;
   }
@@ -1412,6 +1432,10 @@ width: 280px !important ;
 }
 
 .img_vision{
+  max-width: 400px;
+}
+
+.img_vision2{
   max-width: 400px;
 }
 
@@ -1670,6 +1694,15 @@ margin-left: 0 !important;
   text-align: left; 
 }
 
+.instagram-info2,
+.other-info {
+  padding: 1em;
+  text-align: left;
+  display: flex;
+  align-items: center; 
+}
+
+
 .other-info{
   display: flex;
   align-items: center;
@@ -1691,6 +1724,21 @@ margin-left: 0 !important;
  margin-top:70px; 
  font-size: 19px;
 }
+
+
+.links_koruu{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+.links_koruu_2{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
   /*timeline
   .timeline {
     position: relative;
@@ -1810,6 +1858,12 @@ right: -15px;
     /* margin: 10px; */
   }
 
+  .instagram-info2,
+  .other-info {
+    flex: 1;
+    /* margin: 10px; */
+  }
+
 }
 
 @media (max-width: 768px) {
@@ -1825,6 +1879,11 @@ right: -15px;
   .img_vision{
     max-width: 300px !important;
   }
+
+  .img_vision2{
+    max-width: 300px !important;
+  }
+
   .instagram-container{
       margin-top: 0 !important;
   }}
