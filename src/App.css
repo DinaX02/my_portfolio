@@ -8,7 +8,7 @@ body {
   min-height: 100vh;
   /*font-family: "Lexend", sans-serif;*/
   font-family: "Poppins", sans-serif;
-  background-image: url("./assets/textura-blanca\ 2.png");
+  background-image: url("./assets/textura-blanca\ 2.jpg");
   background-repeat: repeat-y;
 }
 
@@ -259,7 +259,7 @@ justify-content: flex-start;
 }
 
   .Navbar > .nav-items {
-    background-image: url("./assets/textura-blanca\ 2.png");
+    background-image: url("./assets/textura-blanca\ 2.jpg");
     border-top: 5px solid  #5331B2;
     overflow: hidden !important;
     position: absolute;
@@ -649,7 +649,7 @@ margin: auto;
 .hero_homepage_div_about {
   /*display: flex;
   position: relative;*/
-  background-image: url("./assets/fundo_about.png");
+  background-image: url("./assets/fundo_about.jpg");
  flex-direction: row !important;
   min-height: 90.7vh;
   /* background: white; */
@@ -755,7 +755,7 @@ width: 60%;
 }
 
 .spacee_single_perojts{
-  background-image: url("./assets/textura-blanca\ 2.png");
+  background-image: url("./assets/textura-blanca\ 2.jpg");
   background-repeat: no-repeat;
   /* padding-top: 56px; */
   min-height: 87vh;
@@ -1224,7 +1224,7 @@ margin-bottom: 0.25rem;
  }
 
 .space_contacto{
-  background-image: url("./assets/textura-blanca\ 2.png");
+  background-image: url("./assets/textura-blanca\ 2.jpg");
   border-top: 3px solid #5331B2;
   padding-top: 4em;
 }
@@ -1310,6 +1310,7 @@ height: auto;
 
 
 @media only screen and (max-width: 450px) {
+
 
   .img_vision{
   max-width: 320px !important;
@@ -1611,7 +1612,7 @@ margin-left: 0 !important;
   }
 
 .into_divvv{
-  background-image: url("./assets/textura-blanca\ 2.png");
+  background-image: url("./assets/textura-blanca\ 2.jpg");
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -1748,18 +1749,18 @@ right: -15px;
 
 .spAce_timelinne{
   padding-top: 3em;
-  background-image: url("./assets/textura-blanca\ 2.png"); 
+  background-image: url("./assets/textura-blanca\ 2.jpg"); 
 }
 
 .altura_projetos{
   min-height: 100vh;
   padding-bottom: 2em;
-  background-image: url("./assets/textura-blanca\ 2.png"); 
+  background-image: url("./assets/textura-blanca\ 2.jpg"); 
 }
 
 .skills_div{
   padding-top: 3em;
-  background-image: url("./assets/textura-blanca\ 2.png"); 
+  background-image: url("./assets/textura-blanca\ 2.jpg"); 
   min-height: 100vh;
 }
 
