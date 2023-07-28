@@ -3,16 +3,44 @@ import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeli
 import "react-vertical-timeline-component/style.min.css";
 import "../App.css";
 
+
 const PercursoAcademico = () => {
+  const linhaStyle = {
+    marginTop:20,
+    width: '200px',
+    height: '5px',
+    backgroundColor: '#A767FB',
+    position:"absolute",
+    right: '0',
+  };
+
+  const numeroStyle = {
+    marginTop:5,
+    position:"absolute",
+    right: '15px',
+    color: '#A767FB',
+    fontSize: '46px',
+    fontWeight: 'bold',
+  };
+
   return (
-    <div id="percurso">
+    <div id="percurso" className="spAce_timelinne">
+
+<div className="linhasss_roxos">
+      <div style={linhaStyle}>
+        <p style={numeroStyle}>02</p>
+      </div>
+      </div>
+
       <p id="projetos" className="introduction">
         A nível Educacional{" "}
       </p>
-      <h1 className="big_title">Percurso Académico.</h1>
+      <div className="title-with-marker">
+    
 
-
-<VerticalTimeline>
+    <h1 className="big_title">Percurso Académico.</h1>
+    </div>
+{/* <VerticalTimeline>
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
         contentStyle={{ background:"#5331B2", color: "#fff" }}
@@ -57,7 +85,7 @@ const PercursoAcademico = () => {
         icon={<i className="fab fa-js-square"></i>}
       >
         <h3 className="vertical-timeline-element-title">Desenvolvimento Web - Programação</h3>
-        <p>Primeiro cont com JavaScript.</p>
+        <p>Primeiro contacto com JavaScript.</p>
         <small>2021</small>
       </VerticalTimelineElement>
 
@@ -97,7 +125,8 @@ const PercursoAcademico = () => {
         <small>2023</small>
       </VerticalTimelineElement>
 
-      </VerticalTimeline>
+      </VerticalTimeline> */}
+      
     </div>
   );
 };

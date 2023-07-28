@@ -13,14 +13,19 @@ const HeroHomepage = () => {
           Tenho como objetivo transformar as experiências digitais cativantes
           através do <span className="effect_line">UX/UI Design</span> e <span className="effect_line_2">Desenvolvimento Front-end.</span>
         </p>
-        <div>
-        <Link to={"/aboutme"}><button className="btn_hero">Mais sobre mim</button></Link></div>
+        {/* <div>
+        <Link to={"/aboutme"}><button className="btn_hero">Mais sobre mim</button></Link></div> */}
         </div>
       </div>
-
       <div className="scroll_icon btn_plus btn_minus">
+          <p className="alinhar_p_scroll">scroll down</p>
+      </div>
+      <div className="scroll_icon btn_plus btn_minus">
+          {/* <p className="alinhar_p_scroll">scroll down</p> */}
         <a href="#intro">
+         
         <div className="btn_scrolll">
+         
         <motion.div
               animate={{
                 y: [0, 24, 0],

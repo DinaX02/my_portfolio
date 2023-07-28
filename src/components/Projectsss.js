@@ -1,9 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import ProjectKoruImg from "../assets/koru_project_img.png";
 import ZetflickstKoruImg from "../assets/zetflicks_proj_3.png";
 import SubmersoImg from "../assets/submerso_cover.PNG"
 import { Link } from "react-router-dom";
 import "../App.css";
+import ImgDinisProjetos from "../assets/projetos_page.png"
+import ImgDinisProjetos2 from "../assets/projetos_page_2.png"
 {/* 
 const projects = [
   {
@@ -37,10 +39,22 @@ const projects = [
 
 
 const ProjectssALONEE = () => {
+
+  const [hovered, setHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setHovered(false);
+  };
+
+
   return (
     <div className="spacee_single_perojts" id="intro">
-      <p className="big_title">Projetos.</p>
-      <p className="content_intro_heroAjustee  space_bottt">
+      {/* <p className="big_title">Projetos.</p> */}
+      {/* <p className="content_intro_heroAjustee  space_bottt">
         Os seguintes projetos mostram as minhas competências e experiência
         através de exemplos reais do meu trabalho. Cada projeto tem uma breve
         descrição e e os respetivos links para os seus protótipos com Live demo.
@@ -49,8 +63,15 @@ const ProjectssALONEE = () => {
         Estes exemplos refletem a minha capacidade de resolver problemas
         complexos, trabalhar com diferentes tecnologias e gerir projetos de
         forma eficaz.
-      </p>
-
+      </p> */}
+      
+    <img
+      className="projetos_foto_circulo"
+      src={hovered ? ImgDinisProjetos2 : ImgDinisProjetos}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      alt="projetos_DINIS"
+    />
 <section className="portfolio">
 
         <div className="project-card">

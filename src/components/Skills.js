@@ -5,13 +5,54 @@ import arrowDown from "../assets/arrow_down.png"
 import "../App.css";
 
 const Skills = () => {
+  const linhaStyle = {
+    marginTop:20,
+    width: '200px',
+    height: '5px',
+    backgroundColor: '#A767FB',
+    position:"absolute",
+    right: '0',
+  };
+
+  const numeroStyle = {
+    marginTop:5,
+    position:"absolute",
+    right: '15px',
+    color: '#A767FB',
+    fontSize: '46px',
+    fontWeight: 'bold',
+  };
+
   return (
-    <div>
+    <div className="skills_div">
+
+<div className="linhasss_roxos">
+      <div style={linhaStyle}>
+        <p style={numeroStyle}>03</p>
+      </div>
+      </div>
+
       <p  id="skills" className="introduction">
         A nível Técnico{" "}
       </p>
-      <h1 className="big_title">Skills.</h1>
-<p className="content_skills">Através do <span className="cor_nome_2">Front-end</span> e <span className="cor_nome_2">UX/UI Design</span>, sou capaz de criar experiências envolventes e únicas no utilizador , combinando o design com o conhecimento técnico para o desenvolvimento de soluções web que cativam e satisfazem os seus utilizadores.</p>
+      <div className="title-with-marker">
+    
+
+    <h1 className="big_title">Skills.</h1>
+    </div>
+    <div className="instagram-container">
+    <div className="instagram-info"> 
+   
+     <p style={{marginTop:40, fontSize:19}}>Através do  <span className="cor_nome_2">Front-end</span> e  <span className="cor_nome_2">UX/UI Design</span>, sou capaz de criar experiências envolventes e únicas no utilizador , combinando o design com o conhecimento técnico para o desenvolvimento de soluções web que cativam e satisfazem os seus utilizadores.
+     </p>
+
+
+   </div>
+   <div className="other-info">
+{/* <img className="img_vision" src={imgVisaoGeRAL}/>  */}
+      </div></div>
+
+
       <section className="skills_geral skills section">
         <div className="skills_container container grid">
           <div>

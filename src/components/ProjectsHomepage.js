@@ -38,20 +38,27 @@ const projects = [
 
 const ProjectsHomePage = () => {
   return (
-    <div id="intro">
-      <p id="projetos"  className="introduction">Os meus trabalhos</p>
-      <p className="big_title">Projetos.</p>
-      <p className="content_intro_hero2  space_bottt">
-        Os seguintes projetos mostram as minhas competências e experiência
-        através de exemplos reais do meu trabalho. Cada projeto tem uma breve
-        descrição e e os respetivos links para os seus protótipos com Live demo.
-        <br></br>
-        <br></br>
-        Estes exemplos refletem a minha capacidade de resolver problemas
-        complexos, trabalhar com diferentes tecnologias e gerir projetos de
-        forma eficaz.
-      </p>
+    <div id="projetos" className="altura_projetos"> 
+    
+      
+       <p className="introduction">Os meus trabalhos</p>
+     <div className="title-with-marker_2">
+      <p className="big_title">Projetos.</p></div>
+      
+      
 
+ <div className="instagram-container">
+
+      <div className="instagram-info">
+        <p style={{marginTop:10, fontSize:19}}>Os seguintes projetos mostram as minhas competências e experiência através de exemplos reais do meu trabalho. Cada projeto tem uma breve descrição e os respetivos links para os seus protótipos (Live demo) e repositório de código. 
+        </p>
+        
+
+      </div>
+      <div className="other-info">
+        <p style={{marginTop:10, fontSize:19}}>Estes exemplos refletem a minha capacidade de resolver problemas complexos, trabalhar com diferentes tecnologias e gerir projetos de forma eficaz.</p>
+      </div>
+    </div> 
       <section className="portfolio">
 
 <div className="project-card">

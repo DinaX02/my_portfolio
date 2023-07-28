@@ -13,7 +13,7 @@ const Projetoss = ()=> {
             <NavbarProjectPage/>
 <ProjectssALONEE/>
 <Contactos/>
-<Footer/>
+{/* <Footer/> */}
         </div>
     )
 }

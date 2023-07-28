@@ -17,7 +17,7 @@ const Homepage = ()=> {
 <Introduction/>
 <ProjectsHomePage/>
 <Contactos/>
-<Footer/>
+{/* <Footer/> */}
         </div>
     )
 }

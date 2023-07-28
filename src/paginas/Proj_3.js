@@ -16,7 +16,7 @@ const Project_3 = ()=> {
            <ContentP3/>
            <InfoProj3/>
            <Contactos/>
-           <Footer/>
+           {/* <Footer/> */}
         </div>
     )
 }
