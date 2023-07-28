@@ -1,6 +1,5 @@
 import React from "react";
-import BackgroundKORU  from '../assets/Koru Mobile App (2).png';
-import setaBack from '../assets/arrow_back_proj.svg'
+import setaBack from '../assets/Arrow 1 (1).png'
 import { useParams, useNavigate } from "react-router-dom";
 import "../App.css";
 
@@ -17,9 +16,9 @@ const HeroProject_1 = ()=> {
 <header className="header_proj1">
     <div onClick={goBack} className="seta_rounded">
     <img className="seta_back_projects" src={setaBack}/></div>
-    <h1>Koru Mobile App </h1>
+    {/* <h1>Koru Mobile App </h1> */}
 </header>
-<img className="background_proj" src={BackgroundKORU} />
+{/* <img className="background_proj" src={BackgroundKORU} /> */}
 </div>
     )
 }

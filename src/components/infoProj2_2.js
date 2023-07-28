@@ -1,12 +1,12 @@
 import React from "react";
 import "../App.css";
-// import Zetflciks_1 from "../assets/zetflicks_img1.PNG"
-// import Zetflciks_2 from "../assets/zetflicks_img2.PNG"
-// import Zetflciks_3 from "../assets/zetflicks_img3.PNG"
-import imgZetflicks_1 from "../assets/zetflicks_parallax.png"
+import Zetflciks_1 from "../assets/zetflicks_img1.PNG"
+import Zetflciks_2 from "../assets/zetflicks_img2.PNG"
+import Zetflciks_3 from "../assets/zetflicks_img3.PNG"
+import imgVisaoGeRAL from "../assets/visao_geral.png"
 
 
-const InfoProj2 = ()=> {
+const InfoProj2_2 = ()=> {
     return(
 
 <div className="info_p22222">
@@ -14,19 +14,19 @@ const InfoProj2 = ()=> {
 
 
 <div className="title-with-marker">
-<p className="big_title">Contextualização.</p></div>
+<p className="big_title">Funcionalidades.</p></div>
 <div className="instagram-container">
 
 <div className="instagram-info"> 
 
-<p className="paragrafo_origens">Este projeto visa desenvolver uma plataforma web responsive, onde o utilizador poderá escolher entre "Movies" e "Tv shows", ver os principais filmes e series nas diferentes categorias e adicionar os seus favoritos à sua watchlist, tendo a opção de mais tarde passá-los para a sua Watched list.<br></br><br></br>O projeto foi desenvolvido com dados retirados da API TMDB permitindo ainda ver os detalhes do filme / serie , onde poderá ver o "overview" e o "cast" que participou no projeto, no caso das series poderá ver o numero total de episódios e temporadas.
+<p className="paragrafo_origens">As principais funcionalidades do Zetflicks encontram-se na parte da watchlist, onde o utilizador pode fazer a pesquisa dos seus filmes / series e pode escolher adiciona-los à sua Watchlist ou à Watched list, bem como remove-los se assim o entender. Uma grande vantagem do Zetflicks é que permite ao utilizador usufruir de todas as funcionalidades sem ser preciso efetuar qualquer registo, pois os seus filmes são todos guardados em LocalStorage.
 </p>
 
 </div>
 
 
 <div className="other-info">
-<img className="img_vision" src={imgZetflicks_1}/>
+<img className="img_vision" src={imgVisaoGeRAL}/>
 </div>
 </div>  
 {/* <p className="big_titleP1">Contextualização.</p>
@@ -59,7 +59,7 @@ Uma grande vantagem do Zetflicks é que permite ao utilizador usufruir dessas fu
     )
 }   
 
-export default InfoProj2
+export default InfoProj2_2
 
 
 

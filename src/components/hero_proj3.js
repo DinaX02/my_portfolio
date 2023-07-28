@@ -1,6 +1,5 @@
 import React from "react";
-import setaBack from '../assets/arrow_back_proj.svg'
-import backgroundSubmerso from "../assets/hero_submerso (1).png"
+import setaBack from '../assets/Arrow 1 (1).png'
 import { useNavigate } from "react-router-dom";
 import "../App.css";
 
@@ -17,9 +16,9 @@ const HeroProject_3 = ()=> {
 <header className="header_proj3">
     <div onClick={goBack} className="seta_rounded">
     <img className="seta_back_projects" src={setaBack}/></div>
-    <h1>Submerso </h1>
+    {/* <h1>Submerso </h1> */}
 </header>
-<img className="background_proj" src={backgroundSubmerso} />
+
 </div>
     )
 }

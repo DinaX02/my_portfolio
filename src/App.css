@@ -39,6 +39,7 @@ html{
   margin-right: 2em;
   margin-left: 20px;
   position: relative;
+  border-bottom: 5px solid #5331B2;
 }
 
 .title-with-marker_4{
@@ -277,6 +278,7 @@ justify-content: flex-start;
   }
 
   .Navbar_project > .nav-items {
+    background-image: url("./assets/textura-blanca\ 2.jpg");
     border-top: 5px solid  #5331B2;
     overflow: hidden !important;
     position: absolute;
@@ -437,7 +439,8 @@ margin: auto;
 
 
 .header_proj1{
-  background: #7C2AE8;
+  padding-top: 1em;
+  /* background: #7C2AE8; */
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -445,7 +448,9 @@ margin: auto;
 }
 
 .header_proj2{
-  background: #0E0909;
+   background-image: url("./assets/textura-blanca\ 2.jpg");
+padding-top: 1em;
+  /* background: #0E0909; */
   color: white;
   width: 100%;
   display: flex;
@@ -455,7 +460,9 @@ margin: auto;
 
 
 .header_proj3{
-  background: #5F7872;
+  background-image: url("./assets/textura-blanca\ 2.jpg");
+  padding-top: 1em;
+  /* background: #5F7872; */
   color: white;
   width: 100%;
   display: flex;
@@ -468,7 +475,7 @@ margin: auto;
 
 .titulo_proj{
 
-
+  background-image: url("./assets/textura-blanca\ 2.jpg");
   display: flex;
   align-items: center;
   align-items: center;
@@ -537,18 +544,30 @@ margin: auto;
 }
 
 .info_p11111{
-  margin-top: 3em;
-  border-top: 3px solid #2e2e2e;
+  background-image: url("./assets/textura-blanca\ 2.jpg");
+  padding-top: 3em;
+  border-top: 3px solid #9747FF;
+  min-height: 100vh;
+}
+
+.info_p22222{
+  background-image: url("./assets/textura-blanca\ 2.jpg");
+  padding-top: 3em;
+  border-top: 3px solid #9747FF;
+  /* min-height: 100vh; */
+  padding-bottom: 3em;
 }
 
 
 
 .div_content_p1{
+  background-image: url("./assets/textura-blanca\ 2.jpg");
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 4em;
+  padding-top: 2.5em;
   margin-bottom: 4em;
+  min-height: 78vh;
 }
 
 .title_overvieww{
@@ -874,6 +893,7 @@ width: 60%;
   border-radius: 15px;
   margin-top: 1em;
   border: transparent;
+  margin-right: 1em;
 }
 
 
@@ -1380,7 +1400,11 @@ width: 280px !important ;
 }
 
   .img-pc_movies{
-    width: 350px;
+    width: 332px;
+  }
+
+  .lateral_btn{
+    margin-left: 0 !important;
   }
 
 .content_hero{
@@ -1601,7 +1625,7 @@ margin-left: 0 !important;
 }
 
 .big_title{
-  font-size: 40px;
+  font-size: 28px;
 }
 
 .big_titleP1{
@@ -1827,8 +1851,10 @@ right: -15px;
   align-items: center;
   margin-bottom: var(--mb-2-5);
   cursor: pointer;
-  padding: 12px !important;
-  margin-bottom: 3.5em;
+  padding-left: 12px !important;
+  padding-top: 12px !important;
+  padding-right: 12px !important;
+  padding-bottom: 36px;
 }
 
 .arrow_nome{

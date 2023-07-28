@@ -1,16 +1,35 @@
 import React from "react";
 import "../App.css";
 import Storyboard from "../assets/storyboard_submerso.PNG"
-import Nivel1_sub from "../assets/nivel_1_submerso.PNG"
-import Nivel2_sub from "../assets/nivel_2_submerso.PNG"
-import Nivel3_sub from "../assets/nivel_3_submerso.PNG"
-
+import imgSubmerso_1 from "../assets/subemrso_1_parraleax.png"
 
 const InfoProj3 = ()=> {
     return(
 
 <div className="info_p11111">
-<p className="big_titleP1">Contextualização.</p>
+<div className="title-with-marker">
+<p className="big_title">Contextualização.</p></div>
+<div className="instagram-container">
+
+<div className="instagram-info"> 
+
+<p className="paragrafo_origens">Primeiro projeto desenvolvido em JavaScript , projeto este que tinha como tema base problemas ambientais e visava ser implementado nas escolas do ensino básico do Município de Ílhavo.
+Sendo o objetivo do projeto a sua possível implementação nas escolas, tivemos em conta a linguagem, a informação, e o estilo artístico e narrativo escolhido, de forma a adequar a uma audiência de jovens estudantes, mais propriamente do 2º ciclo. Um jogo didático, focado num público-alvo infantil, capaz de sensibilizar o público para diversos problemas ambientais, destacando as consequências catastróficas da subida do nível médio das
+águas. <br></br><br></br>
+O jogo conta a história de uma criança que tenta salvar a sua família de uma inundação causada por um tsunami no ano de 2050 e que está a afetar a maior parte do distrito de Aveiro. 
+
+Este tem como objetivo final derrotar o negacionista por detrás da falta de sensibilização popular.<br></br><br></br>
+Em grande parte, devido ao público-alvo, este jogo é de baixa dificuldade, permitindo uma fácil chegada à parte didática do mesmo que só aparece no último nível. Baseado em factos fictícios, mas sobre um problema real, focando apenas no aumento do nível médios das águas, dentro de um grupo abrangente de problemas.
+</p>
+
+</div>
+
+
+<div className="other-info">
+<img className="img_vision" src={imgSubmerso_1}/>
+</div>
+</div>  
+{/* <p className="big_titleP1">Contextualização.</p>
 
 <p className="content_proj11111">	Primeiro projeto desenvolvido em JavaScript , projeto este que tinha como tema base problemas ambientais e visava ser implementado nas escolas do ensino básico do Município de Ílhavo.
 Sendo o objetivo do projeto a sua possível implementação nas escolas, tivemos em conta a linguagem, a informação, e o estilo artístico e narrativo escolhido, de forma a adequar a uma audiência de jovens estudantes, mais propriamente do 2º ciclo. Um jogo didático, focado num público-alvo infantil, capaz de sensibilizar o público para diversos problemas ambientais, destacando as consequências catastróficas da subida do nível médio das
@@ -45,7 +64,7 @@ Em grande parte, devido ao público-alvo, este jogo é de baixa dificuldade, per
 
 <img className="storyboardd" src={Storyboard}/>
 
-<p className="legendas"><strong>Legenda:</strong> Storyboard Submerso</p>
+<p className="legendas"><strong>Legenda:</strong> Storyboard Submerso</p> */}
 {/* 
 <div className="btn_next_projects">
 <Link to={"/project_1"}><button className="btn_viewmore">Ver Projeto Koru</button></Link>

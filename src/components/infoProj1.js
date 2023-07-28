@@ -8,12 +8,36 @@ import  Hi_fi_1 from "../assets/hi-fi_img2.PNG"
 import Hi_fi_2 from "../assets/hi-fi_img3.PNG"
 import Hi_fi_3 from "../assets/hi-fi_img4.PNG"
 import Persona from "../assets/Persona_koru.png"
+import imgKoru_1 from "../assets/img_mockup_newwww.png"
 
 const InfoProj1 = ()=> {
     return(
 
 <div className="info_p11111">
-<p className="big_titleP1">Contextualização.</p>
+
+<div className="title-with-marker">
+<p className="big_title">Contextualização.</p></div>
+<div className="instagram-container">
+
+<div className="instagram-info"> 
+
+<p className="paragrafo_origens">Este projeto visa desenvolver uma plataforma de votação desenhada principalmente para concursos onde os organizadores pretendem adicionar uma componente de interatividade para aumentar a participação e investimento em, por exemplo, projetos ou ideias.
+<br></br>
+A aplicação em desenvolvimento, no âmbito do Projeto Koru, é uma plataforma de acompanhamento de eventos que permite aos seus organizadores criar e gerir eventos de forma eficiente, enquanto fornece aos participantes do mesmo uma experiência personalizada e interativa.
+<br></br><br></br>
+O foco da aplicação é a dinâmica de votação nos projetos exibidos no evento em questão. Ou seja, este projeto tem como objetivo facilitar o processo de criar e gerir atividades de votação em projetos dentro de um evento ao vivo. Este sistema de votação passa por distribuir uma série de moedas pelo público do evento, permitindo a cada utilizador dividir os seus votos pelos seus projetos favoritos, objetivando manter o sistema de votação justo e democrático.
+<br></br><br></br>
+Este projeto prevê uma aplicação mobile, utilizada por participantes de eventos para votar em projetos e assistir ao live ranking das votações, e um website, utilizado pelos organizadores para gerir atividades, características do evento e projetos.
+</p>
+
+</div>
+
+
+<div className="other-info">
+<img className="img_vision" src={imgKoru_1}/>
+</div>
+</div>  
+{/* <p className="big_titleP1">Contextualização.</p>
 
 <p className="content_proj11111">	Este projeto visa desenvolver uma plataforma de votação desenhada principalmente para concursos onde os organizadores pretendem adicionar uma componente de interatividade para aumentar a participação e investimento em, por exemplo, projetos ou ideias.
 <br></br>
@@ -88,7 +112,7 @@ Entendemos que este tipo de utilizador terá como principais objetivos na aplica
 <img className="storyboardd" src={Hi_fi_3}/>
 </div>  
 </div>
-<p className="legendas centrar_leg"><strong className="strong_koru">Legenda:</strong> Modelos protótipos Hi-fi</p>
+<p className="legendas centrar_leg"><strong className="strong_koru">Legenda:</strong> Modelos protótipos Hi-fi</p> */}
 {/* 
 <div className="btn_next_projects">
 <Link to={"/project_2"}><button className="btn_viewmore">Ver Projeto Zetflicks</button></Link>

@@ -1,7 +1,6 @@
 import React from "react";
 import webDesignicon from "../assets/web design.png"
 import frontendICON from "../assets/icon_front_end.png"
-import arrowDown from "../assets/arrow_down.png"
 import "../App.css";
 
 const Skills = () => {
@@ -78,7 +77,7 @@ const Skills = () => {
     </div>
   </div>
 
-  <div className="skills_data">
+  {/* <div className="skills_data">
     <div className="skills_titles">
       <h3 className="skills_name">CSS3</h3>
       <span className="skills_number">80%</span>
@@ -86,11 +85,11 @@ const Skills = () => {
     <div className="skills_bar">
     <span className="skills_percentage skills_css"></span>
     </div>
-  </div>
+  </div> */}
 
   <div className="skills_data">
     <div className="skills_titles">
-      <h3 className="skills_name">Bootstrap</h3>
+      <h3 className="skills_name">CSS3 e Bootstrap</h3>
       <span className="skills_number">85%</span>
     </div>
     <div className="skills_bar">
@@ -175,7 +174,7 @@ const Skills = () => {
     </div>
   </div>
 
-  <div className="skills_data">
+  {/* <div className="skills_data">
     <div className="skills_titles">
       <h3 className="skills_name">Photoshop</h3>
       <span className="skills_number">60%</span>
@@ -183,7 +182,8 @@ const Skills = () => {
     <div className="skills_bar">
     <span className="skills_percentage skills_photoshop"></span>
     </div>
-  </div>
+  </div> */}
+  
 </div>
 </div>
               </div>
