@@ -27,7 +27,7 @@ const Skills = () => {
 
 <div className="linhasss_roxos">
       <div style={linhaStyle}>
-        <p style={numeroStyle}>03</p>
+        <p style={numeroStyle}>02</p>
       </div>
       </div>
 

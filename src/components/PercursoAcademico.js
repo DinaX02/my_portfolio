@@ -23,6 +23,34 @@ const PercursoAcademico = () => {
     fontWeight: 'bold',
   };
 
+  const dates = [
+    '2023-01-01',
+    '2023-03-15',
+    '2023-06-20',
+    '2023-09-10',
+    '2023-12-25',
+  ];
+
+  const generateRandomTitle = () => {
+    const titles = [
+      'Evento 1',
+      'Evento 2',
+      'Evento 3',
+      'Evento 4',
+      'Evento 5',
+    ];
+    const randomIndex = Math.floor(Math.random() * titles.length);
+    return titles[randomIndex];
+  };
+
+  const [selectedDate, setSelectedDate] = React.useState(dates[0]);
+  const [selectedTitle, setSelectedTitle] = React.useState(generateRandomTitle());
+
+  const handleDateClick = (dateIndex) => {
+    setSelectedDate(dates[dateIndex]);
+    setSelectedTitle(generateRandomTitle());
+  };
+
   return (
     <div id="percurso" className="spAce_timelinne">
 
@@ -40,6 +68,30 @@ const PercursoAcademico = () => {
 
     <h1 className="big_title">Percurso Académico.</h1>
     </div>
+
+    <div className="timeline-container">
+      <div className="timeline">
+        {dates.map((date, index) => (
+          <div
+            key={date}
+            className={`date ${selectedDate === date ? 'active' : ''}`}
+            onClick={() => handleDateClick(index)}
+          >
+            {date}
+          </div>
+        ))}
+      </div>
+      <div className="selected-date">{selectedDate}</div>
+      <div className="event-title">{selectedTitle}</div>
+    </div>
+
+
+    </div>
+  );
+};
+
+export default PercursoAcademico;
+
 {/* <VerticalTimeline>
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
@@ -126,9 +178,3 @@ const PercursoAcademico = () => {
       </VerticalTimelineElement>
 
       </VerticalTimeline> */}
-      
-    </div>
-  );
-};
-
-export default PercursoAcademico;

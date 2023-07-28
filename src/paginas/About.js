@@ -13,7 +13,7 @@ const About = () => {
       <NavbarAbout/>
       <HeroAbout/>
       <Origens/>
-   <PercursoAcademico />
+   {/* <PercursoAcademico /> */}
       <Skills />
       <Contactos />
 {/* <Footer/> */}
