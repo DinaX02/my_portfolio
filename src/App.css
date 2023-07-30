@@ -551,7 +551,7 @@ padding-top: 1em;
 }
 
 .info_p22222{
-  background-image: url("./assets/textura-blanca\ 2.jpg");
+  background-image: url("./assets/textura_fixed.jpg");
   padding-top: 3em;
   border-top: 3px solid #9747FF;
   /* min-height: 100vh; */
@@ -861,7 +861,7 @@ width: 60%;
 }
 
 .spacee_single_perojts{
-  background-image: url("./assets/textura-blanca\ 2.jpg");
+  background-image: url("./assets/textura_fixed.jpg");
   background-repeat: no-repeat;
   /* padding-top: 56px; */
   min-height: 87vh;
@@ -1902,12 +1902,12 @@ right: -15px;
 .altura_projetos{
   min-height: 100vh;
   padding-bottom: 2em;
-  background-image: url("./assets/textura-blanca\ 2.jpg"); 
+  background-image: url("./assets/textura_fixed.jpg"); 
 }
 
 .skills_div{
   padding-top: 3em;
-  background-image: url("./assets/textura-blanca\ 2.jpg"); 
+  background-image: url("./assets/textura_fixed.jpg"); 
   min-height: 100vh;
 }
 
@@ -1988,7 +1988,7 @@ right: -15px;
   padding-left: 12px !important;
   padding-top: 12px !important;
   padding-right: 12px !important;
-  padding-bottom: 36px;
+  padding-bottom: 90px;
 }
 
 .arrow_nome{

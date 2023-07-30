@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import ProjectKoruImg from "../assets/koru_project_img.png";
 import ZetflickstKoruImg from "../assets/zetflicks_proj_3.png";
 import SubmersoImg from "../assets/submerso_cover.PNG"
@@ -50,6 +50,23 @@ const ProjectssALONEE = () => {
     setHovered(false);
   };
 
+  useEffect(() => {
+    // Função para verificar a largura da tela e atualizar o estado hovered
+    const handleScreenSizeChange = () => {
+      const screenWidth = window.innerWidth;
+      if (screenWidth <= 423) {
+        setHovered(false);
+      }
+    };
+
+    // Adiciona o listener para verificar a largura da tela quando o componente é montado
+    window.addEventListener("resize", handleScreenSizeChange);
+
+    // Remove o listener quando o componente é desmontado para evitar vazamento de memória
+    return () => {
+      window.removeEventListener("resize", handleScreenSizeChange);
+    };
+  }, []);
 
   return (
     <div className="spacee_single_perojts" id="intro">
