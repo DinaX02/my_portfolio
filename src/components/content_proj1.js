@@ -8,7 +8,7 @@ const ContentP1 = ()=> {
     return(
 
 <div className="div_content_p1">
-    <img className="img-phone" src={teleKOru}/>
+    <img className="img-phone" src={teleKOru} alt="mockupKoru"/>
     <div className="content_p111">
         <h1 className="title_overvieww">Koru</h1>
     <p>O foco da aplicação do Koru é a participação em eventos ao vivo, que permite ao utilizador ver mais informações sobre o evento e criar uma dinâmica de votação nos projetos exibidos no evento em questão, tendo como objetivo facilitar o processo de criar e gerir atividades de votação em projetos dentro de um evento ao vivo.</p>

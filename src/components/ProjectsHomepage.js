@@ -4,33 +4,33 @@ import ZetflickstKoruImg from "../assets/zetflicks_proj_3.png";
 import SubmersoImg from "../assets/submerso_cover.PNG"
 import { Link } from "react-router-dom";
 import "../App.css";
-{/* 
-const projects = [
-  {
-    id: 1,
-    title: "Koru Mobile App",
-    description: "The app focuses on the dynamics of",
-    type: "UX/UI Design",
-    image: ProjectKoruImg,
-    link: "/project1",
-  },
-  {
-    id: 2,
-    title: "Zetflicks",
-    description: "Zetflicks é  ver filmes adicioná-los à sua Watchlist.",
-    type: "UI Design e Front-end",
-    image: ZetflickstKoruImg,
-    link: "/project2",
-  },
-  {
-    id: 3,
-    title: "Submerso",
-    description: " Primeiro projeto em javaScript.",
-    type: "Design e Front-end",
-    image: SubmersoImg,
-    link: "/project3",
-  },
-];*/}
+
+// const projects = [
+//   {
+//     id: 1,
+//     title: "Koru Mobile App",
+//     description: "The app focuses on the dynamics of",
+//     type: "UX/UI Design",
+//     image: ProjectKoruImg,
+//     link: "/project1",
+//   },
+//   {
+//     id: 2,
+//     title: "Zetflicks",
+//     description: "Zetflicks é  ver filmes adicioná-los à sua Watchlist.",
+//     type: "UI Design e Front-end",
+//     image: ZetflickstKoruImg,
+//     link: "/project2",
+//   },
+//   {
+//     id: 3,
+//     title: "Submerso",
+//     description: " Primeiro projeto em javaScript.",
+//     type: "Design e Front-end",
+//     image: SubmersoImg,
+//     link: "/project3",
+//   },
+// ];
 
 
 

@@ -1,7 +1,6 @@
 import React from "react";
 import "../App.css";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 
 const HeroHomepage = () => {
   return (

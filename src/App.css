@@ -1362,7 +1362,7 @@ margin-bottom: 0.25rem;
 
 .three_icons{
 display: flex;
-justify-content: end;
+justify-content: flex-end;
 }
 
 .text_contaaa{

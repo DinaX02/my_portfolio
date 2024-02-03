@@ -25,7 +25,7 @@ Entendemos que este tipo de utilizador terá como principais objetivos na aplica
 
 
 <div className="other-info">
-<img className="img_vision" src={Persona}/>
+<img className="img_vision" src={Persona} alt="personaImg"/>
 </div>
 </div>  
 

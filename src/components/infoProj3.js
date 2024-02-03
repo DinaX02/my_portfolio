@@ -1,6 +1,5 @@
 import React from "react";
 import "../App.css";
-import Storyboard from "../assets/storyboard_submerso.PNG"
 import imgSubmerso_1 from "../assets/subemrso_1_parraleax.png"
 
 const InfoProj3 = ()=> {
@@ -26,7 +25,7 @@ Em grande parte, devido ao público-alvo, este jogo é de baixa dificuldade, per
 
 
 <div className="other-info">
-<img className="img_vision" src={imgSubmerso_1}/>
+<img className="img_vision" src={imgSubmerso_1} alt="SubmersoCover"/>
 </div>
 </div>  
 {/* <p className="big_titleP1">Contextualização.</p>

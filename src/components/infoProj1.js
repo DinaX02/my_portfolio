@@ -28,7 +28,7 @@ Este projeto prevê uma aplicação mobile, desenvolvida em React Native, direci
 
 
 <div className="other-info">
-<img className="img_vision" src={imgKoru_1}/>
+<img className="img_vision" src={imgKoru_1} alt="CoverKoru"/>
 </div>
 </div>  
 </div>

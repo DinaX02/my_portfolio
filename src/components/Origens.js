@@ -1,8 +1,8 @@
 import React from "react";
 import "../App.css";
-import icon1 from "../assets/front-end white.png"
-import icon2 from "../assets/web design icon white.png"
-import {Tilt} from "react-tilt";
+// import icon1 from "../assets/front-end white.png"
+// import icon2 from "../assets/web design icon white.png"
+// import {Tilt} from "react-tilt";
 import imgOrigens from "../assets/origenss.png"
 
 const Origens = ()=> {
@@ -56,7 +56,7 @@ Ao longo do meu percurso escolar foram as áreas relacionadas com artes e tecnol
 
       </div>
       <div className="other-info">
-<img className="img_vision" src={imgOrigens}/> 
+<img className="img_vision" src={imgOrigens} alt="OrigensImgCover"/> 
       </div>
     </div>  
 </div>

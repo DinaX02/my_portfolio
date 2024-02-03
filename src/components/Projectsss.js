@@ -6,37 +6,6 @@ import { Link } from "react-router-dom";
 import "../App.css";
 import ImgDinisProjetos from "../assets/projetos_page.png"
 import ImgDinisProjetos2 from "../assets/projetos_page_2.png"
-{/* 
-const projects = [
-  {
-    id: 1,
-    title: "Koru Mobile App",
-    description: "The app focuses on the dynamics of",
-    type: "UX/UI Design",
-    image: ProjectKoruImg,
-    link: "/project1",
-  },
-  {
-    id: 2,
-    title: "Zetflicks",
-    description: "Zetflicks é  ver filmes adicioná-los à sua Watchlist.",
-    type: "UI Design e Front-end",
-    image: ZetflickstKoruImg,
-    link: "/project2",
-  },
-  {
-    id: 3,
-    title: "Submerso",
-    description: " Primeiro projeto em javaScript.",
-    type: "Design e Front-end",
-    image: SubmersoImg,
-    link: "/project3",
-  },
-];
-*/}
-
-
-
 
 const ProjectssALONEE = () => {
 
@@ -131,3 +100,4 @@ const ProjectssALONEE = () => {
 };
 
 export default ProjectssALONEE;
+

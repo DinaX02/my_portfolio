@@ -24,7 +24,7 @@ const InfoProj3_2 = ()=> {
 
 
 <div className="other-info">
-<img className="img_vision" src={imgVisaoGeRAL}/>
+<img className="img_vision" src={imgVisaoGeRAL} alt="coverVisaoImg"/>
 </div>
 </div>  
 
