@@ -24,7 +24,7 @@ const InfoProj2_2 = ()=> {
 
 
 <div className="other-info">
-<img className="img_vision2" src={imgZetflicksParallax_2}/>
+<img className="img_vision2" src={imgZetflicksParallax_2} alt="coverZetflicks"/>
 </div>
 </div>  
 {/* <p className="big_titleP1">Contextualização.</p>

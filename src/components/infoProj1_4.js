@@ -20,14 +20,14 @@ Ao criar os <i>wireframes</i> de baixa fidelidade, obtivemos uma imagem clara do
 <br></br><br></br> 
 Ao passar para os protótipos de média fidelidade, conseguimos ilustrar funcionalidades e o fluxo da aplicação, aperfeiçoando ainda mais a interface do utilizador e identificar eventuais falhas funcionais nas fases iniciais.
 <br></br><br></br>
-Por fim, convertemos os protótipos de mid-fi para Hi-fi, criando assim os flows de utilização do protótipo usando o Figma.
+Por fim, os protótipos foram convertidos de mid-fi para Hi-fi, criando assim os flows de utilização do protótipo usando o Figma.
 </p>
 
 </div>
 
 
 <div className="other-info">
-<img className="img_vision" src={Wireframesskoru}/>
+<img className="img_vision" src={Wireframesskoru} alt="ImgWireframesKoru"/>
 </div>
 </div>  
 

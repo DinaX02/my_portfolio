@@ -8,7 +8,7 @@ const ContentP3 = ()=> {
     return(
 
 <div className="div_content_p1">
-    <img className="img-pc_movies" src={pcsUubmerso}/>
+    <img className="img-pc_movies" src={pcsUubmerso} alt="mockupSubmerso"/>
     <div className="content_p111">
         <h1 className="title_overview_3">Submerso</h1>
     <p>Pequeno jogo didático desenvolvido no âmbito da unidade curricular de Laboratório Multimédia 3. Tem como objetivo sensibilizar crianças do 2º ciclo em relação à subida do nível médio do mar.</p>

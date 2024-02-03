@@ -8,7 +8,7 @@ const ContentP2 = ()=> {
     return(
 
 <div className="div_content_p1">
-    <img className="img-pc_movies" src={pcZetflicks}/>
+    <img className="img-pc_movies" src={pcZetflicks} alt="mockupZetflicks"/>
     <div className="content_p111">
         <h1 className="title_overview_2">Zetflicks</h1>
     <p>Zetflicks é um pequeno projeto desenvolvido por 3 estudantes universitários da Universidade de Aveiro com o objetivo de se tornarem mais experientes em novas linguagens de programação e uso de API. O projeto consiste num site responsivo onde o utilizador pode encontrar novos filmes e series, ver alguns detalhes sobre eles e adicioná-los à sua Watchlist.</p>

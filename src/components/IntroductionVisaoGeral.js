@@ -1,8 +1,8 @@
 import React from "react";
 import "../App.css";
-import icon1 from "../assets/front-end white.png"
-import icon2 from "../assets/web design icon white.png"
-import {Tilt} from "react-tilt";
+// import icon1 from "../assets/front-end white.png"
+// import icon2 from "../assets/web design icon white.png"
+// import {Tilt} from "react-tilt";
 import imgVisaoGeRAL from "../assets/visao_geral.png"
 
 const Introduction = ()=> {
@@ -25,7 +25,7 @@ const Introduction = ()=> {
 
       </div>
       <div className="other-info">
-<img className="img_vision" src={imgVisaoGeRAL}/>
+<img className="img_vision" src={imgVisaoGeRAL} alt="imgCoverVisaoGeral"/>
       </div>
     </div>  
 </div>

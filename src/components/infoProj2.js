@@ -26,7 +26,7 @@ const InfoProj2 = ()=> {
 
 
 <div className="other-info">
-<img className="img_vision" src={imgZetflicks_1}/>
+<img className="img_vision" src={imgZetflicks_1} alt="ImgProject2"/>
 </div>
 </div>  
 {/* <p className="big_titleP1">Contextualização.</p>

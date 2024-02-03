@@ -59,7 +59,7 @@ const Skills = () => {
               <div className="skills_header space_bg_ecra">
 
 <div className="arrow_nome">
-<img className="icons_skills" src={frontendICON}/>
+<img className="icons_skills" src={frontendICON} alt="IconFrontEnd"/>
   <h1 className="skills_title">Desenvolvimento Front-end</h1>
  {/* <img className="arrow_ajust" src={arrowDown}/>*/}
 </div>
@@ -126,7 +126,7 @@ const Skills = () => {
               <div className="skills_header space_bg_ecra_2">
 
                 <div className="arrow_nome">
-<img className="icons_skills" src={webDesignicon }/>
+<img className="icons_skills" src={webDesignicon }  alt="IconWebDesign" />
   <h1 className="skills_title">UX/ UI Design</h1>
  {/*  <img className="arrow_ajust" src={arrowDown}/>*/}
 </div>

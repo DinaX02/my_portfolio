@@ -1,6 +1,6 @@
 import React from "react";
 import setaBack from '../assets/Arrow 1 (1).png'
-import { useParams, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import "../App.css";
 
 const HeroProject_2 = ()=> {
@@ -15,7 +15,7 @@ const HeroProject_2 = ()=> {
 <div className="titulo_proj">
 <header className="header_proj2">
     <div onClick={goBack} className="seta_rounded">
-    <img className="seta_back_projects" src={setaBack}/></div>
+    <img className="seta_back_projects" src={setaBack} alt="goBackArrow"/></div>
     {/* <h1>Zetflicks </h1> */}
 </header>
 {/* <img className="background_proj" src={BackgroundZetflicks} /> */}
