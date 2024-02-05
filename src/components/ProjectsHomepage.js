@@ -50,7 +50,7 @@ const ProjectsHomePage = () => {
  <div className="instagram-container">
 
       <div className="instagram-info">
-        <p style={{marginTop:10, fontSize:19}}>Os seguintes projetos mostram as minhas competências e experiência através de exemplos reais do meu trabalho. Cada projeto tem uma breve descrição e os respetivos links para os seus protótipos (Live demo) e repositório de código. 
+        <p style={{marginTop:10, fontSize:19}}>Os seguintes projetos mostram as minhas competências e experiência através de exemplos reais do meu trabalho. Cada projeto tem uma breve descrição e os respetivos <i>links</i> para os seus protótipos (Live demo) e repositórios de código. 
         </p>
         
 

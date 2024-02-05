@@ -10,10 +10,12 @@ const HeroHomepage = () => {
         <h1>Olá, sou o <span className="cor_nome">Dinis.</span></h1>
         <p>
           Tenho como objetivo transformar as experiências digitais cativantes
-          através do <span className="effect_line">UX/UI Design</span> e <span className="effect_line_2">Desenvolvimento Front-end.</span>
+          através do <span className="text_marcado">UX/UI Design</span> e <span className="text_marcado">Desenvolvimento Front-end.</span>
         </p>
-        {/* <div>
-        <Link to={"/aboutme"}><button className="btn_hero">Mais sobre mim</button></Link></div> */}
+        {/* <p>
+          Tenho como objetivo transformar as experiências digitais cativantes
+          através do <span className="effect_line">UX/UI Design</span> e <span className="effect_line_2">Desenvolvimento Front-end.</span>
+        </p> */}
         </div>
       </div>
       <div className="scroll_icon btn_plus btn_minus">
