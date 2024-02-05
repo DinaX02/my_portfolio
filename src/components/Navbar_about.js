@@ -6,7 +6,7 @@ const NavbarAbout = ()=> {
 
     const [isOpen, setIsOpen] = useState(false);
     return(
-        <div className="Navbar">
+        <div className="NavbarAbout">
             <span className="nav-logo">
             <strong><Link to={"/"}>Dinis Antunes</Link></strong>
             </span>
