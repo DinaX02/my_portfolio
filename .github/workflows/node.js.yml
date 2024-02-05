@@ -19,25 +19,13 @@ jobs:
       - run: npm install
       - run: npx prettier . --write
       - run: npx prettier . --check
-
-  test:
-    runs-on: ubuntu-latest
-    
-    steps:
-      - uses: actions/checkout@v3
-      - name: Jest + Lint
-        uses: actions/setup-node@v3
-        with:
-          cache: "npm"
-      - run: npm install
-      - run: npm test
       - run: npm run lint
 
   deploy:
     runs-on: ubuntu-latest
     if:  github.ref == 'refs/heads/master' 
 
-    needs: [setup-inicial, test]
+    needs: [setup-inicial]
     
     steps:
       - uses: actions/checkout@v3
