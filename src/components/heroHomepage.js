@@ -2,7 +2,7 @@ import React from "react";
 import "../App.css";
 import { motion } from "framer-motion";
 
-const HeroHomepage = () => {
+const HeroHomepage = ({ scrollToIntroduction }) => {
   return (
     <div className="hero_homepage_div">
       <div className="hero">

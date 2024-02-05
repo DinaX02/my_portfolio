@@ -53,7 +53,7 @@ html{
   margin-right: 2em;
   margin-left: 20px;
   position: relative;
-  /* border-bottom: 5px solid #5331B2; */
+  border-bottom: 5px solid #5331B2;
 }
 
 .title-with-marker_4{
@@ -977,7 +977,7 @@ width: 60%;
   background-image: url("./assets/textura_fixed.jpg");
   background-repeat: no-repeat;
   /* padding-top: 56px; */
-  min-height: 87vh;
+  min-height: 90.7vh;
 }
 
 
