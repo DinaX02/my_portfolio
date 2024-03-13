@@ -6,7 +6,7 @@ const NavbarProjectPage = ()=> {
 
     const [isOpen, setIsOpen] = useState(false);
     return(
-        <div className="Navbar">
+        <div className="Navbar" >
             <span className="nav-logo">
             <strong><Link to={"/"}>Dinis Antunes</Link></strong>
             </span>
