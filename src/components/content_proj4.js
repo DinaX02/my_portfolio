@@ -3,7 +3,7 @@ import coverBoomerang from "../assets/img_cover_boomerang.png";
 import "../App.css";
 import setaBack from '../assets/Arrow 1 (1).png'
 import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 const ContentP4 = () => {
 

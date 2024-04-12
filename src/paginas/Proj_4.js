@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import HeroProject4 from "../components/hero_proj4.js";
+// import HeroProject4 from "../components/hero_proj4.js";
 import NavbarProject from "../components/Navbar_project.js";
 import ContentP4 from "../components/content_proj4.js";
 import InfoProj4 from "../components/infoProj4.js";
