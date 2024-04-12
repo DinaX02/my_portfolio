@@ -1,7 +1,7 @@
 import React from "react";
 import ProjectKoruImg from "../assets/koru_project_img.png";
 import ZetflickstKoruImg from "../assets/zetflicks_proj_3.png";
-import SubmersoImg from "../assets/submerso_cover.PNG"
+import BoomerangCapa from "../assets/capa_boomerang.png"
 import { Link } from "react-router-dom";
 import "../App.css";
 
@@ -86,12 +86,12 @@ const ProjectsHomePage = () => {
 
 
 <div className="project-card">
-  <img src={SubmersoImg} alt="submerso" />
+  <img src={BoomerangCapa} alt="Boomerang" />
   <div className="project-info">
-    <h2>Submerso</h2>
+    <h2>Boomerang</h2>
    {/*<p>{project.description}</p>*/} 
-    <span>Design e Front-end</span>
-    <Link to={"/project3"}>Ver detalhes</Link>
+    <span>Design, Branding e Front-end</span>
+    <Link to={"/project4"}>Ver detalhes</Link>
   </div>
 </div>
 </section>
