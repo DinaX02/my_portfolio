@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.css";
 // import HeroProject4 from "../components/hero_proj4.js";
-import NavbarProject from "../components/Navbar_project.js";
+import NavbarProjectBoomerang from "../components/Navbar_projectBoomerang.js";
 import ContentP4 from "../components/content_proj4.js";
 import InfoProj4 from "../components/infoProj4.js";
 import ContactosBoomerang from "../components/ContactosBoomerang.js";
@@ -12,7 +12,7 @@ const Project_4 = ()=> {
 
     return(
         <div>
-           <NavbarProject/> 
+           <NavbarProjectBoomerang/> 
            {/* <HeroProject4/> */}
            <ContentP4/>
             <InfoProj4/>
