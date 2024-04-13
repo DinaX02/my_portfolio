@@ -1,7 +1,7 @@
 import React from "react";
 import ProjectKoruImg from "../assets/koru_project_img.png";
 import ZetflickstKoruImg from "../assets/zetflicks_proj_3.png";
-import BoomerangCapa from "../assets/capa_boomerang.png"
+import BoomerangCapa from "../assets/capa_boomerang_pequena.png"
 import { Link } from "react-router-dom";
 import "../App.css";
 
@@ -41,15 +41,24 @@ const ProjectsHomePage = () => {
     <div id="projetos" className="altura_projetos"> 
     
       
-       <p className="introduction">Os meus trabalhos</p>
+       {/* <p className="introduction">Os meus trabalhos</p>
      <div className="title-with-marker_2">
-      <p className="big_title">Projetos.</p></div>
-      
-      
+      <p className="big_title">Projetos.</p></div> */}
+
+  <div className="container_projectsHp">
+  <div className="instagram-info">
+  <p className="paragrafo_intro_sizes">Os meus trabalhos</p>
+
+<p className="fontsize_tags"><span className="title_marcado_koru">Projetos.</span></p>
+</div>
+</div>         
 
  <div className="instagram-container">
 
+
+
       <div className="instagram-info">
+        
         <p style={{marginTop:10, fontSize:19}}>Os seguintes projetos mostram as minhas competências e experiência através de exemplos reais do meu trabalho. Cada projeto tem uma breve descrição e os respetivos <i>links</i> para os seus protótipos (Live demo) e repositórios de código. 
         </p>
         

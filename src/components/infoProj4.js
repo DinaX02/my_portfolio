@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import imgSubmerso_1 from "../assets/subemrso_1_parraleax.png"
+import boomerangMockupOverview from "../assets/mockup_overview_boomerang_2.png"
 
 const InfoProj4 = ()=> {
     return(
@@ -36,7 +36,7 @@ Esta aplicação não é apenas uma plataforma, mas uma voz na discussão global
 
 
 <div className="other-info">
-<img className="img_vision" src={imgSubmerso_1} alt="SubmersoCover"/>
+<img className="img_vision" src={boomerangMockupOverview} alt="Boomerang mockup  overview"/>
 </div>
 </div>  
 </div>

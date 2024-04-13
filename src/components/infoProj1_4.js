@@ -8,11 +8,13 @@ const infoProj1_4 = ()=> {
 
 <div className="info_p33333">
 
-<div className="title-with-marker">
-<p className="big_title"><i>Wireframes.</i></p></div>
+{/* <div className="title-with-marker">
+<p className="big_title"><i>Wireframes.</i></p></div> */}
 <div className="instagram-container">
 
 <div className="instagram-info"> 
+
+<p className="fontsize_tags"><span className="title_marcado_koru"><i>Wireframes.</i></span></p>
 
 <p className="paragrafo_origens">
 Uma vez decidida a arquitetura da aplicação e <i>site map</i> avançamos para o <i>sketching</i> dos <i>wireframes</i>, começando pela baixa fidelidade e progredindo para a média e alta fidelidade.<br></br><br></br> 

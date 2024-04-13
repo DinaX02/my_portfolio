@@ -311,6 +311,12 @@ width: 80% !important;
     padding-left: 15px !important;
   }
 
+  .content_contactoss{
+    max-width: 100% !important;
+    padding-left: 15px !important;
+  }
+
+
   .three_icons{
 flex-direction: column;
 justify-content: flex-start;
@@ -803,7 +809,7 @@ padding-top: 1em;
   flex-direction: column;
   align-items: center;
   padding-top: 2.5em;
-  margin-bottom: 4em;
+  padding-bottom: 4em;
   min-height: 78vh;
 }
 
@@ -891,6 +897,7 @@ padding-top: 1em;
   color: #2D2D2D;
 }
 
+
 .tags_boomerang{
   background-color: #343541;
   /* border: 2px solid #5D5D67; */
@@ -972,6 +979,16 @@ font-size: 6vw;
   font-size: -webkit-xxx-large;
 }
 
+.title_marcado_koru{
+  background-color: rgba(151, 71, 255, 0.8);
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  line-height: 0.10;
+  padding-right: 0.4em;
+  padding-bottom: 0.6em;
+  font-size: -webkit-xxx-large;
+}
 
 .hero h1{
   font-weight: 900;
@@ -1102,6 +1119,14 @@ width: 60%;
   margin-top: 0 !important;
 }
 
+
+.paragrafo_intro_sizes{
+  margin-top: 0;
+  font-size: 20px;
+  padding-top: 2em;
+  color: #595959;
+}
+
 .projetos_foto_circulo{
   margin-top: 3em;
   margin-left: 30px;
@@ -1207,6 +1232,17 @@ width: 60%;
   width: 95%;
   margin-top: 2em;
 }
+
+
+.content_contactoss{
+  padding-left: 30px;
+  /* padding-right: 11px; */
+  font-size: 19px;
+  padding-bottom: 1em; 
+  width: 95%;
+  margin-top: 0.5em;
+}
+
 
 .scroll_icon{
   position: absolute;
@@ -1612,7 +1648,7 @@ margin-bottom: 0.25rem;
 .space_contacto{
   background-image: url("./assets/textura-blanca\ 2.jpg");
   border-top: 3px solid #5331B2;
-  padding-top: 4em;
+  /* padding-top: 4em; */
 }
 
 .icons_contactos{
@@ -1695,6 +1731,14 @@ height: auto;
 
 @media only screen and (max-width: 450px) {
 
+  .title_marcado_koru{
+    font-size: xx-large;
+  }
+  
+  .title_marcado_boomerang{
+    font-size: xx-large;
+  }
+
   .hero h1{
     font-size: 50px;
 }
@@ -1759,7 +1803,7 @@ width: 280px !important ;
 }
 
 .project-card{
-  width: 300px !important;
+  width: 330px !important;
 }
 
 .portfolio {
@@ -1773,6 +1817,10 @@ width: 280px !important ;
 }
 
 @media only screen and (max-width: 370px) {
+
+.project-card{
+    width: 300px !important;
+}
 
 .hero p {
   font-size: 2.4vh !important;
@@ -1847,7 +1895,6 @@ margin-left: 0 !important;
   display: none;
 }
 
-
 .header_proj2 h1{
   color: white;
   margin:auto;
@@ -1909,6 +1956,11 @@ margin-left: 0 !important;
   .instagram-container{
     margin-top: 0 !important;
 }
+
+.container_projectsHp{
+  margin-top: 0 !important;
+}
+
   .hero h1 {
     font-size: 70px}
 
@@ -2092,6 +2144,11 @@ margin-left: 0 !important;
   padding: 1em;
 }
 
+.container_projectsHp{
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
 
 .instagram-info,
 .other-info {
@@ -2248,6 +2305,12 @@ right: -15px;
   padding-left: 80px;
   padding-right: 80px;
 }
+
+.container_projectsHp {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
 }
 
 @media (min-width: 768px) {
@@ -2284,7 +2347,12 @@ right: -15px;
 
   .instagram-container{
       margin-top: 0 !important;
-  }}
+  }
+
+  .container_projectsHp{
+    margin-top: 0 !important;
+  }
+}
 
 
 .space_div{

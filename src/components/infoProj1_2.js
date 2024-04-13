@@ -7,11 +7,13 @@ const infoProj1_2 = ()=> {
 
 <div className="info_p22222">
 
-<div className="title-with-marker">
-<p className="big_title"><i>Benchmarking.</i></p></div>
+{/* <div className="title-with-marker">
+<p className="big_title"><i>Benchmarking.</i></p></div> */}
 <div className="instagram-container">
 
 <div className="instagram-info"> 
+
+<p className="fontsize_tags"><span className="title_marcado_koru"><i>Benchmarking.</i></span></p>
 
 <p className="paragrafo_origens">Para o levantamento de requisitos necessários para o desenho da nossa aplicação, uma das fontes de informação foi a pesquisa de mercado, para compreender quais são as funcionalidades priorizadas em soluções já existentes de outras empresas ou iniciativas que oferecem algo semelhante ao que era idealizado para este projeto.
 <br></br><br></br>

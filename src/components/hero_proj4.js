@@ -1,5 +1,5 @@
 import React from "react";
-import setaBack from '../assets/Arrow 1 (1).png'
+import setaBack from '../assets/Arrow 1 (1).svg'
 import { useNavigate } from "react-router-dom";
 import "../App.css";
 

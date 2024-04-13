@@ -34,16 +34,18 @@ const Origens = ()=> {
       </div>
 
     </div>
-                 <p className="introduction">Sobre mim</p>
+                 {/* <p className="introduction">Sobre mim</p>
 
       <div className="title-with-marker_3">
     <h1 className="big_title">Origens.</h1>
-    </div>  
+    </div>   */}
       <div className="instagram-container">
 
       <div className="instagram-info"> 
    
+      <p className="paragrafo_intro_sizes">Sobre mim</p>
 
+<p className="fontsize_tags"><span className="title_marcado_koru">Origens.</span></p>
         <p className="paragrafo_origens">Devido ao facto de viver numa zona costeira sempre fui muito ligado ao mar, simultaneamente pratiquei desporto, tendo sido atleta federado em natação
 pura. Mais tarde, fiz curso elementar de juízes de natação pura, natação adaptada e águas abertas.
 
