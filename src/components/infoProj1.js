@@ -7,11 +7,13 @@ const InfoProj1 = ()=> {
 
 <div className="info_p22222">
 
-<div className="title-with-marker">
-<p className="big_title">Contextualização.</p></div>
+{/* <div className="title-with-marker">
+<p className="big_title">Contextualização.</p></div> */}
 <div className="instagram-container">
 
 <div className="instagram-info"> 
+
+<p className="fontsize_tags"><span className="title_marcado_koru">Overview.</span></p>
 
 <p className="paragrafo_origens">Este projeto visa desenvolver uma plataforma de votação desenhada principalmente para concursos onde os organizadores pretendem adicionar uma componente de interatividade para aumentar a participação e investimento em, por exemplo, projetos ou ideias.
 <br></br><br></br>

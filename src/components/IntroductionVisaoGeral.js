@@ -9,14 +9,20 @@ const Introduction = ()=> {
 
     return(       <div id="intro" className="into_divvv">
           
-   
-      <p className="introduction">Introdução</p>
+{/*    
+      <p className="introduction">Introdução</p> */}
 
-         <div className="title-with-marker_2">
-      <p className="big_title">Visão Geral.</p></div>
+         {/* <div className="title-with-marker_2">
+      <p className="big_title">Visão Geral.</p></div> */}
+
       <div className="instagram-container">
          
       <div className="instagram-info"> 
+
+      <p className="paragrafo_intro_sizes">Introdução</p>
+
+<p className="fontsize_tags"><span className="title_marcado_koru">Visão Geral.</span></p>
+
 
         <p className="paragrafo_origens">O meu portefólio reflete a minha capacidade de unir a criatividade com as soluções técnicas necessárias para realizar os desafios que me são propostos.<br></br>
 <br></br>Ao criar os meus designs, presto atenção a cada detalhe, desde a escolha de paletas de cores e tipografia até a seleção de ícones e ilustrações. Meu objetivo é sempre alcançar um equilíbrio entre estética e funcionalidade, garantindo que cada elemento no design tenha um propósito claro e atenda às necessidades dos utilizadores.

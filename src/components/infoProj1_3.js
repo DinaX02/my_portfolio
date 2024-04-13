@@ -8,11 +8,13 @@ const infoProj1_3 = ()=> {
 
 <div className="info_p22222">
 
-<div className="title-with-marker">
-<p className="big_title">Persona.</p></div>
+{/* <div className="title-with-marker">
+<p className="big_title">Persona.</p></div> */}
 <div className="instagram-container">
 
 <div className="instagram-info"> 
+
+<p className="fontsize_tags"><span className="title_marcado_koru">Persona.</span></p>
 
 <p className="paragrafo_origens">Como público-alvo da aplicação inserem-se os participantes dos eventos, que poderão usar a plataforma para submissão de projetos ou para votação dos seus projetos preferidos.
 <br></br><br></br>

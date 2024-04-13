@@ -1,7 +1,7 @@
 import React from "react";
 import coverBoomerang from "../assets/img_cover_boomerang.png";
 import "../App.css";
-import setaBack from '../assets/Arrow 1 (1).png'
+import setaBack from '../assets/Arrow 1 (1).svg'
 import { useNavigate } from "react-router-dom";
 // import { motion } from "framer-motion";
 

@@ -13,18 +13,21 @@ const Contactos = ()=> {
         Como me contactar{" "}
       </p> */}
 
-<div className="title-with-marker">
+{/* <div className="title-with-marker">
     
 
-<h1 id="contactos" className="big_title">Contactos.</h1>
-</div>
+<h1  className="big_title">Contactos.</h1>
+</div> */}
 
+<div className="container_projectsHp">
 
+<p id="contactos" className="fontsize_tags"><span className="title_marcado_koru">Contactos.</span></p>
 
-<div className="content_skills">
-  <div>
-    <p>Vamos criar juntos algo incrível! Entre em contacto :)</p>
-  </div>
+<p style={{fontSize: "18px"}}>Vamos criar juntos algo incrível! Entre em contacto :)</p>
+</div>  
+
+<div className="content_contactoss">
+
   <div className="conct_geral_text_img">
     <div className="text_contaaa">
 

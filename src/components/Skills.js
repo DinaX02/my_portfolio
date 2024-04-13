@@ -30,7 +30,7 @@ const Skills = () => {
         <p style={numeroStyle}>02</p>
       </div>
       </div>
-
+{/* 
       <p  id="skills" className="introduction">
         A nível Técnico{" "}
       </p>
@@ -38,9 +38,12 @@ const Skills = () => {
     
 
     <h1 className="big_title">Skills.</h1>
-    </div>
+    </div> */}
     <div className="instagram-container">
     <div className="instagram-info"> 
+    <p className="paragrafo_intro_sizes">A nível Técnico</p>
+
+<p className="fontsize_tags"><span className="title_marcado_koru">Skills.</span></p>
    
      <p style={{marginTop:40, fontSize:19}}>Através do  <span className="cor_nome_2">Front-end</span> e  <span className="cor_nome_2">UX/UI Design</span>, sou capaz de criar experiências envolventes e únicas no utilizador , combinando o design com o conhecimento técnico para o desenvolvimento de soluções web que cativam e satisfazem os seus utilizadores.
      </p>

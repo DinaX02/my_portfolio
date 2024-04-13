@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import ProjectKoruImg from "../assets/koru_project_img.png";
 import ZetflickstKoruImg from "../assets/zetflicks_proj_3.png";
-import BoomerangCapa from "../assets/capa_boomerang.png"
+import BoomerangCapa from "../assets/capa_boomerang_pequena.png"
 import { Link } from "react-router-dom";
 import "../App.css";
 import ImgDinisProjetos from "../assets/projetos_page.png"
