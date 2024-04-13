@@ -82,6 +82,18 @@ max-width: 600px;
   border-bottom: 5px solid #5331B2;
 }
 
+.Navbar_projectBoomerang{
+  height: 90px;
+  display: flex;
+  overflow: hidden !important;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 2em;
+  margin-left: 20px;
+  position: relative;
+  border-bottom: 5px solid #00C17C;
+}
+
 .title-with-marker_4{
 padding-left: 80px;
 display: inline-block;
@@ -173,6 +185,14 @@ a {
 }
 
 
+.Navbar_projectBoomerang > .nav-logo {
+  font-weight: 700;
+  font-size: 21px;
+  /*margin: 15px;*/
+  color: #2e2e2e;
+}
+
+
 
 .Navbar > .nav-items > a {
   color: #2e2e2e;
@@ -202,6 +222,15 @@ a {
   opacity: 0.9;
 }
 
+.Navbar_projectBoomerang > .nav-items > a {
+  color: #2e2e2e;
+  font-size: 16px;
+  text-decoration: none;
+  margin: 15px;
+  position: relative;
+  opacity: 0.9;
+}
+
 
 
 .Navbar > .nav-items > a:hover {
@@ -213,6 +242,10 @@ a {
 }
 
 .Navbar_project > .nav-items > a:hover {
+  opacity: 1;
+}
+
+.Navbar_projectBoomerang > .nav-items > a:hover {
   opacity: 1;
 }
 
@@ -251,6 +284,17 @@ a {
   transition: all 0.45s;
 }
 
+.Navbar_projectBoomerang > .nav-items > a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #2e2e2e;
+  transition: all 0.45s;
+}
+
 
 .ola {
   margin-right: 2em;
@@ -268,6 +312,10 @@ a {
   width: 100%;
 }
 
+.Navbar_projectBoomerang > .nav-items > a:hover::before {
+  width: 100%;
+}
+
 
 
 .Navbar > .nav-toggle {
@@ -279,6 +327,10 @@ a {
 }
 
 .Navbar_project > .nav-toggle {
+  display: none;
+}
+
+.Navbar_projectBoomerang > .nav-toggle {
   display: none;
 }
 
@@ -347,6 +399,11 @@ justify-content: flex-start;
     justify-content: space-between;
   }
 
+  .Navbar_projectBoomerang {
+    position: static;
+    justify-content: space-between;
+  }
+
 
 .linhasss_roxos{
   display: flex;
@@ -410,6 +467,25 @@ justify-content: flex-start;
     padding-top: 3em;
   }
 
+  .Navbar_projectBoomerang > .nav-items {
+    background-image: url("./assets/textura-blanca\ 2.jpg");
+    border-top: 5px solid  #00C17C;
+    overflow: hidden !important;
+    position: absolute;
+    top: 90px;
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    left: 0;
+    width: 100%;
+    /*text-align: right; para --> menu direita*/
+    height: calc(100vh - 90px);
+    transform: translateX(-100%);
+    transition: all 0.45s;
+    z-index: 5;
+    padding-top: 3em;
+  }
+
   .Navbar > .nav-items > a {
     margin-left: 36px;
   }
@@ -419,6 +495,10 @@ justify-content: flex-start;
   }
   
   .Navbar_project > .nav-items > a {
+    margin-left: 36px;
+  }
+
+  .Navbar_projectBoomerang > .nav-items > a {
     margin-left: 36px;
   }
 
@@ -435,6 +515,10 @@ justify-content: flex-start;
     background: transparent;
   }
 
+  .Navbar_projectBoomerang > .nav-items > a::before {
+    background: transparent;
+  }
+
   .Navbar > .nav-items.open {
     transform: translateX(0);
   }
@@ -444,6 +528,10 @@ justify-content: flex-start;
   }
 
   .Navbar_project > .nav-items.open {
+    transform: translateX(0);
+  }
+
+  .Navbar_projectBoomerang > .nav-items.open {
     transform: translateX(0);
   }
 
@@ -468,6 +556,16 @@ justify-content: flex-start;
   }
 
   .Navbar_project > .nav-toggle {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 0.4em;
+  }
+
+  .Navbar_projectBoomerang > .nav-toggle {
     display: flex;
     width: 50px;
     height: 50px;
@@ -992,6 +1090,17 @@ font-size: 6vw;
   padding-right: 0.4em;
   padding-bottom: 0.6em;
   font-size: -webkit-xxx-large;
+}
+
+.title_marcado_skills{
+  background-color: rgba(151, 71, 255, 0.8);
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  line-height: 0.10;
+  padding-right: 0.4em;
+  padding-bottom: 0.6em;
+  font-size: 19px;
 }
 
 .hero h1{
@@ -1738,7 +1847,7 @@ height: auto;
   margin-top: 3em;
   width: 80%;
   height: auto;
-  border-radius: 30px;
+  border-radius: 20px;
 }
 
 
@@ -1975,6 +2084,7 @@ margin-left: 0 !important;
 
 .img_diagram{
   width: 95%;
+  border-radius: 10px;
 }
 
   .instagram-container{
