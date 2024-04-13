@@ -15,7 +15,7 @@ const InfoProj4 = ()=> {
 
 <div className="instagram-info"> 
 <p className="fontsize_tags"><span className="title_marcado_boomerang">Overview.</span></p>
-<p className="paragrafo_origens">Projeto desenvolvido em contexto CBL no primeiro ano do mestrado em Comunicação e Tecnologias Web.
+<p className="paragrafo_origens">Projeto desenvolvido em contexto CBL no primeiro ano de mestrado em Comunicação e Tecnologias Web na Universidade de Aveiro.
 <br></br><br></br>
 A Boomerang é uma plataforma de aluguer de roupa peer-to-peer, que tem como missão central a redução do desperdício têxtil, contribuindo diretamente para a diminuição do impacto ambiental.
 <br></br><br></br>

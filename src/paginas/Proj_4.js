@@ -4,8 +4,9 @@ import "../App.css";
 import NavbarProject from "../components/Navbar_project.js";
 import ContentP4 from "../components/content_proj4.js";
 import InfoProj4 from "../components/infoProj4.js";
-import Contactos from "../components/Contactos.js";
-// import InfoProj32 from "../components/infoProj3_2.js";
+import ContactosBoomerang from "../components/ContactosBoomerang.js";
+import InfoProj42 from "../components/infoProj4_2.js";
+import InfoProj43 from "../components/infoProj4_3.js";
 const Project_4 = ()=> {
 
 
@@ -15,8 +16,9 @@ const Project_4 = ()=> {
            {/* <HeroProject4/> */}
            <ContentP4/>
             <InfoProj4/>
-          {/* <InfoProj32/> */}
-           <Contactos/>
+          <InfoProj42/>
+          <InfoProj43/>
+           <ContactosBoomerang/>
    
         </div>
     )

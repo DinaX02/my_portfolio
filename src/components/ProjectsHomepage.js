@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectKoruImg from "../assets/koru_project_img.png";
-import ZetflickstKoruImg from "../assets/zetflicks_proj_3.png";
+// import ZetflickstKoruImg from "../assets/zetflicks_proj_3.png";
 import BoomerangCapa from "../assets/capa_boomerang_pequena.png"
 import { Link } from "react-router-dom";
 import "../App.css";
@@ -81,16 +81,16 @@ const ProjectsHomePage = () => {
 </div>
 
 
-
+ {/*
 <div className="project-card">
   <img src={ZetflickstKoruImg} alt="zetflicks" />
   <div className="project-info">
     <h2>Zetflicks</h2>
-   {/*<p>{project.description}</p>*/} 
+  <p>{project.description}</p>
     <span>UI Design e Front-end</span>
     <Link to={"/project2"}>Ver detalhes</Link>
   </div>
-</div>
+</div>*/} 
 
 
 
@@ -99,7 +99,7 @@ const ProjectsHomePage = () => {
   <div className="project-info">
     <h2>Boomerang</h2>
    {/*<p>{project.description}</p>*/} 
-    <span>Design, Branding e Front-end</span>
+    <span>UX/UI Design, Branding e Front-end</span>
     <Link to={"/project4"}>Ver detalhes</Link>
   </div>
 </div>
