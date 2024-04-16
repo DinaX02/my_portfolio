@@ -1,10 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../App.css";
 import DiagramDesignProcess from "../assets/design_process_diagram.png";
 import styled from "styled-components";
 
 const InfoProj4_3 = () => {
   const [viewImage, setViewImage] = useState(null);
+
+  useEffect(() => {
+    if (viewImage) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [viewImage]);
 
   const openImageView = (imageUrl) => {
     setViewImage(imageUrl);
@@ -24,15 +32,23 @@ const InfoProj4_3 = () => {
         </ImageViewModal>
       )}
       <div className="containerDesignProcess">
-        <p className="fontsize_tags"><span className="title_marcado_boomerang">Design Process.</span></p>
-        <p className="paragrafo_design_process">Para o desenvolvimento deste projeto, foi utilizado o processo de design thinking, de modo a ajudar a descobrir o processo de design centrado no utilizador (UCD) dando prioridade às necessidades e perspectivas dos utilizadores através das fases de empatia, definição, ideação, protótipos e por último os testes desses protótipos.</p>
+        <p className="fontsize_tags">
+          <span className="title_marcado_boomerang">Design Process.</span>
+        </p>
+        <p className="paragrafo_design_process">
+          Para o desenvolvimento deste projeto, foi utilizado o processo de
+          design thinking, de modo a ajudar a descobrir o processo de design
+          centrado no utilizador (UCD) dando prioridade às necessidades e
+          perspectivas dos utilizadores através das fases de empatia,
+          definição, ideação, protótipos e por último os testes desses
+          protótipos.
+        </p>
         <ImageContainer>
           <img
             className="img_diagram"
             src={DiagramDesignProcess}
             alt="Design Process Diagram"
             onClick={() => openImageView(DiagramDesignProcess)}
-            
           />
         </ImageContainer>
       </div>
@@ -58,7 +74,7 @@ const ImageView = styled.div`
   height: auto;
   overflow: hidden;
   border-radius: 15px;
-  background-color: #00C17C;
+  background-color: #00c17c;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 
   img {
