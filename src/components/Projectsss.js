@@ -65,7 +65,8 @@ const ProjectssALONEE = () => {
           <div className="project-info">
             <h2>Koru Mobile App</h2>
            {/*<p>{project.description}</p>*/} 
-            <span>UX/UI Design</span>
+           <div style={{display: "flex", flexDirection:"row"}}>
+           <p className="tags_projetos">UX/UI Design</p><p className="tags_projetos">Branding</p></div>
             <Link to={"/project1"}>Ver detalhes</Link>
           </div>
         </div>
@@ -98,8 +99,8 @@ const ProjectssALONEE = () => {
           <img src={BoomerangCapa} alt="Boomerang" />
           <div className="project-info">
             <h2>Boomerang</h2>
-           
-            <span>UX/UI Design, Branding e Front-end</span>
+           <div style={{display: "flex", flexDirection:"row"}}>
+           <p className="tags_projetos">UX/UI Design</p><p className="tags_projetos">Branding</p><p className="tags_projetos">Front-end</p></div>
             <Link to={"/project4"}>Ver detalhes</Link>
           </div>
         </div>  

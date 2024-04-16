@@ -42,6 +42,22 @@ align-items: center;
 max-width: 600px;
 }
 
+.btnInstallManual{
+
+  background-color: #343541;
+  font-family: 'Poppins', sans-serif;
+  color: #00C17C;
+  border-radius: 10px;
+  padding: 1em;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btnInstallManual:hover {
+  background-color: #59595c;
+}
+
 /* //////////// NavBar //////////// */
 .Navbar {
   /* background-image: url("./assets/textura-blanca\ 2.png"); */
@@ -1014,6 +1030,7 @@ padding-top: 1em;
   margin-bottom: 0.7em;
 }
 
+
 .tags_boomerang_big{
   background-color: #343541;
   /* border: 2px solid #5D5D67; */
@@ -1850,8 +1867,27 @@ height: auto;
   border-radius: 20px;
 }
 
+.tags_projetos{
+  background-color: transparent;
+  color: #2e2e2e;
+  border: 2px solid #a0aca8;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  padding-left: 0.7em;
+  padding-right: 0.7em;
+  border-radius: 25px;
+  max-width: 100px;
+  margin-right: 0.7em;
+  font-size: 13px;
+  margin-bottom: 0.3em;
+}
 
 @media only screen and (max-width: 450px) {
+
+
+  .tags_projetos{
+font-size: 12px;
+  }
 
   .title_marcado_koru{
     font-size: xx-large;
@@ -2678,7 +2714,7 @@ right: -15px;
   overflow: hidden;
   position: relative;
   width: 360px;
-  height: 400px;
+  height: 450px;
   margin-bottom: 30px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
@@ -2706,6 +2742,7 @@ right: -15px;
 }
 
 .project-info h2 {
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
