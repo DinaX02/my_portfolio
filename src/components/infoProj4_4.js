@@ -145,7 +145,7 @@ const InfoProj4_4 = () => {
 
         <p>Para ver mais detalhadamente: </p>
         <div style={{display:"flex", alignItems:"center", justifyContent:"center"}}>
-        <button className="btnInstallManual" onClick={downloadPDF}>Manual de Design do Projeto <img style={{marginLeft: "10px"}} src={DownloadIcon}/></button></div>
+        <button className="btnInstallManual" onClick={downloadPDF}>Manual de Design do Projeto <img style={{marginLeft: "10px"}} src={DownloadIcon} alt="icon download manual de Design"/></button></div>
       </div>
     </div>
   );
