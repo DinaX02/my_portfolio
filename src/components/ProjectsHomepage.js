@@ -76,7 +76,7 @@ const ProjectsHomePage = () => {
     <h2>Koru Mobile App</h2>
    {/*<p>{project.description}</p>*/} 
    <div style={{display: "flex", flexDirection:"row"}}>
-           <p className="tags_projetos">UX/UI Design</p><p className="tags_projetos">Branding</p></div>
+           <p className="tags_projetos">UX/UI Design</p><p className="tags_projetos">Branding</p><p className="tags_projetos">Front-end</p></div>
     <Link to={"/project1"}>Ver detalhes</Link>
   </div>
 </div>

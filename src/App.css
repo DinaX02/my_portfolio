@@ -830,6 +830,13 @@ padding-top: 1em;
   min-height: 100vh;
 }
 
+.info_p1_koru{
+  background-image: url("./assets/textura_fixed.jpg");
+  padding-top: 3em;
+  border-top: 3px solid #9747FF;
+  min-height: 100vh;
+}
+
 .info_p22222{
   background-image: url("./assets/textura_fixed.jpg");
   padding-top: 3em;
@@ -1031,6 +1038,20 @@ padding-top: 1em;
 }
 
 
+.tags_koru{
+  background-color:  #343541;
+  color:  rgba(189, 139, 255, 0.9);
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  padding-left: 0.7em;
+  padding-right: 0.7em;
+  border-radius: 25px;
+  max-width: 150px;
+  margin-right: 0.7em;
+  margin-bottom: 0.7em;
+}
+
+
 .tags_boomerang_big{
   background-color: #343541;
   /* border: 2px solid #5D5D67; */
@@ -1045,6 +1066,20 @@ padding-top: 1em;
   margin-bottom: 0.7em;
 }
 
+.tags_koru_big{
+  background-color: #343541;
+  /* border: 2px solid #5D5D67; */
+  color:  rgba(189, 139, 255, 0.9);
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  padding-left: 0.7em;
+  padding-right: 0.7em;
+  border-radius: 25px;
+  max-width: 220px;
+  margin-right: 0.7em;
+  margin-bottom: 0.7em;
+}
+
 .title_boomerang_hero{
   font-size: 7vw;
   color: #00C17C;
@@ -1054,25 +1089,47 @@ padding-top: 1em;
   margin-top: 0 !important;
 }
 
+.title_koru_hero{
+  font-size: 7vw;
+  color: rgba(151, 71, 255, 0.8);
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+}
+
 @media (max-width: 1050px) {
   
   .title_boomerang_hero{
 font-size: 6vw;
-  }}
+  }
+
+  .title_koru_hero{
+    font-size: 6vw;
+      }
+}
 
 
   @media (max-width: 950px) {
   
     .title_boomerang_hero{
   font-size: 5vw;
-    }}
+    }
+  
+    .title_koru_hero{
+      font-size: 5vw;
+        }
+  }
 
 
     @media (max-width: 850px) {
   
       .title_boomerang_hero{
     font-size: 4.5vw;
-      }}
+      }
+    
+      .title_koru_hero{
+        font-size: 4.5vw;
+          }
+    }
   
 
 
@@ -1085,6 +1142,17 @@ font-size: 6vw;
   padding-right: 0.4em;
   padding-bottom: 0.6em;
 }
+
+.text_marcado_koru{
+  background-color: rgba(151, 71, 255, 0.8);
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  line-height: 0.10;
+  padding-right: 0.4em;
+  padding-bottom: 0.6em;
+}
+
 
 
 .title_marcado_boomerang{
@@ -1882,8 +1950,16 @@ height: auto;
   margin-bottom: 0.3em;
 }
 
+.paragrahseemore{
+  min-width: 90%;
+  text-align: center;
+}
+
 @media only screen and (max-width: 450px) {
 
+  .img_diagram{
+margin-top: 1em;
+  }
 
   .tags_projetos{
 font-size: 12px;
@@ -1998,6 +2074,14 @@ font-size: 50px !important;
 @media only screen and (max-width: 550px) {
 
 .paragrafo_origens{
+  margin-top: 40px !important;
+}
+
+.paragrafo_missonBrand{
+  margin-top: 40px !important;
+}
+
+.paragrafo_missonBrand_Koru{
   margin-top: 40px !important;
 }
 
@@ -2364,6 +2448,23 @@ margin-left: 0 !important;
  margin-top:70px; 
  font-size: 19px;
  width: 95%;
+}
+
+.paragrafo_missonBrand{
+  margin-top:70px; 
+  font-size: 19px;
+  font-weight: 500;
+  width: 95%;
+  color: #00C17C;
+}
+
+
+.paragrafo_missonBrand_Koru{
+  margin-top:70px; 
+  font-size: 19px;
+  font-weight: 500;
+  width: 95%;
+  color: rgba(151, 71, 255, 0.8);
 }
 
 .links_koruu{

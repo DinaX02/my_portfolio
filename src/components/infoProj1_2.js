@@ -13,11 +13,11 @@ const infoProj1_2 = ()=> {
 
 <div className="instagram-info"> 
 
-<p className="fontsize_tags"><span className="title_marcado_koru"><i>Benchmarking.</i></span></p>
+<p className="fontsize_tags"><span className="title_marcado_koru">Benchmarking.</span></p>
 
-<p className="paragrafo_origens">Para o levantamento de requisitos necessários para o desenho da nossa aplicação, uma das fontes de informação foi a pesquisa de mercado, para compreender quais são as funcionalidades priorizadas em soluções já existentes de outras empresas ou iniciativas que oferecem algo semelhante ao que era idealizado para este projeto.
+<p className="paragrafo_origens">Para o levantamento de requisitos necessários para o desenho desta aplicação, uma das fontes de informação foi a pesquisa de mercado, para compreender quais são as funcionalidades priorizadas em soluções já existentes de outras empresas ou iniciativas que oferecem algo semelhante ao que era idealizado para este projeto.
 <br></br><br></br>
-Para isto estudamos empresas de organização de eventos com investimento em moedas, aplicações que conseguem ter soluções móveis e Web e por fim, algumas aplicações de mercado de valores e gestão de carteiras de criptomoedas.
+Para isto foram estudadas empresas de organização de eventos com investimento em moedas, aplicações que conseguem ter soluções móveis e Web e por fim, algumas aplicações de mercado de valores e gestão de carteiras de criptomoedas.
 </p>
 
 </div>

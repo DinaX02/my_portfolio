@@ -8,8 +8,6 @@ const infoProj1_3 = ()=> {
 
 <div className="info_p22222">
 
-{/* <div className="title-with-marker">
-<p className="big_title">Persona.</p></div> */}
 <div className="instagram-container">
 
 <div className="instagram-info"> 
@@ -32,6 +30,9 @@ Entendemos que este tipo de utilizador terá como principais objetivos na aplica
 </div>  
 
 </div>
+
+
+
 
     )
 }   

@@ -143,7 +143,7 @@ const InfoProj4_4 = () => {
           )}
         </ImageContainer>
 
-        <p>Para ver mais detalhadamente: </p>
+        <p className="paragrahseemore">Para ver mais detalhadamente: </p>
         <div style={{display:"flex", alignItems:"center", justifyContent:"center"}}>
         <button className="btnInstallManual" onClick={downloadPDF}>Manual de Design do Projeto <img style={{marginLeft: "10px"}} src={DownloadIcon} alt="icon download manual de Design"/></button></div>
       </div>
@@ -187,7 +187,7 @@ const ImageView = styled.div`
   max-width: 90%;
   height: auto;
   overflow: hidden;
-  border-radius: 15px;
+  border-radius: 8px;
   background-color: #00c17c;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 

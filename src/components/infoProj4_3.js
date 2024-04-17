@@ -73,7 +73,7 @@ const ImageView = styled.div`
   max-width: 90%;
   height: auto;
   overflow: hidden;
-  border-radius: 15px;
+  border-radius: 8px;
   background-color: #00c17c;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 

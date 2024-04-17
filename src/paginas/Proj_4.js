@@ -8,6 +8,7 @@ import ContactosBoomerang from "../components/ContactosBoomerang.js";
 import InfoProj42 from "../components/infoProj4_2.js";
 import InfoProj43 from "../components/infoProj4_3.js";
 import InfoProj44 from "../components/infoProj4_4.js";
+import InfoProj45 from "../components/infoProj4_5.js";
 const Project_4 = ()=> {
 
 
@@ -20,6 +21,7 @@ const Project_4 = ()=> {
           <InfoProj42/>
           <InfoProj43/>
           <InfoProj44/>
+          <InfoProj45/>
            <ContactosBoomerang/>
    
         </div>
