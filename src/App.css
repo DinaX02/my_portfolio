@@ -853,6 +853,15 @@ padding-top: 1em;
   padding-bottom: 2em;
 }
 
+.info_wireframes_p1{
+  background-image: url("./assets/textura_fixed.jpg");
+  padding-top: 3em;
+  border-top: 3px solid #9747FF;
+  /* min-height: 100vh; */
+  padding-bottom: 2em;
+}
+
+
 
 
 .timeline-container {

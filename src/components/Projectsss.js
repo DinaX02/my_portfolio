@@ -4,8 +4,8 @@ import ProjectKoruImg from "../assets/koru_project_img.png";
 import BoomerangCapa from "../assets/capa_boomerang_pequena.png"
 import { Link } from "react-router-dom";
 import "../App.css";
-import ImgDinisProjetos from "../assets/projetos_page.png"
-import ImgDinisProjetos2 from "../assets/projetos_page_2.png"
+import ImgDinisProjetos from "../assets/projetos_page_svg.svg"
+import ImgDinisProjetos2 from "../assets/projetos_page_2_v2.svg"
 
 const ProjectssALONEE = () => {
 
