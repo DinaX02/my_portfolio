@@ -77,7 +77,7 @@ const ProjectsHomePage = () => {
    {/*<p>{project.description}</p>*/} 
    <div style={{display: "flex", flexDirection:"row"}}>
            <p className="tags_projetos">UX/UI Design</p><p className="tags_projetos">Branding</p><p className="tags_projetos">Front-end</p></div>
-    <Link to={"/project1"}>Ver detalhes</Link>
+    <Link to={"/project-Koru"}>Ver detalhes</Link>
   </div>
 </div>
 
@@ -102,9 +102,20 @@ const ProjectsHomePage = () => {
    {/*<p>{project.description}</p>*/} 
    <div style={{display: "flex", flexDirection:"row"}}>
            <p className="tags_projetos">UX/UI Design</p><p className="tags_projetos">Branding</p><p className="tags_projetos">Front-end</p></div>
-    <Link to={"/project4"}>Ver detalhes</Link>
+    <Link to={"/project-Boomerang"}>Ver detalhes</Link>
   </div>
 </div>
+
+<div className="project-card">
+          <img src={BoomerangCapa} alt="Boomerang" />
+          <div className="project-info">
+            <h2>ToCare</h2>
+           <div style={{display: "flex", flexDirection:"row"}}>
+           <p className="tags_projetos">Case Study</p><p className="tags_projetos">UX/UI Design</p></div>
+            <Link to={"/project-ToCare"}>Ver detalhes</Link>
+          </div>
+        </div>
+
 </section>
 
     </div>
