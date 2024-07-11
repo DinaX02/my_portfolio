@@ -5,7 +5,7 @@ import EntrarCriarContaImage from "../assets/Entrar_criarconta.png"
 import HomepageWireframes from "../assets/homepage_wireframess.png";
 import PesquisaWireframes from "../assets/pesquisa_wireframess.png";
 import ArigoeChatImage from "../assets/artigo_wireframess.png";
-import AlugarArtigoImage from "../assets/rent_wireframess.png";
+import AlugarArtigoImage from "../assets/rent_wireframess_2.png";
 import PublicarImage from "../assets/publicar_wireframess.png";
 import CaixadeEntradeImage from "../assets/caixa de entrada_wireframess.png";
 import PerfilImage from "../assets/perfil_wireframess.png";
