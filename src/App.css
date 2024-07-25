@@ -2132,6 +2132,7 @@ height: auto;
   width: 80%;
   height: auto;
   border-radius: 20px;
+  margin-bottom: 2em;
 }
 
 .tags_projetos{
@@ -2606,7 +2607,9 @@ margin-left: 0 !important;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 1em;
+  padding-bottom: 1em;
+  padding-right: 1em;
+  padding-left: 1em;
 }
 
 .container_projectsHp{

@@ -8,7 +8,7 @@ import ContactosToCare from "../components/ContactosToCare.js";
 import InfoProj42 from "../components/infoProj4_2.js";
 import InfoProj5DesignProcess from "../components/infoProj5_DesignProcess.js";
 // import InfoProj44 from "../components/infoProj4_4.js";
-import InfoProj45 from "../components/infoProj4_5.js";
+import InfoProj5Wireframes from "../components/infoProj5_Wireframes.js";
 const Project5 = ()=> {
 
 
@@ -21,7 +21,7 @@ const Project5 = ()=> {
           <InfoProj42/>
           <InfoProj5DesignProcess/>
           {/* <InfoProj44/> */}
-          <InfoProj45/>
+          <InfoProj5Wireframes/>
            <ContactosToCare/>
    
         </div>
