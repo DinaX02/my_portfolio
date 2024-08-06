@@ -932,7 +932,7 @@ padding-top: 1em;
 
 .info_p5{
   background-image: url("./assets/textura_fixed.jpg");
-  padding-top: 3em;
+  padding-top: 2.3em;
   border-top: 3px solid #0097B2;
   min-height: 100vh;
 }
@@ -2132,6 +2132,7 @@ height: auto;
   width: 80%;
   height: auto;
   border-radius: 20px;
+  margin-bottom: 2em;
 }
 
 .tags_projetos{
@@ -2169,10 +2170,14 @@ font-size: 12px;
   }
   
   .title_marcado_boomerang{
+    line-height: 0.8;
+    padding-bottom: 0.4em;
     font-size: xx-large;
   }
 
   .title_marcado_tocare{
+    line-height: 0.8;
+    padding-bottom: 0.4em;
     font-size: xx-large;
   }
 
@@ -2606,7 +2611,9 @@ margin-left: 0 !important;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 1em;
+  padding-bottom: 1em;
+  padding-right: 1em;
+  padding-left: 1em;
 }
 
 .container_projectsHp{

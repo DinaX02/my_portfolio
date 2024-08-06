@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
 import DiagramDesignProcess from "../assets/design_thinking_grafico_tocare.png";
-import OnBoardingImage from "../assets/onboarding.png";
-import EntrarCriarContaImage from "../assets/Entrar_criarconta.png"
+import BenchmarkingToCare from "../assets/benchmarking.png";
+import HMWToCare from "../assets/HMWtocare.png";
+import PersonaToCare from "../assets/PersonaToCare.png";
+import InsightsToCare from "../assets/Insights.png";
+import UserJourneyMapToCare from "../assets/User Journey Map_tocare.png";
+import UserFlowToCare from "../assets/User Flow_tocare.png";
+import RequisitosToCare from "../assets/requesitos_tocare.png";
+import SolutionToCare from "../assets/solucao_tocare.png";
+import InovationToCare from "../assets/inovacao_tocare.png";
 import styled from "styled-components";
 
 const InfoProj5_DesignProcess = () => {
@@ -57,19 +64,70 @@ const InfoProj5_DesignProcess = () => {
       <div className="containerDesignProcess">
       <p className="fontsize_tags_tocare">
           <span className="title_marcado_tocare">Processo.</span>
-        </p>
+      </p>
       <TabsContainer>
+
           <TabButton
             onClick={() => handleTabClick("designSystem")}
             active={activeTab === "designSystem"}
           >
-            OnBoarding
+            Benchmarking
           </TabButton>
+
           <TabButton
-            onClick={() => handleTabClick("colors")}
-            active={activeTab === "colors"}
+            onClick={() => handleTabClick("persona")}
+            active={activeTab === "persona"}
           >
-            Entrar/ Criar Conta
+            Persona
+          </TabButton>
+
+          <TabButton
+            onClick={() => handleTabClick("hmw")}
+            active={activeTab === "hmw"}
+          >
+            How might we? 
+          </TabButton>
+  
+          <TabButton
+            onClick={() => handleTabClick("insights")}
+            active={activeTab === "insights"}
+          >
+            Insights 
+          </TabButton>
+
+          <TabButton
+            onClick={() => handleTabClick("userjourney")}
+            active={activeTab === "userjourney"}
+          >
+            User Journey Map 
+          </TabButton>
+
+          <TabButton
+            onClick={() => handleTabClick("userflow")}
+            active={activeTab === "userflow"}
+          >
+            User Flow 
+          </TabButton>
+
+          <TabButton
+            onClick={() => handleTabClick("solucao")}
+            active={activeTab === "solucao"}
+          >
+            Solução 
+          </TabButton>
+
+          <TabButton
+            onClick={() => handleTabClick("requisitos")}
+            active={activeTab === "requisitos"}
+          >
+            Requisitos
+          </TabButton>
+
+          <TabButton
+            onClick={() => handleTabClick("inovacao")}
+            active={activeTab === "inovacao"}
+          >
+            Inovação
           </TabButton>
 
         </TabsContainer>
@@ -77,17 +135,73 @@ const InfoProj5_DesignProcess = () => {
           {activeTab === "designSystem" && (
             <img
               className="img_diagram"
-              src={OnBoardingImage}
-              alt="onboarding- wireframes"
-              onClick={() => openImageView(OnBoardingImage)}
+              src={BenchmarkingToCare}
+              alt="benchmarking_tocare"
+              onClick={() => openImageView(BenchmarkingToCare)}
             />
           )}
-          {activeTab === "colors" && (
+          {activeTab === "persona" && (
             <img
               className="img_diagram"
-              src={EntrarCriarContaImage}
-              alt="Criar conta- wireframes"
-              onClick={() => openImageView(EntrarCriarContaImage)}
+              src={PersonaToCare}
+              alt="persona"
+              onClick={() => openImageView(PersonaToCare)}
+            />
+          )}
+          {activeTab === "hmw" && (
+            <img
+              className="img_diagram"
+              src={HMWToCare}
+              alt="How might we questions"
+              onClick={() => openImageView(HMWToCare)}
+            />
+          )}
+            {activeTab === "insights" && (
+            <img
+              className="img_diagram"
+              src={InsightsToCare}
+              alt="Insights"
+              onClick={() => openImageView(InsightsToCare)}
+            />
+          )}
+            {activeTab === "userjourney" && (
+            <img
+              className="img_diagram"
+              src={UserJourneyMapToCare}
+              alt="user journey map"
+              onClick={() => openImageView(UserJourneyMapToCare)}
+            />
+          )}
+            {activeTab === "userflow" && (
+            <img
+              className="img_diagram"
+              src={UserFlowToCare}
+              alt="user flow"
+              onClick={() => openImageView(UserFlowToCare)}
+            />
+          )}
+            {activeTab === "solucao" && (
+            <img
+              className="img_diagram"
+              src={SolutionToCare}
+              alt="solucao"
+              onClick={() => openImageView(SolutionToCare)}
+            />
+          )}
+            {activeTab === "requisitos" && (
+            <img
+              className="img_diagram"
+              src={RequisitosToCare}
+              alt="requisitos"
+              onClick={() => openImageView(RequisitosToCare)}
+            />
+          )}
+            {activeTab === "inovacao" && (
+            <img
+              className="img_diagram"
+              src={InovationToCare}
+              alt="inocação"
+              onClick={() => openImageView(InovationToCare)}
             />
           )}
         </ImageContainer>

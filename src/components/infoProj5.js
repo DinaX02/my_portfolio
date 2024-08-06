@@ -15,20 +15,19 @@ const InfoProj5 = ()=> {
 
 <div className="instagram-info"> 
 <p className="fontsize_tags"><span className="title_marcado_tocare">Overview.</span></p>
-<p className="paragrafo_origens">Projeto desenvolvido em contexto CBL no primeiro ano de mestrado em Comunicação e Tecnologias Web na Universidade de Aveiro.
+<p className="paragrafo_origens">Em 2022, 22,9% da população portuguesa correspondia a idosos e em 2100, prevê-se que esse número atinja cerca de 36,28%. Este envelhecimento populacional traz desafios na saúde e no cuidado de idosos, intensificando a necessidade de cuidadores de idosos. {/* Esses profissionais enfrentam dificuldades na coordenação de tarefas e na comunicação com familiares e profissionais de saúde. */}
 <br></br><br></br>
-A Boomerang é uma plataforma de aluguer de roupa peer-to-peer, que tem como missão central a redução do desperdício têxtil, contribuindo diretamente para a diminuição do impacto ambiental.
-<br></br><br></br>
-Ao estender a vida útil das roupas, não só reduz a pegada de carbono, mas também cria oportunidades económicas para os utilizadores, promovendo uma economia circular. Além dos benefícios tangíveis, ao escolher alugar em vez de comprar, os utilizadores tornam-se defensores ativos da sustentabilidade, participando numa comunidade consciente.
-<br></br><br></br>
-Esta aplicação não é apenas uma plataforma, mas uma voz na discussão global sobre moda sustentável. 
+Como resposta ao desafio lançado pela InovaRia e Altice Labs, onde era pretendido a criação de um produto inovador na área da saúde, surge a ToCare uma aplicação móvel desenvolvida para facilitar a gestão e coordenação dos cuidados de idosos.<br></br><br></br>Através de um design centrado no utilizador, a ToCare pretende melhorar a comunicação entre cuidadores, oferecendo acesso a informações médicas atualizadas e organiza tarefas diárias essenciais, como administração de medicamentos e higiene pessoal.
 </p>
 
 <p className="fontsize_tags"><span className="title_marcado_tocare">Tarefas.</span></p>
 
 <div className="tarefas_boomerang">
         <div className="tags_tocare">UX/UI Design</div>
-        </div>     
+        </div>   
+
+        <div style={{paddingRight:20}}><h3> Desafio InovaRia e Altice Labs:</h3><p>Design Thinking aplicado ao Design de Produto Digital</p></div>
+
 </div>
 
 

@@ -1,180 +1,53 @@
-// import React from "react";
-// import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
-// import "react-vertical-timeline-component/style.min.css";
-// import "../App.css";
+import React from "react";
+// import HorizontalTimeline from "react-horizontal-timeline";
+import "../App.css";
 
-
-// const PercursoAcademico = () => {
-//   const linhaStyle = {
-//     marginTop:20,
-//     width: '200px',
-//     height: '5px',
-//     backgroundColor: '#A767FB',
-//     position:"absolute",
-//     right: '0',
-//   };
-
-//   const numeroStyle = {
-//     marginTop:5,
-//     position:"absolute",
-//     right: '15px',
-//     color: '#A767FB',
-//     fontSize: '46px',
-//     fontWeight: 'bold',
-//   };
-
-//   const dates = [
-//     '2023-01-01',
-//     '2023-03-15',
-//     '2023-06-20',
-//     '2023-09-10',
-//     '2023-12-25',
-//   ];
-
-//   const generateRandomTitle = () => {
-//     const titles = [
-//       'Evento 1',
-//       'Evento 2',
-//       'Evento 3',
-//       'Evento 4',
-//       'Evento 5',
-//     ];
-//     const randomIndex = Math.floor(Math.random() * titles.length);
-//     return titles[randomIndex];
-//   };
-
-//   const [selectedDate, setSelectedDate] = React.useState(dates[0]);
-//   const [selectedTitle, setSelectedTitle] = React.useState(generateRandomTitle());
-
-//   const handleDateClick = (dateIndex) => {
-//     setSelectedDate(dates[dateIndex]);
-//     setSelectedTitle(generateRandomTitle());
-//   };
-
-//   return (
-//     <div id="percurso" className="spAce_timelinne">
-
-// <div className="linhasss_roxos">
-//       <div style={linhaStyle}>
-//         <p style={numeroStyle}>02</p>
-//       </div>
-//       </div>
-
-//       <p id="projetos" className="introduction">
-//         A nível Educacional{" "}
-//       </p>
-//       <div className="title-with-marker">
+const PercursoAcademico = () => {
+    const linhaStyle = {
+        marginTop: 20,
+        width: "200px",
+        height: "5px",
+        backgroundColor: "#A767FB",
+        position: "absolute",
+        right: "0",
+      };
     
+      const numeroStyle = {
+        marginTop: 5,
+        position: "absolute",
+        right: "15px",
+        color: "#A767FB",
+        fontSize: "46px",
+        fontWeight: "bold",
+      };
+  return (
+    <div className="skills_div">
+    <div className="linhasss_roxos">
+    <div style={linhaStyle}>
+      <p style={numeroStyle}>02</p>
+    </div>
+  </div>
+    <div className="instagram-container">
+    <div className="instagram-info">
+    <p className="paragrafo_intro_sizes">A nível Educacional</p>
 
-//     <h1 className="big_title">Percurso Académico.</h1>
-//     </div>
+    <p className="fontsize_tags">
+      <span className="title_marcado_koru">Percurso Académico.</span>
+    </p>
+{/* 
+    <p style={{ marginTop: 40, fontSize: 19 }}>
+      Através do{" "}
+      <span className="title_marcado_skills">UX/UI Design</span> e do{" "}
+      <span className="title_marcado_skills">
+        Desenvolvimento Front-end
+      </span>
+      , sou capaz de criar experiências envolventes e únicas no utilizador
+      , combinando o design com o conhecimento técnico para o
+      desenvolvimento de soluções web que cativam e satisfazem os seus
+      utilizadores.
+    </p> */}
+  </div></div></div>
+  );
+};
 
-//     <div className="timeline-container">
-//       <div className="timeline">
-//         {dates.map((date, index) => (
-//           <div
-//             key={date}
-//             className={`date ${selectedDate === date ? 'active' : ''}`}
-//             onClick={() => handleDateClick(index)}
-//           >
-//             {date}
-//           </div>
-//         ))}
-//       </div>
-//       <div className="selected-date">{selectedDate}</div>
-//       <div className="event-title">{selectedTitle}</div>
-//     </div>
-
-
-//     </div>
-//   );
-// };
-
-// export default PercursoAcademico;
-
-// <VerticalTimeline>
-//       <VerticalTimelineElement
-//         className="vertical-timeline-element--work"
-//         contentStyle={{ background:"#5331B2", color: "#fff" }}
-//         contentArrowStyle={{ borderRight: "7px solid #5331B2" }}
-//         iconStyle={{ background:"#5331B2", color: "#fff" }}
-//         icon={<i className="fas fa-palette"></i>}
-//       >
-//         <h3 className="vertical-timeline-element-title">Artes</h3>
-//         <p>Ensino Secundário.</p>
-//         <small>2017-2020</small>
-//       </VerticalTimelineElement>
-
-//       <VerticalTimelineElement
-//         className="vertical-timeline-element--work"
-//         contentStyle={{ background:"#5331B2", color: "#fff" }}
-//         contentArrowStyle={{ borderRight: "7px solid #5331B2" }}
-//         iconStyle={{ background:"#5331B2", color: "#fff" }}
-//         icon={<i className="fas fa-paint-brush"></i>}
-//       >
-//         <h3 className="vertical-timeline-element-title">Web Design</h3>
-//         <p>Primeiro contacto com design de interfaces e experiência do utilizador.</p>
-//         <small>2020</small>
-//       </VerticalTimelineElement>
-
-//       <VerticalTimelineElement
-//         className="vertical-timeline-element--work"
-//         contentStyle={{ background:"#5331B2", color: "#fff" }}
-//         contentArrowStyle={{ borderRight: "7px solid #5331B2" }}
-//         iconStyle={{ background:"#5331B2", color: "#fff" }}
-//         icon={<i className="fab fa-html5"></i>}
-//       >
-//         <h3 className="vertical-timeline-element-title">Desenvolvimento Web</h3>
-//         <p>Primeiro contacto com HTML, CSS e Bootstrap.</p>
-//         <small>2021</small>
-//       </VerticalTimelineElement>
-
-//       <VerticalTimelineElement
-//         className="vertical-timeline-element--work"
-//         contentStyle={{ background:"#5331B2", color: "#fff" }}
-//         contentArrowStyle={{ borderRight: "7px solid #5331B2" }}
-//         iconStyle={{ background:"#5331B2", color: "#fff" }}
-//         icon={<i className="fab fa-js-square"></i>}
-//       >
-//         <h3 className="vertical-timeline-element-title">Desenvolvimento Web - Programação</h3>
-//         <p>Primeiro contacto com JavaScript.</p>
-//         <small>2021</small>
-//       </VerticalTimelineElement>
-
-//       <VerticalTimelineElement
-//         className="vertical-timeline-element--work"
-//         contentStyle={{ background:"#5331B2", color: "#fff" }}
-//         contentArrowStyle={{ borderRight: "7px solid #5331B2" }}
-//         iconStyle={{ background:"#5331B2", color: "#fff" }}
-//         icon={<i className="fab fa-js-square"></i>}
-//       >
-//         <h3 className="vertical-timeline-element-title">Ambients 3D</h3>
-//         <p>Primeiro contacto com Unity3D e Blender.</p>
-//         <small>2022</small>
-//       </VerticalTimelineElement>
- 
-//       <VerticalTimelineElement
-//         className="vertical-timeline-element--work"
-//         contentStyle={{ background:"#5331B2", color: "#fff" }}
-//         contentArrowStyle={{ borderRight: "7px solid #5331B2" }}
-//     iconStyle={{ background:"#5331B2", color: "#fff" }}
-//         icon={<i className="fab fa-js-square"></i>}
-//       >
-//         <h3 className="vertical-timeline-element-title">Desenvolvimento Web - Programação</h3>
-//         <p>Primeiro contacto com React js.</p>
-//         <small>2022</small>
-//       </VerticalTimelineElement>
-       
-//       <VerticalTimelineElement
-//         className="vertical-timeline-element--work"
-//         contentStyle={{ background:"#5331B2", color: "#fff" }}
-//         contentArrowStyle={{ borderRight: "7px solid #5331B2" }}
-//         iconStyle={{ background:"#5331B2", color: "#fff" }}
-//         icon={<i className="fab fa-js-square"></i>}
-//       >
-//         <h3 className="vertical-timeline-element-title">Desenvolvimento Web - Programação</h3>
-//         <p>Primeiro contacto com React Native.</p>
-//         <small>2023</small>
-//       </VerticalTimelineElement>
-
-//       </VerticalTimeline>
+export default PercursoAcademico;
