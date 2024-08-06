@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
 import DiagramDesignProcess from "../assets/design_thinking_grafico_tocare.png";
-import ProblemToCare from "../assets/problema.png";
 import BenchmarkingToCare from "../assets/benchmarking.png";
 import HMWToCare from "../assets/HMWtocare.png";
 import PersonaToCare from "../assets/PersonaToCare.png";
@@ -67,16 +66,10 @@ const InfoProj5_DesignProcess = () => {
           <span className="title_marcado_tocare">Processo.</span>
       </p>
       <TabsContainer>
+
           <TabButton
             onClick={() => handleTabClick("designSystem")}
             active={activeTab === "designSystem"}
-          >
-            Problem Statment
-          </TabButton>
-
-          <TabButton
-            onClick={() => handleTabClick("benchmarking")}
-            active={activeTab === "benchmarking"}
           >
             Benchmarking
           </TabButton>
@@ -140,14 +133,6 @@ const InfoProj5_DesignProcess = () => {
         </TabsContainer>
         <ImageContainer>
           {activeTab === "designSystem" && (
-            <img
-              className="img_diagram"
-              src={ProblemToCare}
-              alt="problem statment"
-              onClick={() => openImageView(ProblemToCare)}
-            />
-          )}
-          {activeTab === "benchmarking" && (
             <img
               className="img_diagram"
               src={BenchmarkingToCare}
