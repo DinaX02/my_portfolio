@@ -26,7 +26,7 @@ Como resposta ao desafio lançado pela InovaRia e Altice Labs, onde era pretendi
         <div className="tags_tocare">UX/UI Design</div>
         </div>   
 
-        <div style={{paddingRight:20}}><h3> Desafio InovaRia e Altice Labs:</h3><p>Design Thinking aplicado ao Design de Produto Digital</p></div>
+        <div style={{paddingRight:20}}><h3> Desafio InovaRia e Altice Labs:</h3><p>Design Thinking aplicado ao Design de Produto Digital: <strong>1 Semana</strong></p></div>
 
 </div>
 

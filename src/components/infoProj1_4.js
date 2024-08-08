@@ -1,12 +1,47 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import "../App.css";
-import Wireframesskoru from "../assets/koru_finallll.png"
+import Wireframesskoru from "../assets/koru_finallll.png";
+import { FaArrowUp} from "react-icons/fa";
+import styled from "styled-components";
 
+const InfoProj1_4 = ()=> {
 
-const infoProj1_4 = ()=> {
+    const [showScrollToTop, setShowScrollToTop] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+          const contentP1Height = document.querySelector('.contentP1')?.offsetHeight || 0;
+          const contentP1Top = document.querySelector('.contentP1')?.offsetTop || 0;
+          const scrollPosition = window.scrollY;
+    
+          if (scrollPosition > contentP1Top + contentP1Height) {
+            setShowScrollToTop(true);
+          } else {
+            setShowScrollToTop(false);
+          }
+        };
+    
+        window.addEventListener('scroll', handleScroll);
+    
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []);
+
+      const scrollToTop = () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      };
+
     return(
 <div className="info_p22222">
-
+{showScrollToTop && (
+        <ScrollToTopButton onClick={scrollToTop}>
+          <FaArrowUp />
+        </ScrollToTopButton>
+      )}
 <div className="instagram-container">
 
 <div className="instagram-info"> 
@@ -14,12 +49,12 @@ const infoProj1_4 = ()=> {
 <p className="fontsize_tags"><span className="title_marcado_koru">Wireframes.</span></p>
 
 <p className="paragrafo_origens">
-Uma vez decidida a arquitetura da aplicação e o <i>site map</i> avançamos para o <i>sketching</i> dos <i>wireframes</i>, começando pela baixa fidelidade e progredindo para a média e alta fidelidade.<br></br><br></br> 
-Ao criar os <i>wireframes</i> de baixa fidelidade, obtivemos uma imagem clara do aspecto visual da aplicação e da forma como o utilizador irá navegar através dela.
+Uma vez decidida a arquitetura da aplicação e o <i>site map</i> passou-se para o <i>sketching</i> dos <i>wireframes</i>, começando pela baixa fidelidade e progredindo progressivamente para a média e alta fidelidade.<br></br><br></br> 
+Com a criação dos primeiros <i>wireframes</i> de baixa fidelidade, foi possível obter uma imagem clara do aspecto visual da aplicação e da forma como o utilizador irá navegar através dela.
 <br></br><br></br> 
-Ao passar para os protótipos de média fidelidade, conseguimos ilustrar funcionalidades e o fluxo da aplicação, aperfeiçoando ainda mais a interface do utilizador e identificar eventuais falhas funcionais nas fases iniciais.
+Ao avançar para os protótipos de média fidelidade, as funcionalidades e o fluxo da aplicação foram ilustrados, permitindo um aperfeiçoamento ainda maior da interface do utilizador e a identificação de eventuais falhas funcionais nas fases iniciais.
 <br></br><br></br>
-Por fim, os protótipos foram convertidos de mid-fi para Hi-fi, criando assim os flows de utilização do protótipo usando o Figma.
+Por fim, os protótipos foram convertidos de Mid-fi para Hi-fi, criando assim os flows de utilização do protótipo usando o Figma.
 </p>
 <a href="https://www.figma.com/proto/XvQjbPsxIYJKLmFfWOfHCg/MID-FI?node-id=739-840&scaling=scale-down&page-id=327%3A2&starting-point-node-id=739%3A840" target="blank" rel="noopener noreferrer"><button className="btn_viewmore">Ver Protótipo</button></a>
 
@@ -36,7 +71,27 @@ Por fim, os protótipos foram convertidos de mid-fi para Hi-fi, criando assim os
     )
 }   
 
-export default infoProj1_4
+const ScrollToTopButton = styled.button`
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: #5331B2;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background-color: #9747FF;
+  }
+`;
+
+export default InfoProj1_4
 
 
 

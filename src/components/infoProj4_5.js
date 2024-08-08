@@ -9,11 +9,13 @@ import AlugarArtigoImage from "../assets/rent_wireframess_2.png";
 import PublicarImage from "../assets/publicar_wireframess.png";
 import CaixadeEntradeImage from "../assets/caixa de entrada_wireframess.png";
 import PerfilImage from "../assets/perfil_wireframess.png";
+import { FaArrowUp} from "react-icons/fa";
 import styled from "styled-components";
 
 const InfoProj4_5 = () => {
   const [activeTab, setActiveTab] = useState("designSystem");
   const [viewImage, setViewImage] = useState(null);
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
 
   useEffect(() => {
 
@@ -28,6 +30,26 @@ const InfoProj4_5 = () => {
     };
   }, [viewImage]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const contentP4Height = document.querySelector('.contentP4')?.offsetHeight || 0;
+      const contentP4Top = document.querySelector('.contentP4')?.offsetTop || 0;
+      const scrollPosition = window.scrollY;
+
+      if (scrollPosition > contentP4Top + contentP4Height) {
+        setShowScrollToTop(true);
+      } else {
+        setShowScrollToTop(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
@@ -40,8 +62,20 @@ const InfoProj4_5 = () => {
     setViewImage(null);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
   return (
     <div className="info_p4">
+      {showScrollToTop && (
+        <ScrollToTopButton onClick={scrollToTop}>
+          <FaArrowUp />
+        </ScrollToTopButton>
+      )}
       {viewImage && (
         <ImageViewModal onClick={closeImageView}>
           <ImageView>
@@ -51,7 +85,7 @@ const InfoProj4_5 = () => {
       )}
       <div className="containerDesignProcess">
         <p className="fontsize_tags">
-          <span className="title_marcado_boomerang">Wireframes.</span>
+          <span className="title_marcado_boomerang">Ecrãs.</span>
         </p>
 
         <TabsContainer>
@@ -248,6 +282,26 @@ const ImageContainer = styled.div`
   cursor: pointer;
   display: flex;
   justify-content: center;
+`;
+
+const ScrollToTopButton = styled.button`
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: #00c17c;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background-color: #009d6b;
+  }
 `;
 
 export default InfoProj4_5;
