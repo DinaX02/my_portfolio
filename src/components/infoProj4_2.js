@@ -13,7 +13,7 @@ const InfoProj4_2 = () => {
         <div className="instagram-info">
           <p className="paragrafo_intro_sizes">Identidade de Marca</p>
           <p className="fontsize_tags">
-            <span className="title_marcado_boomerang">Nossa Missão.</span>
+            <span className="title_marcado_boomerang">Missão.</span>
           </p>
           <p className="paragrafo_missonBrand">
             Revolucionar os hábitos de consumo do mercado da moda.

@@ -8,7 +8,7 @@ const InfoProj5 = () => {
         <div className="instagram-info">
           <p className="paragrafo_intro_sizes">Identidade de Marca</p>
           <p className="fontsize_tags">
-            <span className="title_marcado_koru">Nossa Visão.</span>
+            <span className="title_marcado_koru">Visão.</span>
           </p>
           <p className="paragrafo_missonBrand_Koru">
             Ser a solução para o investimento nos projetos do futuro.
@@ -49,6 +49,19 @@ const InfoProj5 = () => {
             Poder criar um espaço de expressão para ideias de cariz inovador é a principal motivação para criar este projeto. Por sua vez, esta
             plataforma dará espaço ao seu financiamento e reconhecimento,
             possibilitando a concretização de ideias.
+          </p>
+
+          <p className="fontsize_tags">
+            <span className="title_marcado_koru">Princípios.</span>
+          </p>
+          <p className="paragrafo_origens">
+            <span className="paragrafo_missonBrand_Koru">Dinâmica</span> - Melhorar a experiência dos participantes
+          </p>
+          <p className="paragrafo_origens">
+          <span className="paragrafo_missonBrand_Koru">Amplificação</span> - Aumentar a participação do público
+          </p>
+          <p className="paragrafo_origens">
+          <span className="paragrafo_missonBrand_Koru">Transparência</span> - Tornar os sistemas de voto mais democráticos
           </p>
         </div>
       </div>

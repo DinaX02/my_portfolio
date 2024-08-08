@@ -43,7 +43,7 @@ const InfoProj4_4 = () => {
   const downloadPDF = () => {
     const link = document.createElement("a");
     link.href = ManualPDF;
-    link.setAttribute("download", "manual.pdf");
+    link.setAttribute("download", "manual_identidade_boomerang.pdf");
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
