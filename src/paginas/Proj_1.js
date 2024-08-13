@@ -9,6 +9,7 @@ import InfoProj13 from "../components/infoProj1_3";
 import InfoProj14 from "../components/infoProj1_4";
 import InfoProj5 from "../components/infoProj1_5";
 import InfoProj1DesignSystem from "../components/infoProj1_DesignSystem";
+import InfoProj1DesignProcess from "../components/infoProj1_DesignProcess";
 import "../App.css";
 
 const Project_1 = ()=> {
@@ -17,10 +18,10 @@ const Project_1 = ()=> {
     return(
         <div>
             <NavbarProject />
-{/* <HeroProject1/> */}
 <ContentP1/>
 <InfoProj1/>
 <InfoProj5/>
+<InfoProj1DesignProcess/>
 <InfoProj1DesignSystem/>
 <InfoProj12/>
 <InfoProj13/>

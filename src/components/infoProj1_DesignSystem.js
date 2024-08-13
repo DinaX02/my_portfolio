@@ -4,8 +4,8 @@ import DiagramDesignProcess from "../assets/logo_koru.png";
 import DownloadIcon from "../assets/download_icon_koru.svg"
 import ColorsImage from "../assets/cores_koru.png";
 import TypographyImage from "../assets/tipografia_koru.png";
-import IconographyImage from "../assets/iconografia.png";
-import ComponentsImage from "../assets/Components.png";
+import IconographyImage from "../assets/iconografia_koru.png";
+import ComponentsImage from "../assets/Components_koru.png";
 import Manual_Identidade_Koru from "../assets/Manual_Identidade_Koru.pdf";
 import styled from "styled-components";
 
