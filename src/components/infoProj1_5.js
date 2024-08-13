@@ -14,7 +14,7 @@ const InfoProj5 = () => {
             Ser a solução para o investimento nos projetos do futuro.
           </p>
           <p className="paragrafo_origens">
-            Koru baseia-se a sua comunicação de marca numa só visão. Esta visão
+            Koru baseia a sua comunicação de marca numa só visão. Esta visão
             é alcançada com as pessoas que usufruem do Koru, sejam estas
             organizadores de eventos, concorrentes com projetos ou participantes
             na votação.

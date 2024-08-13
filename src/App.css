@@ -2681,6 +2681,11 @@ margin-left: 0 !important;
   /* font-weight: bold; */
 }
 
+.links_koruu_2 a:hover {
+  color: #807dff;
+}
+
+
 .instagram-info a {
   color: black;
   text-decoration: none;
