@@ -36,10 +36,10 @@ const InfoProj1DesignProcess = () => {
           <span className="title_marcado_koru">Processo.</span>
         </p>
         <p className="paragrafo_design_process">
-          Este projeto, foi desenvolvido durante 1 semestre, utilizando um processo de design
+          Este projeto, foi desenvolvido durante <strong>1 semestre</strong>, utilizando um processo de design
           centrado no utilizador (UCD) dando prioridade às necessidades e
           perspectivas dos utilizadores através das fases de pesquisa e
-          definição, ideação, protótipos, testagem. Após a validação desses protótipos iniciou-se o desenvolvimento das interfaces ao nível do front-end e back-end.
+          definição, ideação, protótipos e testagem. Após a validação desses protótipos iniciou-se o desenvolvimento das interfaces ao nível do front-end e back-end.
         </p>
         <ImageContainer>
           <img

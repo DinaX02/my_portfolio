@@ -4,8 +4,9 @@ import ProjectKoruImg from "../assets/koru_project_img.png";
 import BoomerangCapa from "../assets/capa_boomerang_pequena.png"
 import { Link } from "react-router-dom";
 import "../App.css";
-import ImgDinisProjetos from "../assets/projetos_page_svg.svg"
-import ImgDinisProjetos2 from "../assets/projetos_page_2_v2.svg"
+import ImgDinisProjetos from "../assets/projetos_page_svg.svg";
+import ImgDinisProjetos2 from "../assets/projetos_page_2_v2.svg";
+import TocareBanner from "../assets/Tocare_banner.png";
 
 const ProjectssALONEE = () => {
 
@@ -106,7 +107,7 @@ const ProjectssALONEE = () => {
         </div>
 
           <div className="project-card">
-          <img src={BoomerangCapa} alt="Boomerang" />
+          <img src={TocareBanner} alt="Boomerang" />
           <div className="project-info">
             <h2>ToCare</h2>
            <div style={{display: "flex", flexDirection:"row"}}>

@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import boomerangMockupOverview from "../assets/mockup_overview_boomerang_2.png"
+import tocareMockupOverview from "../assets/overview_ToCare_mock-up.png"
 
 const InfoProj5 = ()=> {
     return(
@@ -32,7 +32,7 @@ Como resposta ao desafio lançado pela InovaRia e Altice Labs, onde era pretendi
 
 
 <div className="other-info">
-<img className="img_vision" src={boomerangMockupOverview} alt="Boomerang mockup  overview"/>
+<img className="img_vision" src={tocareMockupOverview} alt="ToCare mockup  overview"/>
 </div>
 </div>  
 </div>

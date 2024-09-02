@@ -1,5 +1,5 @@
 import React from "react";
-import coverBoomerang from "../assets/img_cover_boomerang.png";
+import coverToCare from "../assets/cover_tocaree.png";
 import "../App.css";
 import setaBack from "../assets/Arrow 1 (1).svg";
 import { useNavigate } from "react-router-dom";
@@ -26,8 +26,8 @@ const ContentP5 = () => {
       <div className="div_content_p4">
         <img
           className="img-pc_movies"
-          src={coverBoomerang}
-          alt="mockupBoomerang"
+          src={coverToCare}
+          alt="mockup ToCare"
         />
         <div className="content_p4">
           <h1 className="title_tocare_hero">ToCare</h1>
