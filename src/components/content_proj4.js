@@ -39,7 +39,7 @@ const ContentP4 = () => {
         <p className="fontsize_tags"><span className="text_marcado_boomerang">Tools.</span></p>
 
         <div style={{width: "auto", display: "flex", flexWrap:"wrap", alignItems:"center", maxWidth: "600px"}}>
-        <div className="tags_boomerang">Figma</div> <div className="tags_boomerang">Jira</div><div className="tags_boomerang">React js</div><div className="tags_boomerang">Material UI</div> <div className="tags_boomerang">PwA</div><div className="tags_boomerang">Redux</div><div className="tags_boomerang">Node js</div><div className="tags_boomerang">GitHub</div><div className="tags_boomerang">Netlify</div>
+        <div className="tags_boomerang">Figma</div> <div className="tags_boomerang">Jira</div><div className="tags_boomerang">React js</div><div className="tags_boomerang">Material UI</div> <div className="tags_boomerang">PwA</div><div className="tags_boomerang">Redux</div><div className="tags_boomerang">Silktide</div><div className="tags_boomerang">Acess Monitor</div><div className="tags_boomerang">Axe DevTools</div><div className="tags_boomerang">Node js</div><div className="tags_boomerang">GitHub</div><div className="tags_boomerang">Netlify</div>
 </div>
       </div>
 {/* 

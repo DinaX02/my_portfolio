@@ -30,6 +30,7 @@ Esta aplicação não é apenas uma plataforma, mas uma voz na discussão global
         <div className="tags_boomerang">UX/UI Design</div>
         <div className="tags_boomerang">Branding</div>
         <div className="tags_boomerang">Front-end</div>
+        <div className="tags_boomerang">Acessibilidade</div>
         </div>
         <div className="links_koruu_2"  style={{marginTop:"2em", marginBottom:"1em"}}>
 <div className="links_boomerang" style={{paddingRight:20}}><h3>Link:</h3><a href="https://guileless-bienenstitch-7518c4.netlify.app/" target="blank"><p style={{marginLeft:10}}>Website</p></a></div>

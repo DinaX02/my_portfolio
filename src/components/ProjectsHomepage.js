@@ -1,8 +1,9 @@
 import React from "react";
 import ProjectKoruImg from "../assets/koru_project_img.png";
 // import ZetflickstKoruImg from "../assets/zetflicks_proj_3.png";
-import BoomerangCapa from "../assets/capa_boomerang_pequena.png"
+import BoomerangCapa from "../assets/capa_boomerang_pequena.png";
 import { Link } from "react-router-dom";
+import TocareBanner from "../assets/Tocare_banner.png";
 import "../App.css";
 
 // const projects = [
@@ -107,7 +108,7 @@ const ProjectsHomePage = () => {
 </div>
 
 <div className="project-card">
-          <img src={BoomerangCapa} alt="Boomerang" />
+          <img src={TocareBanner} alt="Boomerang" />
           <div className="project-info">
             <h2>ToCare</h2>
            <div style={{display: "flex", flexDirection:"row"}}>
