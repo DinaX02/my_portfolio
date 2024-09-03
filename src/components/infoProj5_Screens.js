@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from "react";
 import "../App.css";
-import LowFi1 from "../assets/Lofi-protypes1.png";
-import LowFi2 from "../assets/LowFi-prototypes2.png"
+import HiFi1 from "../assets/hifi_screens_tocare_1.png";
+import HiFi2 from "../assets/hifi_screens_tocare_2.png";
 import { FaArrowUp} from "react-icons/fa";
 import styled from "styled-components";
 
@@ -86,30 +86,30 @@ const InfoProj5Screens = () => {
             onClick={() => handleTabClick("designSystem")}
             active={activeTab === "designSystem"}
           >
-            Low-fi (Crazy 8) 1
+            Homepage, Criar Tarefas e Lista de Tarefas
           </TabButton>
           <TabButton
             onClick={() => handleTabClick("colors")}
             active={activeTab === "colors"}
           >
-            Low-fi (Crazy 8) 2
+            Calendário, Dados Biométricos e Lista de Medicamentos
           </TabButton>
         </TabsContainer>
         <ImageContainer>
           {activeTab === "designSystem" && (
             <img
               className="img_diagram"
-              src={LowFi1}
-              alt="onboarding- wireframes"
-              onClick={() => openImageView(LowFi1)}
+              src={HiFi1}
+              alt="ecrãs homepage, adicionar tarefa e lissta de tarefas"
+              onClick={() => openImageView(HiFi1)}
             />
           )}
           {activeTab === "colors" && (
             <img
               className="img_diagram"
-              src={LowFi2}
+              src={HiFi2}
               alt="Criar conta- wireframes"
-              onClick={() => openImageView(LowFi2)}
+              onClick={() => openImageView(HiFi2)}
             />
           )}
         </ImageContainer>

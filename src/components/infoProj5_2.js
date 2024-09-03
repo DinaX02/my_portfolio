@@ -47,7 +47,7 @@ const InfoProj5_2 = () => {
  provedores. <br></br><br></br>
  Ao integrar dados biométricos e promover uma comunicação eficaz entre cuidadores e
  profissionais de saúde, pretende-se melhorar a qualidade dos cuidados prestados, reduzir
- erros médicos e aliviar a sobrecarga dos cuidadores, contribuindo para o bem-estar de
+ erros e aliviar a sobrecarga dos cuidadores, contribuindo para o bem-estar de
  todos os intervenientes.
           </p>
         </div>
