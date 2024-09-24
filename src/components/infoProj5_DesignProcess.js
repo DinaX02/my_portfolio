@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
+import EmpathyMap from "../assets/empathy map.png";
 import DiagramDesignProcess from "../assets/design_thinking_grafico_tocare.png";
 import BenchmarkingToCare from "../assets/benchmarking.png";
 import HMWToCare from "../assets/HMWtocare.png";
@@ -7,13 +8,10 @@ import PersonaToCare from "../assets/PersonaToCare.png";
 import InsightsToCare from "../assets/Insights.png";
 import UserJourneyMapToCare from "../assets/User Journey Map_tocare.png";
 import UserFlowToCare from "../assets/User Flow_tocare.png";
-import RequisitosToCare from "../assets/requesitos_tocare.png";
-import SolutionToCare from "../assets/solucao_tocare.png";
-import InovationToCare from "../assets/inovacao_tocare.png";
 import styled from "styled-components";
 
 const InfoProj5_DesignProcess = () => {
-  const [activeTab, setActiveTab] = useState("designSystem");
+  const [activeTab, setActiveTab] = useState("empathymap");
   const [viewImage, setViewImage] = useState(null);
 
   useEffect(() => {
@@ -66,7 +64,12 @@ const InfoProj5_DesignProcess = () => {
           <span className="title_marcado_tocare">Processo.</span>
       </p>
       <TabsContainer>
-
+          <TabButton
+            onClick={() => handleTabClick("empathymap")}
+            active={activeTab === "empathymap"}
+          >
+            Empathy Map
+          </TabButton>
           <TabButton
             onClick={() => handleTabClick("designSystem")}
             active={activeTab === "designSystem"}
@@ -109,29 +112,16 @@ const InfoProj5_DesignProcess = () => {
             User Flow 
           </TabButton>
 
-          <TabButton
-            onClick={() => handleTabClick("solucao")}
-            active={activeTab === "solucao"}
-          >
-            Solução 
-          </TabButton>
-
-          <TabButton
-            onClick={() => handleTabClick("requisitos")}
-            active={activeTab === "requisitos"}
-          >
-            Requisitos
-          </TabButton>
-
-          <TabButton
-            onClick={() => handleTabClick("inovacao")}
-            active={activeTab === "inovacao"}
-          >
-            Inovação
-          </TabButton>
-
         </TabsContainer>
         <ImageContainer>
+        {activeTab === "empathymap" && (
+            <img
+              className="img_diagram"
+              src={EmpathyMap}
+              alt="empathy map_tocare"
+              onClick={() => openImageView(EmpathyMap)}
+            />
+          )}
           {activeTab === "designSystem" && (
             <img
               className="img_diagram"
@@ -178,30 +168,6 @@ const InfoProj5_DesignProcess = () => {
               src={UserFlowToCare}
               alt="user flow"
               onClick={() => openImageView(UserFlowToCare)}
-            />
-          )}
-            {activeTab === "solucao" && (
-            <img
-              className="img_diagram"
-              src={SolutionToCare}
-              alt="solucao"
-              onClick={() => openImageView(SolutionToCare)}
-            />
-          )}
-            {activeTab === "requisitos" && (
-            <img
-              className="img_diagram"
-              src={RequisitosToCare}
-              alt="requisitos"
-              onClick={() => openImageView(RequisitosToCare)}
-            />
-          )}
-            {activeTab === "inovacao" && (
-            <img
-              className="img_diagram"
-              src={InovationToCare}
-              alt="inocação"
-              onClick={() => openImageView(InovationToCare)}
             />
           )}
         </ImageContainer>

@@ -1,11 +1,12 @@
 import React, { useState, useEffect} from "react";
 import "../App.css";
-import LowFi1 from "../assets/Lofi-protypes1.jpg";
-import LowFi2 from "../assets/LowFi-prototypes2.jpg"
+import RequisitosToCare from "../assets/requesitos_tocare.png";
+import SolutionToCare from "../assets/solucao_tocare.png";
+import InovationToCare from "../assets/inovacao_tocare.png";
 import styled from "styled-components";
 
-const InfoProj5Wireframes = () => {
-  const [activeTab, setActiveTab] = useState("designSystem");
+const InfoProj5Final = () => {
+  const [activeTab, setActiveTab] = useState("solucao");
   const [viewImage, setViewImage] = useState(null);
 
   useEffect(() => {
@@ -44,38 +45,55 @@ const InfoProj5Wireframes = () => {
       )}
       <div className="containerDesignProcess">
         <p className="fontsize_tags">
-          <span className="title_marcado_tocare">Wireframes.</span>
+          <span className="title_marcado_tocare">ToCare.</span>
         </p>
 
         <TabsContainer>
           <TabButton
-            onClick={() => handleTabClick("designSystem")}
-            active={activeTab === "designSystem"}
+            onClick={() => handleTabClick("solucao")}
+            active={activeTab === "solucao"}
           >
-            Low-fi (Crazy 8) 1
+            Solução
           </TabButton>
+
           <TabButton
-            onClick={() => handleTabClick("colors")}
-            active={activeTab === "colors"}
+            onClick={() => handleTabClick("requisitos")}
+            active={activeTab === "requisitos"}
           >
-            Low-fi (Crazy 8) 2
+            Requisitos
           </TabButton>
+
+          <TabButton
+            onClick={() => handleTabClick("inovacao")}
+            active={activeTab === "inovacao"}
+          >
+            Inovação
+          </TabButton>
+
         </TabsContainer>
         <ImageContainer>
-          {activeTab === "designSystem" && (
+        {activeTab === "solucao" && (
             <img
               className="img_diagram"
-              src={LowFi1}
-              alt="onboarding- wireframes"
-              onClick={() => openImageView(LowFi1)}
+              src={SolutionToCare}
+              alt="solucao"
+              onClick={() => openImageView(SolutionToCare)}
             />
           )}
-          {activeTab === "colors" && (
+            {activeTab === "requisitos" && (
             <img
               className="img_diagram"
-              src={LowFi2}
-              alt="Criar conta- wireframes"
-              onClick={() => openImageView(LowFi2)}
+              src={RequisitosToCare}
+              alt="requisitos"
+              onClick={() => openImageView(RequisitosToCare)}
+            />
+          )}
+            {activeTab === "inovacao" && (
+            <img
+              className="img_diagram"
+              src={InovationToCare}
+              alt="inocação"
+              onClick={() => openImageView(InovationToCare)}
             />
           )}
         </ImageContainer>
@@ -137,4 +155,4 @@ const ImageContainer = styled.div`
   justify-content: center;
 `;
 
-export default InfoProj5Wireframes;
+export default InfoProj5Final;

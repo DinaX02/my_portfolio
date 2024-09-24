@@ -16,7 +16,7 @@ const InfoProj1 = ()=> {
 <p className="fontsize_tags"><span className="title_marcado_koru">Overview.</span></p>
 <p className="paragrafo_origens">Este projeto visa desenvolver uma plataforma de votação desenhada principalmente para concursos onde os organizadores pretendem adicionar uma componente de interatividade para aumentar a participação e investimento em, por exemplo, projetos ou ideias.
 <br></br><br></br>
-A aplicação em desenvolvimento, no âmbito do Projeto Koru, é uma plataforma de acompanhamento de eventos que permite aos seus organizadores criar e gerir eventos de forma eficiente, enquanto fornece aos participantes do mesmo uma experiência personalizada e interativa.
+Esta aplicação foi desenvolvida no âmbito do Projeto Koru, é uma plataforma de acompanhamento de eventos que permite aos seus organizadores criar e gerir eventos de forma eficiente, enquanto fornece aos participantes do mesmo uma experiência personalizada e interativa.
 <br></br><br></br>
 O foco da aplicação é a dinâmica de votação nos projetos exibidos no evento em questão. Ou seja, este projeto tem como objetivo facilitar o processo de criar e gerir atividades de votação em projetos dentro de um evento ao vivo. 
 </p>
