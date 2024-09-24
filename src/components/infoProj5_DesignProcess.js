@@ -8,6 +8,7 @@ import PersonaToCare from "../assets/PersonaToCare.png";
 import InsightsToCare from "../assets/Insights.png";
 import UserJourneyMapToCare from "../assets/User Journey Map_tocare.png";
 import UserFlowToCare from "../assets/User Flow_tocare.png";
+import MatrizPriority from "../assets/matriz_prioridade.svg";
 import styled from "styled-components";
 
 const InfoProj5_DesignProcess = () => {
@@ -111,6 +112,12 @@ const InfoProj5_DesignProcess = () => {
           >
             User Flow 
           </TabButton>
+          <TabButton
+            onClick={() => handleTabClick("matrizprioridade")}
+            active={activeTab === "matrizprioridade"}
+          >
+            Matriz de Prioridade 
+          </TabButton>
 
         </TabsContainer>
         <ImageContainer>
@@ -168,6 +175,14 @@ const InfoProj5_DesignProcess = () => {
               src={UserFlowToCare}
               alt="user flow"
               onClick={() => openImageView(UserFlowToCare)}
+            />
+          )}
+            {activeTab === "matrizprioridade" && (
+            <img
+              className="img_diagram"
+              src={MatrizPriority}
+              alt="matriz de prioridade"
+              onClick={() => openImageView(MatrizPriority)}
             />
           )}
         </ImageContainer>
