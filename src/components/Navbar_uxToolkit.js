@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
 
-const NavbarAbout = ()=> {
+const NavbarUXToolkit = ()=> {
 
     const [isOpen, setIsOpen] = useState(false);
     return(
-        <div className="NavbarAbout">
+        <div className="Navbar_projectUXToolkit">
             <span className="nav-logo">
             <p><Link to={"/"}>Dinis Antunes</Link></p>
             </span>
@@ -24,9 +24,5 @@ const NavbarAbout = ()=> {
     )
 }
 
-export default NavbarAbout
-
-
-
-
+export default NavbarUXToolkit
 

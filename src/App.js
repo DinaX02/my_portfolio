@@ -7,6 +7,7 @@ import Project2 from './paginas/Proj_2';
 import Project3 from './paginas/Proj_3';
 import Project4 from './paginas/Proj_4';
 import Project5 from './paginas/Proj_5';
+import Project6 from './paginas/Proj_6';
 import Projetoss from './paginas/Projetos';
 import ScrollToTop from './components/scrollstart';
 
@@ -24,6 +25,7 @@ function App() {
           <Route path="/project3" element={<Project3 />} />
           <Route path="/project-Boomerang" element={<Project4 />} />
           <Route path="/project-ToCare" element={<Project5/>} />
+          <Route path="/project-UXToolkit" element={<Project6/>} />
           <Route path="/projectsss" element={<Projetoss />} />
         </Routes>
       </BrowserRouter>

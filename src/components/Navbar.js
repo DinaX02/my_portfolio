@@ -8,7 +8,7 @@ const Navbar = ()=> {
     return(
         <div className="Navbar">
             <span className="nav-logo">
-            <strong><Link to={"/"}>Dinis Antunes</Link></strong>
+            <p><Link to={"/"}>Dinis Antunes</Link></p>
             </span>
             <div className={`nav-items ${isOpen && "open"}`}>
                 <a href="#projetos">Projetos </a>
