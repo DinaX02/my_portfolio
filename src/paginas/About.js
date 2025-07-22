@@ -2,6 +2,7 @@ import React from "react";
 import NavbarAbout from "../components/Navbar_about";
 import Skills from "../components/Skills";
 import "../App.css";
+import PercursoAcademico from "../components/PercursoAcademico";
 import Contactos from "../components/Contactos";
 import HeroAbout from "../components/heroAbout";
 import Origens from "../components/Origens";
@@ -12,7 +13,7 @@ const About = () => {
       <NavbarAbout/>
       <HeroAbout/>
       <Origens/>
-   {/* <PercursoAcademico /> */}
+   <PercursoAcademico />
       <Skills />
       <Contactos />
 {/* <Footer/> */}

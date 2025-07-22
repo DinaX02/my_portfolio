@@ -51,8 +51,8 @@ pura. Mais tarde, fiz curso elementar de juízes de natação pura, natação ad
 
 <br></br>
 <br></br>A conciliação entre os estudos e a prática desportiva foram importantes no desenvolvimento das minhas
-características pessoais, tendo sido sempre um estudante trabalhador, empenhado, organizado e responsável.<br></br><br></br>
-Ao longo do meu percurso escolar foram as áreas relacionadas com artes e tecnologias que mais me interessaram, tendo desenvolvido um grande interesse pelo UX/UI Design e mais tarde pelo Front-end .
+características pessoais, tendo sido sempre uma pessoa trabalhadora, empenhada, organizada e responsável.<br></br><br></br>
+Ao longo do meu percurso académico foram as áreas relacionadas com artes e tecnologias que mais me interessaram, tendo desenvolvido um grande interesse pelo UX/UI Design e mais tarde pelo Front-end .
         </p>
         
 
