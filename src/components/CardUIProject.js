@@ -10,8 +10,6 @@ const Card = styled.div`
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  margin-right: 0.5em;
-  margin-left: 0.5em;
   transition: transform 0.2s;
   
   &:hover {
