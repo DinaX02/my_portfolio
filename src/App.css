@@ -1048,6 +1048,13 @@ padding-top: 1em;
   min-height: 100vh;
 }
 
+.info_p6{
+  background-image: url("./assets/textura_fixed.jpg");
+  padding-top: 2.3em;
+  border-top: 3px solid #CA9050;
+  min-height: 100vh;
+}
+
 .info_p1_koru{
   background-image: url("./assets/textura_fixed.jpg");
   padding-top: 3em;
@@ -1521,6 +1528,17 @@ font-size: 6vw;
 
 .title_marcado_tocare{
   background-color: rgba(46, 167, 186, 0.8);
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  line-height: 0.10;
+  padding-right: 0.4em;
+  padding-bottom: 0.6em;
+  font-size: -webkit-xxx-large;
+}
+
+.title_marcado_uxtoolkit{
+  background-color: rgba(202, 144, 80, 0.8);
   display: inline-block;
   position: relative;
   z-index: 1;
@@ -2226,6 +2244,12 @@ margin-bottom: 0.25rem;
   /* padding-top: 4em; */
 }
 
+.space_contacto_uxtoolkit{
+  background-image: url("./assets/textura-blanca\ 2.jpg");
+  border-top: 3px solid #CA9050;
+  /* padding-top: 4em; */
+}
+
 .icons_contactos{
   display: flex;
   flex-direction: column !important;
@@ -2358,6 +2382,12 @@ font-size: 12px;
   }
 
   .title_marcado_tocare{
+    line-height: 0.8;
+    padding-bottom: 0.4em;
+    font-size: xx-large;
+  }
+
+    .title_marcado_uxtoolkit{
     line-height: 0.8;
     padding-bottom: 0.4em;
     font-size: xx-large;
@@ -2901,6 +2931,16 @@ font-weight: 600;
 
 .links_boomerang > a:hover{
 color: #00C17C;
+}
+
+.links_uxtoolkit{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.links_uxtoolkit > a:hover{
+color: #CA9050;
 }
 
 .links_koruu_2{
