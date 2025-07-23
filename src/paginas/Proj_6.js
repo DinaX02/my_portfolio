@@ -4,11 +4,8 @@ import NavbarUXToolkit from "../components/Navbar_uxToolkit.js";
 import ContentP6 from "../components/content_proj6.js";
 import InfoProj6 from "../components/infoProj6.js";
 import ContactosUXToolkit from "../components/ContactosUXToolkit.js";
-// import InfoProj52 from "../components/infoProj5_2.js";
-// import InfoProj5DesignProcess from "../components/infoProj5_DesignProcess.js";
-// import InfoProj5Wireframes from "../components/infoProj5_Wireframes.js";
-// import InfoProj5Screens from "../components/infoProj5_Screens.js";
-// import InfoProj5Final from "../components/infoProj5_Final.js";
+import InfoProj6DesignProcess from "../components/infoProj6_DesignProcess.js";
+import InfoProj6UXToolkitFisica from "../components/infoProj6_ux_toolkit_fisica.js";
 
 const Project6 = ()=> {
 
@@ -18,11 +15,8 @@ const Project6 = ()=> {
            <NavbarUXToolkit/> 
            <ContentP6/>
            <InfoProj6/>
-           {/* <InfoProj52/>
-          <InfoProj5DesignProcess/>
-          <InfoProj5Wireframes/>
-          <InfoProj5Screens/>
-          <InfoProj5Final/> */}
+        <InfoProj6DesignProcess/>
+          <InfoProj6UXToolkitFisica/>
            <ContactosUXToolkit/>
    
         </div>

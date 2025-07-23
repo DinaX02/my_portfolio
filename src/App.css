@@ -45,7 +45,7 @@ max-width: 600px;
 
 .btnInstallManual{
 
-  background-color: #343541;
+  background-color: #1c1c1c;
   font-family: 'Poppins', sans-serif;
   color: #00C17C;
   border-radius: 10px;
@@ -57,12 +57,12 @@ max-width: 600px;
 }
 
 .btnInstallManual:hover {
-  background-color: #59595c;
+  background-color: #343541;
 }
 
 .btnInstallManualKoru{
 
-  background-color: #343541;
+  background-color: #1c1c1c;
   font-family: 'Poppins', sans-serif;
   color: rgba(189, 139, 255, 0.9);
   border-radius: 10px;
@@ -74,7 +74,7 @@ max-width: 600px;
 }
 
 .btnInstallManualKoru:hover {
-  background-color: #59595c;
+  background-color: #343541;
 }
 
 /* //////////// NavBar //////////// */
@@ -1038,6 +1038,13 @@ padding-top: 1em;
   background-image: url("./assets/textura_fixed.jpg");
   padding-top: 3em;
   border-top: 3px solid #0097B2;
+  min-height: 100vh;
+}
+
+.info_uxtoolkit{
+  background-image: url("./assets/textura_fixed.jpg");
+  padding-top: 3em;
+  border-top: 3px solid #CA9050;
   min-height: 100vh;
 }
 

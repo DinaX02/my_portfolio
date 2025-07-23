@@ -1,12 +1,15 @@
 import React, { useState, useEffect} from "react";
 import "../App.css";
-import HiFi1 from "../assets/hifi_screens_tocare_1.png";
-import HiFi2 from "../assets/hifi_screens_tocare_2.png";
+import ExerciciosPraticosToolkitFisica from "../assets/ExerciciosPraticos_uxtoolkit.png";
+import MecanicasToolkitFisica from "../assets/MecanicaseFormasdeAplicacao_uxtoolkit.png";
+import LigacaoComponentes from "../assets/LigacaoEntreComponentes.png";
+import OrganizacaoVisual from "../assets/OrganizacaoVisual.png";
+import EstruturadaToolkitFisica from "../assets/EstruturadaToolkitFisica.png";
 import { FaArrowUp} from "react-icons/fa";
 import styled from "styled-components";
 
-const InfoProj5Screens = () => {
-  const [activeTab, setActiveTab] = useState("designSystem");
+const InfoProj6UXToolkitFisica = () => {
+  const [activeTab, setActiveTab] = useState("estruturadatoolkitfisica");
   const [viewImage, setViewImage] = useState(null);
   const [showScrollToTop, setShowScrollToTop] = useState(false);
 
@@ -63,7 +66,7 @@ const InfoProj5Screens = () => {
   };
 
   return (
-    <div className="info_tocare">
+    <div className="info_uxtoolkit">
         {showScrollToTop && (
         <ScrollToTopButton onClick={scrollToTop}>
           <FaArrowUp />
@@ -78,38 +81,80 @@ const InfoProj5Screens = () => {
       )}
       <div className="containerDesignProcess">
         <p className="fontsize_tags">
-          <span className="title_marcado_tocare">Ecrãs.</span>
+          <span className="title_marcado_uxtoolkit">Toolkit Física.</span>
         </p>
 
         <TabsContainer>
           <TabButton
-            onClick={() => handleTabClick("designSystem")}
-            active={activeTab === "designSystem"}
+            onClick={() => handleTabClick("estruturadatoolkitfisica")}
+            active={activeTab === "estruturadatoolkitfisica"}
           >
-            Homepage, Criar Tarefas e Lista de Tarefas
+            Estrutura da Toolkit
           </TabButton>
           <TabButton
-            onClick={() => handleTabClick("colors")}
-            active={activeTab === "colors"}
+            onClick={() => handleTabClick("organizacaovisual")}
+            active={activeTab === "organizacaovisual"}
           >
-            Calendário, Dados Biométricos e Lista de Medicamentos
+           Organização Visual
+          </TabButton>
+                    <TabButton
+            onClick={() => handleTabClick("ligacaoentrecomponentes")}
+            active={activeTab === "ligacaoentrecomponentes"}
+          >
+           Ligação entre Componentes
+          </TabButton>
+                    <TabButton
+            onClick={() => handleTabClick("mecanicastoolkitfisica")}
+            active={activeTab === "mecanicastoolkitfisica"}
+          >
+           Mecânicas e formas de aplicação
+          </TabButton>
+                    <TabButton
+            onClick={() => handleTabClick("exerciciospraticostoolkitfisica")}
+            active={activeTab === "exerciciospraticostoolkitfisica"}
+          >
+           Exercícios Práticos
           </TabButton>
         </TabsContainer>
         <ImageContainer>
-          {activeTab === "designSystem" && (
+                    {activeTab === "estruturadatoolkitfisica" && (
             <img
               className="img_diagram"
-              src={HiFi1}
-              alt="ecrãs homepage, adicionar tarefa e lista de tarefas"
-              onClick={() => openImageView(HiFi1)}
+              src={EstruturadaToolkitFisica}
+              alt="estrutura da toolkit fisica"
+              onClick={() => openImageView(EstruturadaToolkitFisica)}
             />
           )}
-          {activeTab === "colors" && (
+          {activeTab === "exerciciospraticostoolkitfisica" && (
             <img
               className="img_diagram"
-              src={HiFi2}
-              alt="Criar conta- wireframes"
-              onClick={() => openImageView(HiFi2)}
+              src={ExerciciosPraticosToolkitFisica}
+              alt="exercicios praticos toolkit fisica"
+              onClick={() => openImageView(ExerciciosPraticosToolkitFisica)}
+            />
+          )}
+              {activeTab === "organizacaovisual" && (
+            <img
+              className="img_diagram"
+              src={OrganizacaoVisual}
+              alt="Organizacao visual do conteudo das cartas da toolkit fisica"
+              onClick={() => openImageView(OrganizacaoVisual)}
+            />
+          )}
+                    {activeTab === "ligacaoentrecomponentes" && (
+            <img
+              className="img_diagram"
+              src={LigacaoComponentes}
+              alt="Ligacao entre componente fisica e digital"
+              onClick={() => openImageView(LigacaoComponentes)}
+            />
+          )}
+          {activeTab === "mecanicastoolkitfisica" && (
+            <img
+              className="img_diagram"
+              src={MecanicasToolkitFisica}
+              alt="Mecanicas e formas de aplicacao da toolkit fisica"
+              onClick={() => openImageView(MecanicasToolkitFisica)}
             />
           )}
         </ImageContainer>
@@ -126,7 +171,7 @@ const TabsContainer = styled.div`
 `;
 
 const TabButton = styled.button`
-  background-color: ${(props) => (props.active ? "#2EA7BA" : "transparent")};
+  background-color: ${(props) => (props.active ? "#CA9050" : "transparent")};
   color: ${(props) => (props.active ? "#fff" : "#2E2E2E")};
   border: 2px solid ${(props) => (props.active ? "transparent" : "#ccc")};
   font-family: 'Poppins', sans-serif;
@@ -155,7 +200,7 @@ const ImageView = styled.div`
   height: auto;
   overflow: hidden;
   border-radius: 8px;
-  background-color: #2EA7BA;
+  background-color: #CA9050;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 
   img {
@@ -175,7 +220,7 @@ const ScrollToTopButton = styled.button`
   position: fixed;
   bottom: 1rem;
   right: 1rem;
-  background-color: #0097B2;
+  background-color: #CA9050;
   color: white;
   border: none;
   padding: 0.5rem;
@@ -187,9 +232,9 @@ const ScrollToTopButton = styled.button`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
   &:hover {
-    background-color: #34A2B6;
+    background-color: #c77f32ff;
   }
 `;
 
 
-export default InfoProj5Screens;
+export default InfoProj6UXToolkitFisica;
