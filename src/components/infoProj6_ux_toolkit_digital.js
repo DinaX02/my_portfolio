@@ -1,15 +1,16 @@
 import React, { useState, useEffect} from "react";
 import "../App.css";
-import ExerciciosPraticosToolkitFisica from "../assets/ExerciciosPraticos_uxtoolkit.png";
-import MecanicasToolkitFisica from "../assets/MecanicaseFormasdeAplicacao_uxtoolkit.png";
-import LigacaoComponentes from "../assets/LigacaoEntreComponentes.png";
-import OrganizacaoVisual from "../assets/OrganizacaoVisual.png";
-import EstruturadaToolkitFisica from "../assets/EstruturadaToolkitFisica.png";
+import FuncionalidadeTiersCustomPlan from "../assets/FuncionalidadeTiersCustomPlan.png";
+import FuncionalidadeCustomPlan from "../assets/FuncionalidadeCustomPlan.png";
+import FuncionalidadeDigitalFerramentasDesign from "../assets/FuncionalidadeDigitalFerramentasDesign.png";
+import FuncionalidadeCatalogoDigital from "../assets/FuncionalidadeCatalogoDigital.png";
+import ExerciciosPraticosSite from "../assets/FuncionalidadeDigitalExerciciosPraticos.png";
+import SitemapUXToolkitDigital from "../assets/SitemapUXToolkitDigital.png";
 import { FaArrowUp} from "react-icons/fa";
 import styled from "styled-components";
 
-const InfoProj6UXToolkitFisica = () => {
-  const [activeTab, setActiveTab] = useState("estruturadatoolkitfisica");
+const InfoProj6UXToolkitDigital = () => {
+  const [activeTab, setActiveTab] = useState("sitemapuxtoolkit");
   const [viewImage, setViewImage] = useState(null);
   const [showScrollToTop, setShowScrollToTop] = useState(false);
 
@@ -81,85 +82,100 @@ const InfoProj6UXToolkitFisica = () => {
       )}
       <div className="containerDesignProcess">
         <p className="fontsize_tags">
-          <span className="title_marcado_uxtoolkit">Toolkit Física.</span>
+          <span className="title_marcado_uxtoolkit">Toolkit Digital.</span>
         </p>
-              <p style={{width:"80%", fontSize:"19px"}}>A componente física da toolkit consiste num conjunto de trinta e sete (37) cartas, 
-construídas a partir da categorização feita no âmbito deste estudo. Além destas cartas, 
-a toolkit inclui um manual de utilização que tem o intuito de explicar aos utilizadores como a 
-toolkit funciona, e um conjunto extra de três (3) exercícios práticos desenhados para estimular 
-a aplicação mais prática e dinâmica desta componente física. 
+              <p style={{width:"80%", fontSize:"19px"}}>A plataforma digital foi desenhada com o objetivo de ser fácil e intuitiva e oferecer recursos 
+adicionais de maneira a complementarem a componente física da toolkit.<br></br><br></br>
+A estrutura da plataforma foi organizada de forma a facilitar a navegação entre as várias 
+páginas, sendo que a navegação está sempre disponível ao utilizador através do menu de 
+navegação lateral (aside) que permite o acesso direto às quatro páginas principais da 
+plataforma. 
         </p>
         <TabsContainer>
           <TabButton
-            onClick={() => handleTabClick("estruturadatoolkitfisica")}
-            active={activeTab === "estruturadatoolkitfisica"}
+            onClick={() => handleTabClick("sitemapuxtoolkit")}
+            active={activeTab === "sitemapuxtoolkit"}
           >
-            Estrutura da Toolkit
+            Sitemap
           </TabButton>
           <TabButton
-            onClick={() => handleTabClick("organizacaovisual")}
-            active={activeTab === "organizacaovisual"}
+            onClick={() => handleTabClick("catalogouxtoolkitdigital")}
+            active={activeTab === "catalogouxtoolkitdigital"}
           >
-           Organização Visual
+           Catálogo
           </TabButton>
                     <TabButton
-            onClick={() => handleTabClick("ligacaoentrecomponentes")}
-            active={activeTab === "ligacaoentrecomponentes"}
+            onClick={() => handleTabClick("funcionalidadedigitalferramentasdesign")}
+            active={activeTab === "funcionalidadedigitalferramentasdesign"}
           >
-           Ligação entre Componentes
+           Design Tools
           </TabButton>
-                    <TabButton
-            onClick={() => handleTabClick("mecanicastoolkitfisica")}
-            active={activeTab === "mecanicastoolkitfisica"}
-          >
-           Mecânicas e formas de aplicação
-          </TabButton>
-                    <TabButton
-            onClick={() => handleTabClick("exerciciospraticostoolkitfisica")}
-            active={activeTab === "exerciciospraticostoolkitfisica"}
+                              <TabButton
+            onClick={() => handleTabClick("exerciciospraticostoolkitdigital")}
+            active={activeTab === "exerciciospraticostoolkitdigital"}
           >
            Exercícios Práticos
           </TabButton>
+                    <TabButton
+            onClick={() => handleTabClick("funcionalidadetierscustomplan")}
+            active={activeTab === "funcionalidadetierscustomplan"}
+          >
+           Sugestões de como criar um Custom Plan
+          </TabButton>
+                              <TabButton
+            onClick={() => handleTabClick("funcionalidadescustomplan")}
+            active={activeTab === "funcionalidadescustomplan"}
+          >
+            Custom Plan
+          </TabButton>
         </TabsContainer>
         <ImageContainer>
-                    {activeTab === "estruturadatoolkitfisica" && (
+                    {activeTab === "sitemapuxtoolkit" && (
             <img
               className="img_diagram"
-              src={EstruturadaToolkitFisica}
-              alt="estrutura da toolkit fisica"
-              onClick={() => openImageView(EstruturadaToolkitFisica)}
+              src={SitemapUXToolkitDigital}
+              alt="sitemap da toolkit digital"
+              onClick={() => openImageView(SitemapUXToolkitDigital)}
             />
           )}
-          {activeTab === "exerciciospraticostoolkitfisica" && (
+          {activeTab === "exerciciospraticostoolkitdigital" && (
             <img
               className="img_diagram"
-              src={ExerciciosPraticosToolkitFisica}
-              alt="exercicios praticos toolkit fisica"
-              onClick={() => openImageView(ExerciciosPraticosToolkitFisica)}
+              src={ExerciciosPraticosSite}
+              alt="exercicios praticos toolkit digital"
+              onClick={() => openImageView(ExerciciosPraticosSite)}
             />
           )}
-              {activeTab === "organizacaovisual" && (
+              {activeTab === "catalogouxtoolkitdigital" && (
             <img
               className="img_diagram"
-              src={OrganizacaoVisual}
-              alt="Organizacao visual do conteudo das cartas da toolkit fisica"
-              onClick={() => openImageView(OrganizacaoVisual)}
+              src={FuncionalidadeCatalogoDigital}
+              alt="funcionalidade de catalogo da toolkit digital"
+              onClick={() => openImageView(FuncionalidadeCatalogoDigital)}
             />
           )}
-                    {activeTab === "ligacaoentrecomponentes" && (
+                    {activeTab === "funcionalidadedigitalferramentasdesign" && (
             <img
               className="img_diagram"
-              src={LigacaoComponentes}
-              alt="Ligacao entre componente fisica e digital"
-              onClick={() => openImageView(LigacaoComponentes)}
+              src={FuncionalidadeDigitalFerramentasDesign}
+              alt="funcionalidade pagina de ferramentas de design toolkit digital"
+              onClick={() => openImageView(FuncionalidadeDigitalFerramentasDesign)}
             />
           )}
-          {activeTab === "mecanicastoolkitfisica" && (
+                    {activeTab === "funcionalidadescustomplan" && (
             <img
               className="img_diagram"
-              src={MecanicasToolkitFisica}
-              alt="Mecanicas e formas de aplicacao da toolkit fisica"
-              onClick={() => openImageView(MecanicasToolkitFisica)}
+              src={FuncionalidadeCustomPlan}
+              alt="Funcionalidade Custom Plan da toolkit digital"
+              onClick={() => openImageView(FuncionalidadeCustomPlan)}
+            />
+          )}
+          {activeTab === "funcionalidadetierscustomplan" && (
+            <img
+              className="img_diagram"
+              src={FuncionalidadeTiersCustomPlan}
+              alt="Funcionalidade Tiers Custom Plan da toolkit digital"
+              onClick={() => openImageView(FuncionalidadeTiersCustomPlan)}
             />
           )}
         </ImageContainer>
@@ -242,4 +258,4 @@ const ScrollToTopButton = styled.button`
 `;
 
 
-export default InfoProj6UXToolkitFisica;
+export default InfoProj6UXToolkitDigital;
