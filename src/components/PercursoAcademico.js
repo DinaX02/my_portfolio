@@ -27,18 +27,18 @@ const ButtonPlanoCurricular = styled.button`
   }
 `;
 
-// const Separator = styled.hr`
-//   width: 50px;
-//   border: 0;
-//   border-top: 2px solid #A767FB;
-//   margin: 0.5rem 0;
-// `;
+const Separator = styled.hr`
+  width: 50px;
+  border: 0;
+  border-top: 2px solid #A767FB;
+  margin: 0.5rem 0;
+`;
 
-// const Averages = styled.div`
-//   font-size: 0.9rem;
-//   color: #333;
-//   margin-top: 0.5rem;
-// `;
+const Averages = styled.div`
+  font-size: 0.9rem;
+  color: #333;
+  margin-top: 0.5rem;
+`;
 
 const PercursoAcademico = () => {
     const linhaStyle = {
@@ -85,10 +85,10 @@ const PercursoAcademico = () => {
       >
         Plano Curricular
       </ButtonPlanoCurricular>
-      {/* <Separator />
+      <Separator />
  <Averages>
         <p style={{fontSize:"18px"}}>Média: <strong>15,4</strong></p>
-      </Averages> */}
+      </Averages>
 </ButtonsContainer>
          <p className='tituloEtapasAcademicas'>Mestrado em Comunicação e Tecnologias Web (2023-2025)</p>
           <p className="paragrafo_percurso">O MCTW aprofundou principalmente a minha especialização em UX/UI Design e Desenvolvimento Web, focando-se na conceptualização, desenvolvimento e avaliação de soluções Web com base em metodologias de Challenge Based Learning. Aqui, desenvolvi competências chave na criação de produtos digitais sustentáveis, design de interfaces responsivas e inclusivas, e avaliação da experiência do utilizador. A experiência de propor soluções para desafios reais reforçou a minha autonomia, pensamento estratégico e espírito empreendedor. Profissionalmente, preparou-me para liderar projetos Web, integrando tecnologias atuais e emergentes e garantindo a acessibilidade, usabilidade e impacto social positivo do projeto em questão.
@@ -102,10 +102,10 @@ const PercursoAcademico = () => {
       >
         Plano Curricular
       </ButtonPlanoCurricular>
-         {/*    <Separator />
+            <Separator />
  <Averages>
-        <p style={{fontSize:"18px"}}>Média:<strong></strong></p>
-      </Averages> */}
+        <p style={{fontSize:"18px"}}>Média:<strong> 17,3</strong></p>
+      </Averages>
       </ButtonsContainer>
   </div>
         <div className="other-info">
