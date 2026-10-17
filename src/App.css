@@ -3952,7 +3952,7 @@ img[aria-haspopup="dialog"]:focus-visible {
   font-size: 18px;
 }
 
-/* ecrãs pequenos: todo o texto corrido do site a 16px */
+/* ecrãs pequenos: todo o texto corrido do site a 18px */
 @media (max-width: 450px) {
   .paragrafo_origens,
   .paragrafo_percurso,
@@ -3964,6 +3964,6 @@ img[aria-haspopup="dialog"]:focus-visible {
   .content_proj11111,
   .texto_corrido,
   .texto_contactos {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
