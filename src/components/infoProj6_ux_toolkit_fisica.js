@@ -1,17 +1,16 @@
 import React, { useState, useEffect} from "react";
 import "../App.css";
+import { ampliavel, useFecharModal } from "./acessibilidade";
 import ExerciciosPraticosToolkitFisica from "../assets/ExerciciosPraticos_uxtoolkit.png";
 import MecanicasToolkitFisica from "../assets/MecanicaseFormasdeAplicacao_uxtoolkit.png";
 import LigacaoComponentes from "../assets/LigacaoEntreComponentes.png";
 import OrganizacaoVisual from "../assets/OrganizacaoVisual.png";
 import EstruturadaToolkitFisica from "../assets/EstruturadaToolkitFisica.png";
-import { FaArrowUp} from "react-icons/fa";
 import styled from "styled-components";
 
 const InfoProj6UXToolkitFisica = () => {
   const [activeTab, setActiveTab] = useState("estruturadatoolkitfisica");
   const [viewImage, setViewImage] = useState(null);
-  const [showScrollToTop, setShowScrollToTop] = useState(false);
 
   useEffect(() => {
 
@@ -26,25 +25,6 @@ const InfoProj6UXToolkitFisica = () => {
     };
   }, [viewImage]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const contentP5Height = document.querySelector('.contentP5')?.offsetHeight || 0;
-      const contentP5Top = document.querySelector('.contentP5')?.offsetTop || 0;
-      const scrollPosition = window.scrollY;
-
-      if (scrollPosition > contentP5Top + contentP5Height) {
-        setShowScrollToTop(true);
-      } else {
-        setShowScrollToTop(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
@@ -58,31 +38,23 @@ const InfoProj6UXToolkitFisica = () => {
     setViewImage(null);
   };
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  };
+    useFecharModal(viewImage, closeImageView);
+
 
   return (
     <div className="info_uxtoolkit">
-        {showScrollToTop && (
-        <ScrollToTopButton onClick={scrollToTop}>
-          <FaArrowUp />
-        </ScrollToTopButton>
-      )}
       {viewImage && (
-        <ImageViewModal onClick={closeImageView}>
+        <ImageViewModal onClick={closeImageView} role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+          <button type="button" className="modal_fechar" aria-label="Fechar imagem">×</button>
           <ImageView>
             <img src={viewImage} alt="Imagem em tamanho maior" />
           </ImageView>
         </ImageViewModal>
       )}
       <div className="containerDesignProcess">
-        <p className="fontsize_tags">
+        <h2 className="fontsize_tags">
           <span className="title_marcado_uxtoolkit">Toolkit Física.</span>
-        </p>
+        </h2>
               <p style={{width:"80%", fontSize:"19px"}}>A componente física da toolkit consiste num conjunto de trinta e sete (37) cartas, 
 construídas a partir da categorização feita no âmbito deste estudo. Além destas cartas, 
 a toolkit inclui um manual de utilização que tem o intuito de explicar aos utilizadores como a 
@@ -93,30 +65,35 @@ a aplicação mais prática e dinâmica desta componente física.
           <TabButton
             onClick={() => handleTabClick("estruturadatoolkitfisica")}
             active={activeTab === "estruturadatoolkitfisica"}
+            aria-pressed={activeTab === "estruturadatoolkitfisica"}
           >
             Estrutura da Toolkit
           </TabButton>
           <TabButton
             onClick={() => handleTabClick("organizacaovisual")}
             active={activeTab === "organizacaovisual"}
+            aria-pressed={activeTab === "organizacaovisual"}
           >
            Organização Visual
           </TabButton>
                     <TabButton
             onClick={() => handleTabClick("ligacaoentrecomponentes")}
             active={activeTab === "ligacaoentrecomponentes"}
+            aria-pressed={activeTab === "ligacaoentrecomponentes"}
           >
            Ligação entre Componentes
           </TabButton>
                     <TabButton
             onClick={() => handleTabClick("mecanicastoolkitfisica")}
             active={activeTab === "mecanicastoolkitfisica"}
+            aria-pressed={activeTab === "mecanicastoolkitfisica"}
           >
            Mecânicas e formas de aplicação
           </TabButton>
                     <TabButton
             onClick={() => handleTabClick("exerciciospraticostoolkitfisica")}
             active={activeTab === "exerciciospraticostoolkitfisica"}
+            aria-pressed={activeTab === "exerciciospraticostoolkitfisica"}
           >
            Exercícios Práticos
           </TabButton>
@@ -127,7 +104,7 @@ a aplicação mais prática e dinâmica desta componente física.
               className="img_diagram"
               src={EstruturadaToolkitFisica}
               alt="estrutura da toolkit fisica"
-              onClick={() => openImageView(EstruturadaToolkitFisica)}
+              {...ampliavel(() => openImageView(EstruturadaToolkitFisica))}
             />
           )}
           {activeTab === "exerciciospraticostoolkitfisica" && (
@@ -135,7 +112,7 @@ a aplicação mais prática e dinâmica desta componente física.
               className="img_diagram"
               src={ExerciciosPraticosToolkitFisica}
               alt="exercicios praticos toolkit fisica"
-              onClick={() => openImageView(ExerciciosPraticosToolkitFisica)}
+              {...ampliavel(() => openImageView(ExerciciosPraticosToolkitFisica))}
             />
           )}
               {activeTab === "organizacaovisual" && (
@@ -143,7 +120,7 @@ a aplicação mais prática e dinâmica desta componente física.
               className="img_diagram"
               src={OrganizacaoVisual}
               alt="Organizacao visual do conteudo das cartas da toolkit fisica"
-              onClick={() => openImageView(OrganizacaoVisual)}
+              {...ampliavel(() => openImageView(OrganizacaoVisual))}
             />
           )}
                     {activeTab === "ligacaoentrecomponentes" && (
@@ -151,7 +128,7 @@ a aplicação mais prática e dinâmica desta componente física.
               className="img_diagram"
               src={LigacaoComponentes}
               alt="Ligacao entre componente fisica e digital"
-              onClick={() => openImageView(LigacaoComponentes)}
+              {...ampliavel(() => openImageView(LigacaoComponentes))}
             />
           )}
           {activeTab === "mecanicastoolkitfisica" && (
@@ -159,7 +136,7 @@ a aplicação mais prática e dinâmica desta componente física.
               className="img_diagram"
               src={MecanicasToolkitFisica}
               alt="Mecanicas e formas de aplicacao da toolkit fisica"
-              onClick={() => openImageView(MecanicasToolkitFisica)}
+              {...ampliavel(() => openImageView(MecanicasToolkitFisica))}
             />
           )}
         </ImageContainer>
@@ -221,25 +198,6 @@ const ImageContainer = styled.div`
   justify-content: center;
 `;
 
-const ScrollToTopButton = styled.button`
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  background-color: #CA9050;
-  color: white;
-  border: none;
-  padding: 0.5rem;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-  &:hover {
-    background-color: #c77f32ff;
-  }
-`;
 
 
 export default InfoProj6UXToolkitFisica;

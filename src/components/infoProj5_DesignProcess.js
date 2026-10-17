@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
+import { ampliavel, useFecharModal } from "./acessibilidade";
 import EmpathyMap from "../assets/empathy map.png";
 import DiagramDesignProcess from "../assets/design_thinking_grafico_tocare.png";
 import BenchmarkingToCare from "../assets/benchmarking.png";
@@ -35,19 +36,22 @@ const InfoProj5_DesignProcess = () => {
     setViewImage(null);
   };
 
+    useFecharModal(viewImage, closeImageView);
+
   return (
     <div className="info_tocare">
       {viewImage && (
-        <ImageViewModal onClick={closeImageView}>
+        <ImageViewModal onClick={closeImageView} role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+          <button type="button" className="modal_fechar" aria-label="Fechar imagem">×</button>
           <ImageView>
             <img src={viewImage} alt="Imagem em tamanho maior" />
           </ImageView>
         </ImageViewModal>
       )}
       <div className="containerDesignProcess">
-        <p className="fontsize_tags">
+        <h2 className="fontsize_tags">
           <span className="title_marcado_tocare">Design Thinking.</span>
-        </p>
+        </h2>
         <p className="paragrafo_design_process">
           Para dar resposta a este desafio, foi utilizada a metodologia de Design Thinking para a estruturação e desenvolvimento da ToCare. Neste desafio foram trabalhadas apenas as 4 primeiras fases desta metodologia, tendo sido priorizadas especialmente as fases da Empatia, Definição e Ideação.
         </p>
@@ -56,24 +60,26 @@ const InfoProj5_DesignProcess = () => {
             className="img_diagram"
             src={DiagramDesignProcess}
             alt="Design Process Diagram"
-            onClick={() => openImageView(DiagramDesignProcess)}
+            {...ampliavel(() => openImageView(DiagramDesignProcess))}
           />
         </ImageContainer>
       </div>
       <div className="containerDesignProcess">
-      <p className="fontsize_tags_tocare">
+      <h2 className="fontsize_tags_tocare">
           <span className="title_marcado_tocare">Processo.</span>
-      </p>
+      </h2>
       <TabsContainer>
           <TabButton
             onClick={() => handleTabClick("empathymap")}
             active={activeTab === "empathymap"}
+            aria-pressed={activeTab === "empathymap"}
           >
             Empathy Map
           </TabButton>
           <TabButton
             onClick={() => handleTabClick("designSystem")}
             active={activeTab === "designSystem"}
+            aria-pressed={activeTab === "designSystem"}
           >
             Benchmarking
           </TabButton>
@@ -81,6 +87,7 @@ const InfoProj5_DesignProcess = () => {
           <TabButton
             onClick={() => handleTabClick("persona")}
             active={activeTab === "persona"}
+            aria-pressed={activeTab === "persona"}
           >
             Persona
           </TabButton>
@@ -88,6 +95,7 @@ const InfoProj5_DesignProcess = () => {
           <TabButton
             onClick={() => handleTabClick("hmw")}
             active={activeTab === "hmw"}
+            aria-pressed={activeTab === "hmw"}
           >
             How might we? 
           </TabButton>
@@ -95,6 +103,7 @@ const InfoProj5_DesignProcess = () => {
           <TabButton
             onClick={() => handleTabClick("insights")}
             active={activeTab === "insights"}
+            aria-pressed={activeTab === "insights"}
           >
             Insights 
           </TabButton>
@@ -102,6 +111,7 @@ const InfoProj5_DesignProcess = () => {
           <TabButton
             onClick={() => handleTabClick("userjourney")}
             active={activeTab === "userjourney"}
+            aria-pressed={activeTab === "userjourney"}
           >
             User Journey Map 
           </TabButton>
@@ -109,12 +119,14 @@ const InfoProj5_DesignProcess = () => {
           <TabButton
             onClick={() => handleTabClick("userflow")}
             active={activeTab === "userflow"}
+            aria-pressed={activeTab === "userflow"}
           >
             User Flow 
           </TabButton>
           <TabButton
             onClick={() => handleTabClick("matrizprioridade")}
             active={activeTab === "matrizprioridade"}
+            aria-pressed={activeTab === "matrizprioridade"}
           >
             Matriz de Prioridade 
           </TabButton>
@@ -126,7 +138,7 @@ const InfoProj5_DesignProcess = () => {
               className="img_diagram"
               src={EmpathyMap}
               alt="empathy map_tocare"
-              onClick={() => openImageView(EmpathyMap)}
+              {...ampliavel(() => openImageView(EmpathyMap))}
             />
           )}
           {activeTab === "designSystem" && (
@@ -134,7 +146,7 @@ const InfoProj5_DesignProcess = () => {
               className="img_diagram"
               src={BenchmarkingToCare}
               alt="benchmarking_tocare"
-              onClick={() => openImageView(BenchmarkingToCare)}
+              {...ampliavel(() => openImageView(BenchmarkingToCare))}
             />
           )}
           {activeTab === "persona" && (
@@ -142,7 +154,7 @@ const InfoProj5_DesignProcess = () => {
               className="img_diagram"
               src={PersonaToCare}
               alt="persona"
-              onClick={() => openImageView(PersonaToCare)}
+              {...ampliavel(() => openImageView(PersonaToCare))}
             />
           )}
           {activeTab === "hmw" && (
@@ -150,7 +162,7 @@ const InfoProj5_DesignProcess = () => {
               className="img_diagram"
               src={HMWToCare}
               alt="How might we questions"
-              onClick={() => openImageView(HMWToCare)}
+              {...ampliavel(() => openImageView(HMWToCare))}
             />
           )}
             {activeTab === "insights" && (
@@ -158,7 +170,7 @@ const InfoProj5_DesignProcess = () => {
               className="img_diagram"
               src={InsightsToCare}
               alt="Insights"
-              onClick={() => openImageView(InsightsToCare)}
+              {...ampliavel(() => openImageView(InsightsToCare))}
             />
           )}
             {activeTab === "userjourney" && (
@@ -166,7 +178,7 @@ const InfoProj5_DesignProcess = () => {
               className="img_diagram"
               src={UserJourneyMapToCare}
               alt="user journey map"
-              onClick={() => openImageView(UserJourneyMapToCare)}
+              {...ampliavel(() => openImageView(UserJourneyMapToCare))}
             />
           )}
             {activeTab === "userflow" && (
@@ -174,7 +186,7 @@ const InfoProj5_DesignProcess = () => {
               className="img_diagram"
               src={UserFlowToCare}
               alt="user flow"
-              onClick={() => openImageView(UserFlowToCare)}
+              {...ampliavel(() => openImageView(UserFlowToCare))}
             />
           )}
             {activeTab === "matrizprioridade" && (
@@ -182,7 +194,7 @@ const InfoProj5_DesignProcess = () => {
               className="img_diagram"
               src={MatrizPriority}
               alt="matriz de prioridade"
-              onClick={() => openImageView(MatrizPriority)}
+              {...ampliavel(() => openImageView(MatrizPriority))}
             />
           )}
         </ImageContainer>

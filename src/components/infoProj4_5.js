@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from "react";
 import "../App.css";
+import { ampliavel, useFecharModal } from "./acessibilidade";
 import OnBoardingImage from "../assets/onboarding.png";
 import EntrarCriarContaImage from "../assets/Entrar_criarconta.png"
 import HomepageWireframes from "../assets/homepage_wireframess.png";
@@ -9,13 +10,11 @@ import AlugarArtigoImage from "../assets/rent_wireframess_2.png";
 import PublicarImage from "../assets/publicar_wireframess.png";
 import CaixadeEntradeImage from "../assets/caixa de entrada_wireframess.png";
 import PerfilImage from "../assets/perfil_wireframess.png";
-import { FaArrowUp} from "react-icons/fa";
 import styled from "styled-components";
 
 const InfoProj4_5 = () => {
   const [activeTab, setActiveTab] = useState("designSystem");
   const [viewImage, setViewImage] = useState(null);
-  const [showScrollToTop, setShowScrollToTop] = useState(false);
 
   useEffect(() => {
 
@@ -30,25 +29,6 @@ const InfoProj4_5 = () => {
     };
   }, [viewImage]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const contentP4Height = document.querySelector('.contentP4')?.offsetHeight || 0;
-      const contentP4Top = document.querySelector('.contentP4')?.offsetTop || 0;
-      const scrollPosition = window.scrollY;
-
-      if (scrollPosition > contentP4Top + contentP4Height) {
-        setShowScrollToTop(true);
-      } else {
-        setShowScrollToTop(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
@@ -62,60 +42,57 @@ const InfoProj4_5 = () => {
     setViewImage(null);
   };
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  };
+    useFecharModal(viewImage, closeImageView);
+
 
   return (
     <div className="info_p4">
-      {showScrollToTop && (
-        <ScrollToTopButton onClick={scrollToTop}>
-          <FaArrowUp />
-        </ScrollToTopButton>
-      )}
       {viewImage && (
-        <ImageViewModal onClick={closeImageView}>
+        <ImageViewModal onClick={closeImageView} role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+          <button type="button" className="modal_fechar" aria-label="Fechar imagem">×</button>
           <ImageView>
             <img src={viewImage} alt="Imagem em tamanho maior" />
           </ImageView>
         </ImageViewModal>
       )}
       <div className="containerDesignProcess">
-        <p className="fontsize_tags">
+        <h2 className="fontsize_tags">
           <span className="title_marcado_boomerang">Ecrãs.</span>
-        </p>
+        </h2>
 
         <TabsContainer>
           <TabButton
             onClick={() => handleTabClick("designSystem")}
             active={activeTab === "designSystem"}
+            aria-pressed={activeTab === "designSystem"}
           >
             OnBoarding
           </TabButton>
           <TabButton
             onClick={() => handleTabClick("colors")}
             active={activeTab === "colors"}
+            aria-pressed={activeTab === "colors"}
           >
             Entrar/ Criar Conta
           </TabButton>
           <TabButton
             onClick={() => handleTabClick("typography")}
             active={activeTab === "typography"}
+            aria-pressed={activeTab === "typography"}
           >
             Homepage
           </TabButton>
           <TabButton
             onClick={() => handleTabClick("iconography")}
             active={activeTab === "iconography"}
+            aria-pressed={activeTab === "iconography"}
           >
             Pesquisa
           </TabButton>
           <TabButton
             onClick={() => handleTabClick("components")}
             active={activeTab === "components"}
+            aria-pressed={activeTab === "components"}
           >
             Artigo + Chat
           </TabButton>
@@ -123,6 +100,7 @@ const InfoProj4_5 = () => {
           <TabButton
             onClick={() => handleTabClick("rent")}
             active={activeTab === "rent"}
+            aria-pressed={activeTab === "rent"}
           >
             Alugar Artigo
           </TabButton>
@@ -130,6 +108,7 @@ const InfoProj4_5 = () => {
           <TabButton
             onClick={() => handleTabClick("publicar")}
             active={activeTab === "publicar"}
+            aria-pressed={activeTab === "publicar"}
           >
             Publicar Artigo
           </TabButton>
@@ -137,6 +116,7 @@ const InfoProj4_5 = () => {
           <TabButton
             onClick={() => handleTabClick("notifications")}
             active={activeTab === "notifications"}
+            aria-pressed={activeTab === "notifications"}
           >
             Caixa de Entrada
           </TabButton>
@@ -144,6 +124,7 @@ const InfoProj4_5 = () => {
           <TabButton
             onClick={() => handleTabClick("perfil")}
             active={activeTab === "perfil"}
+            aria-pressed={activeTab === "perfil"}
           >
             Perfil
           </TabButton>
@@ -155,7 +136,7 @@ const InfoProj4_5 = () => {
               className="img_diagram"
               src={OnBoardingImage}
               alt="onboarding- wireframes"
-              onClick={() => openImageView(OnBoardingImage)}
+              {...ampliavel(() => openImageView(OnBoardingImage))}
             />
           )}
           {activeTab === "colors" && (
@@ -163,7 +144,7 @@ const InfoProj4_5 = () => {
               className="img_diagram"
               src={EntrarCriarContaImage}
               alt="Criar conta- wireframes"
-              onClick={() => openImageView(EntrarCriarContaImage)}
+              {...ampliavel(() => openImageView(EntrarCriarContaImage))}
             />
           )}
           {activeTab === "typography" && (
@@ -171,7 +152,7 @@ const InfoProj4_5 = () => {
               className="img_diagram"
               src={HomepageWireframes}
               alt="homepage-wireframes"
-              onClick={() => openImageView(HomepageWireframes)}
+              {...ampliavel(() => openImageView(HomepageWireframes))}
             />
           )}
           {activeTab === "iconography" && (
@@ -179,7 +160,7 @@ const InfoProj4_5 = () => {
               className="img_diagram"
               src={PesquisaWireframes}
               alt="pesquisa- wireframes"
-              onClick={() => openImageView(PesquisaWireframes)}
+              {...ampliavel(() => openImageView(PesquisaWireframes))}
             />
           )}
           {activeTab === "components" && (
@@ -187,7 +168,7 @@ const InfoProj4_5 = () => {
               className="img_diagram"
               src={ArigoeChatImage}
               alt="artigo + Chat- wireframes"
-              onClick={() => openImageView(ArigoeChatImage)}
+              {...ampliavel(() => openImageView(ArigoeChatImage))}
             />
           )}
                     {activeTab === "rent" && (
@@ -195,7 +176,7 @@ const InfoProj4_5 = () => {
               className="img_diagram"
               src={AlugarArtigoImage}
               alt="alugar artigo- wireframes"
-              onClick={() => openImageView(AlugarArtigoImage)}
+              {...ampliavel(() => openImageView(AlugarArtigoImage))}
             />
           )}
 
@@ -204,7 +185,7 @@ const InfoProj4_5 = () => {
               className="img_diagram"
               src={PublicarImage}
               alt="publicar- wireframes"
-              onClick={() => openImageView(PublicarImage)}
+              {...ampliavel(() => openImageView(PublicarImage))}
             />
           )}
 
@@ -213,7 +194,7 @@ const InfoProj4_5 = () => {
               className="img_diagram"
               src={CaixadeEntradeImage}
               alt="caixa de entrada- wireframes"
-              onClick={() => openImageView(CaixadeEntradeImage)}
+              {...ampliavel(() => openImageView(CaixadeEntradeImage))}
             />
           )}
 
@@ -222,7 +203,7 @@ const InfoProj4_5 = () => {
               className="img_diagram"
               src={PerfilImage}
               alt="perfil- wireframes"
-              onClick={() => openImageView(PerfilImage)}
+              {...ampliavel(() => openImageView(PerfilImage))}
             />
           )}
         </ImageContainer>
@@ -284,24 +265,5 @@ const ImageContainer = styled.div`
   justify-content: center;
 `;
 
-const ScrollToTopButton = styled.button`
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  background-color: #00c17c;
-  color: white;
-  border: none;
-  padding: 0.5rem;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-  &:hover {
-    background-color: #009d6b;
-  }
-`;
 
 export default InfoProj4_5;

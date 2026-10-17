@@ -12,24 +12,24 @@ const InfoProj5_2 = () => {
       <div className="instagram-container">
         <div className="instagram-info">
           {/* <p className="paragrafo_intro_sizes">Identidade de Marca</p> */}
-          <p className="fontsize_tags">
+          <h2 className="fontsize_tags">
             <span className="title_marcado_tocare">Contexto.</span>
-          </p>
+          </h2>
           <p className="paragrafo_tocare_context">
           O envelhecimento populacional traz desafios na saúde e cuidados a longo prazo, aumentando a demanda por assistência em instituições, ambientes domésticos e hospitalares. Cuidadores formais e informais são essenciais, mas enfrentam dificuldades na coordenação com familiares e profissionais de saúde, o que pode comprometer a qualidade do atendimento e afetar o seu bem-estar. <br></br> <br></br>A plataforma visa apoiar esses cuidadores, melhorando a articulação entre os envolvidos e aliviando a sobrecarga de trabalho.
           </p>
-          <p className="fontsize_tags">
+          <h2 className="fontsize_tags">
             <span className="title_marcado_tocare">Problema.</span>
-          </p>
+          </h2>
           <p  className="paragrafo_origens">
           Os cuidadores de idosos enfrentam dificuldades significativas na comunicação e coordenação eficazes das tarefas com outros cuidadores. <br></br><br></br>Esta ineficiência na troca de informações e na organização das atividades diárias compromete a qualidade dos cuidados prestados, aumentando o stress e a sobrecarga dos cuidadores.</p>
         </div>
 
         <div className="instagram-info">
           {/* <p className="paragrafo_intro_sizes">Identidade de Marca</p> */}
-          <p className="fontsize_tags">
+          <h2 className="fontsize_tags">
             <span className="title_marcado_tocare">Ideia.</span>
-          </p>
+          </h2>
           <p className="paragrafo_tocare_context">
           Reconhecendo a existência de problemas associados à articulação entre cuidadores,
  propõe-se a criação de uma aplicação móvel que pretende revolucionar o cuidado de
@@ -39,9 +39,9 @@ const InfoProj5_2 = () => {
  de medicamentos, toma de banhos e trocas de fraldas.
           </p>
 
-          <p className="fontsize_tags">
+          <h2 className="fontsize_tags">
             <span className="title_marcado_tocare">Objetivos.</span>
-          </p>
+          </h2>
           <p className="paragrafo_origens">
           A aplicação tem como objetivos facilitar a coordenação dos cuidados entre diferentes
  provedores. <br></br><br></br>

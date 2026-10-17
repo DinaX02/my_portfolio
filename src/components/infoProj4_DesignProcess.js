@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
+import { ampliavel, useFecharModal } from "./acessibilidade";
 import { QRCodeCanvas } from "qrcode.react";
 import TecnologiasUtilizadas from "../assets/tecnologias_usadas_boomerang.png";
 import AcessibilidadeBommerang from "../assets/Acessibilidade_boomerang.png";
@@ -27,6 +28,8 @@ const InfoProj4DesignProcess = () => {
     setViewImage(null);
   };
 
+    useFecharModal(viewImage, closeImageView);
+
   
   const handleTabClick = (tab) => {
     setActiveTab(tab);
@@ -35,16 +38,17 @@ const InfoProj4DesignProcess = () => {
   return (
     <div className="info_p4">
       {viewImage && (
-        <ImageViewModal onClick={closeImageView}>
+        <ImageViewModal onClick={closeImageView} role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+          <button type="button" className="modal_fechar" aria-label="Fechar imagem">×</button>
           <ImageView>
             <img src={viewImage} alt="Imagem em tamanho maior" />
           </ImageView>
         </ImageViewModal>
       )}
       <div className="containerDesignProcess">
-        <p className="fontsize_tags">
+        <h2 className="fontsize_tags">
           <span className="title_marcado_boomerang">Desenvolvimento.</span>
-        </p>
+        </h2>
         <p className="paragrafo_design_process">
           Este projeto, foi desenvolvido durante <strong>1 ano </strong> sendo que após as fases de Ideação e Design estarem concluídas veio a fase mais trabalhosa do projeto, o Desenvolvimento, que ficou marcado principalmente pelo desenvolvimento Front-end, Back-end e a preocupação constante pela Acessibilidade do mesmo.
         </p>
@@ -53,7 +57,7 @@ const InfoProj4DesignProcess = () => {
             className="img_diagram"
             src={DiagramDesenvolvimentoProcess}
             alt="Design Process Diagram"
-            onClick={() => openImageView(DiagramDesenvolvimentoProcess)}
+            {...ampliavel(() => openImageView(DiagramDesenvolvimentoProcess))}
           />
         </ImageContainer>
 
@@ -62,18 +66,21 @@ const InfoProj4DesignProcess = () => {
           <TabButton
             onClick={() => handleTabClick("tecnologias")}
             active={activeTab === "tecnologias"}
+            aria-pressed={activeTab === "tecnologias"}
           >
             Tecnologias Utilizadas
           </TabButton>
           <TabButton
             onClick={() => handleTabClick("acessibilidade")}
             active={activeTab === "acessibilidade"}
+            aria-pressed={activeTab === "acessibilidade"}
           >
             Detalhes da Acessibilidade
           </TabButton>
           <TabButton
             onClick={() => handleTabClick("resultadosAcessibilidade")}
             active={activeTab === "resultadosAcessibilidade"}
+            aria-pressed={activeTab === "resultadosAcessibilidade"}
           >
             Resutlados Acessibilidade
           </TabButton>
@@ -84,7 +91,7 @@ const InfoProj4DesignProcess = () => {
               className="img_diagram"
               src={TecnologiasUtilizadas}
               alt="Tecnologias utilizadas no desenbvolvimento da Boomerang"
-              onClick={() => openImageView(TecnologiasUtilizadas)}
+              {...ampliavel(() => openImageView(TecnologiasUtilizadas))}
             />
           )}
           {activeTab === "acessibilidade" && (
@@ -92,7 +99,7 @@ const InfoProj4DesignProcess = () => {
               className="img_diagram"
               src={AcessibilidadeBommerang}
               alt="Ferramentas utilizadas para meder a Acessibilidade da Boomerang"
-              onClick={() => openImageView(AcessibilidadeBommerang)}
+              {...ampliavel(() => openImageView(AcessibilidadeBommerang))}
             />
           )}
           {activeTab === "resultadosAcessibilidade" && (
@@ -100,7 +107,7 @@ const InfoProj4DesignProcess = () => {
               className="img_diagram"
               src={ResultadosAcessibilidadeBoomerang}
               alt="Resultados obtidos na Acessibilidade do Projeto Boomerang"
-              onClick={() => openImageView(ResultadosAcessibilidadeBoomerang)}
+              {...ampliavel(() => openImageView(ResultadosAcessibilidadeBoomerang))}
             />
           )}
         </ImageContainer>

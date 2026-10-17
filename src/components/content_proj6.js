@@ -1,7 +1,8 @@
 import React from "react";
 import coverUXToolkit from "../assets/coverUXToolkit.png";
 import "../App.css";
-import setaBack from "../assets/Arrow 1 (1).svg";
+import MockupProjeto from "./MockupProjeto";
+import { FiArrowLeft } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 // import { motion } from "framer-motion";
 
@@ -14,27 +15,19 @@ const ContentP6 = () => {
   return (
     <div>
       <header className="header_proj4">
-        <div onClick={goBack} className="seta_rounded">
-          <img
-            className="seta_back_projects"
-            src={setaBack}
-            alt="goBackArrow"
-          />
-        </div>
+        <button type="button" onClick={goBack} className="seta_rounded" aria-label="Voltar à página anterior">
+          <FiArrowLeft className="seta_back_projects" aria-hidden="true" />
+        </button>
         {/* <h1>Submerso </h1> */}
       </header>
       <div className="div_content_p4">
-        <img
-          className="img-pc_movies"
-          src={coverUXToolkit}
-          alt="mockup UX Toolkit"
-        />
+        <MockupProjeto src={coverUXToolkit} alt="mockup UX Toolkit" />
         <div className="content_p4">
           <h1 className="title_uxtoolkit_hero">UX Toolkit</h1>
 
-          <p className="fontsize_tags">
+          <h2 className="fontsize_tags">
             <span className="text_marcado_uxtoolkit">Tags.</span>
-          </p>
+          </h2>
 
           <div
             style={{
@@ -51,9 +44,9 @@ const ContentP6 = () => {
             <div className="tags_uxtoolkit_big">Development(al) Research</div>
           </div>
 
-          <p className="fontsize_tags">
+          <h2 className="fontsize_tags">
             <span className="text_marcado_uxtoolkit">Tools.</span>
-          </p>
+          </h2>
 
           <div
             style={{

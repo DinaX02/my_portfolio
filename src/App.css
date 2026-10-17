@@ -983,6 +983,15 @@ padding-top: 1em;
 .seta_back_projects{
   padding: 5px;
   margin-top: 5px;
+  /* ícone Feather, da mesma família do "voltar ao topo" */
+  width: 34px;
+  height: 34px;
+  color: #1c1c2e;
+  transition: transform 0.2s ease;
+}
+
+.seta_rounded:hover .seta_back_projects {
+  transform: translateX(-4px);
 }
 
 
@@ -3414,3 +3423,526 @@ right: -15px;
   .space_bg_ecra_2{
     margin-left: 3em;
   }
+/* //////////// motion / parallax homepage //////////// */
+
+.scroll_progress_bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(to right, #5331B2, #807DFF);
+  transform-origin: 0%;
+  z-index: 9999;
+}
+
+/* //////////// roadmap percurso académico //////////// */
+
+.roadmap_linha_numero {
+  margin-top: 20px;
+  width: 200px;
+  height: 5px;
+  background-color: #A767FB;
+  position: absolute;
+  right: 0;
+}
+
+.roadmap_linha_numero_txt {
+  margin-top: 5px;
+  position: absolute;
+  right: 15px;
+  color: #A767FB;
+  font-size: 46px;
+  font-weight: bold;
+}
+
+.roadmap_wrapper {
+  padding: 0 16px 3em;
+}
+
+@media (min-width: 1080px) {
+  .roadmap_wrapper {
+    padding: 0 80px 3em;
+  }
+}
+
+.roadmap_track {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+
+.roadmap_track::-webkit-scrollbar {
+  display: none;
+}
+
+.roadmap_canvas {
+  position: relative;
+}
+
+.roadmap_svg {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+}
+
+.roadmap_numero {
+  position: absolute;
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1.5px #A78BFA;
+  transition: color 0.4s;
+  user-select: none;
+}
+
+.roadmap_numero.alcancado {
+  color: #8B5CF6;
+  -webkit-text-stroke: 0;
+}
+
+.roadmap_etapa,
+.roadmap_marco {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  background: none;
+}
+
+.roadmap_etapa {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(28, 28, 46, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.4s;
+}
+
+.roadmap_etapa.alcancado {
+  background: rgba(139, 92, 246, 0.35);
+}
+
+.roadmap_etapa_centro {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #1c1c2e;
+  transition: background 0.4s;
+}
+
+.roadmap_etapa.alcancado .roadmap_etapa_centro {
+  background: #8B5CF6;
+}
+
+.roadmap_halo {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: rgba(139, 92, 246, 0.35);
+}
+
+.roadmap_marco {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #1c1c2e;
+  z-index: 1;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+/* área de toque maior que o ponto visível (10px -> 42px) */
+.roadmap_marco::after {
+  content: "";
+  position: absolute;
+  inset: -16px;
+}
+
+.roadmap_marco.alcancado {
+  background: #8B5CF6;
+}
+
+.roadmap_marco.ativo {
+  box-shadow: 0 0 0 6px rgba(139, 92, 246, 0.3);
+}
+
+.roadmap_etapa:focus-visible,
+.roadmap_marco:focus-visible,
+.roadmap_btn:focus-visible {
+  outline: 2px solid #5331B2;
+  outline-offset: 3px;
+}
+
+.roadmap_legenda {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  cursor: pointer;
+  width: 210px;
+}
+
+.roadmap_tracejado {
+  display: block;
+  width: 0;
+  border-left: 1.5px dashed #8a8a8a;
+}
+
+.roadmap_legenda_txt {
+  padding-left: 18px;
+  margin-top: -36px;
+}
+
+.roadmap_legenda_titulo {
+  margin: 0 0 6px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #1c1c2e;
+  transition: color 0.3s;
+}
+
+.roadmap_legenda.ativo .roadmap_legenda_titulo {
+  color: #5331B2;
+  font-weight: 600;
+}
+
+.roadmap_legenda_sub {
+  margin: 0;
+  font-size: 13px;
+  color: #1c1c2e;
+  white-space: pre-line;
+}
+
+.roadmap_realce {
+  font-weight: 600;
+}
+
+.roadmap_controlos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 0 2rem;
+}
+
+.roadmap_botoes {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.roadmap_btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid #1c1c2e;
+  background: transparent;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.roadmap_btn:hover:not(:disabled) {
+  background: #1c1c2e;
+  color: #D9BCFF;
+}
+
+.roadmap_btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.roadmap_contador {
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.roadmap_detalhe {
+  max-width: 900px;
+}
+
+.roadmap_detalhe_num {
+  color: #1c1c2e;
+  margin-right: 0.6rem;
+}
+
+/* //////////// imagem origens (camadas) //////////// */
+
+.origens_img {
+  position: relative;
+  width: 100%;
+  max-width: 540px;
+  aspect-ratio: 828 / 693;
+}
+
+.origens_camada {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.origens_camada img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: auto;
+}
+
+.projetos_foto_wrapper {
+  position: relative;
+  display: inline-block;
+  width: 110px;
+  height: 110px;
+}
+
+.projetos_foto_wrapper img {
+  display: block;
+}
+
+.projetos_foto_balao {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: none !important;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.projetos_foto_balao.visivel {
+  opacity: 1;
+}
+
+/* //////////// acessibilidade //////////// */
+
+/* texto só para leitores de ecrã */
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* link "Saltar para o conteúdo": só aparece quando recebe foco pelo teclado */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  z-index: 10000;
+  padding: 0.75rem 1.25rem;
+  background: #1c1c2e;
+  color: #fff !important;
+  border-radius: 0 0 12px 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* foco visível em todo o site (só com teclado) */
+:focus-visible {
+  outline: 3px solid #5331B2 !important;
+  outline-offset: 3px;
+}
+
+main:focus {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* navegação */
+button.nav-toggle {
+  background: none;
+  border: 0;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+}
+
+.nav-items > a[aria-current="page"] {
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  /* menu mobile fechado: escondido também para teclado e leitores de ecrã */
+  .nav-items {
+    visibility: hidden;
+  }
+
+  .nav-items.open {
+    visibility: visible;
+  }
+}
+
+/* seta "voltar" (agora é um botão) */
+button.seta_rounded {
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* títulos de secção passaram de <p> para <h2>: manter o aspeto */
+h2.fontsize_tags,
+h2.fontsize_tags_tocare {
+  margin-block: 1em;
+}
+
+/* email (era <h5>): manter o aspeto */
+p.responsive_names {
+  font-weight: bold;
+  margin-block: 1.67em;
+}
+
+p.responsive_names a {
+  color: inherit;
+}
+
+/* imagens ampliáveis */
+img[aria-haspopup="dialog"] {
+  cursor: zoom-in;
+}
+
+.modal_fechar {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 0;
+  background: rgba(255, 255, 255, 0.9);
+  color: #1c1c2e;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* botões que são links (antes eram <button> dentro de <a>) */
+a.btn_viewmore,
+a.btn_viewmore_2,
+a.btn_viewmore_3 {
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* //////////// voltar ao topo //////////// */
+.back_to_top {
+  position: fixed;
+  right: 24px;
+  bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+  z-index: 50;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 480px) {
+  .roadmap_numero {
+    font-size: 36px;
+  }
+
+  .roadmap_legenda_titulo {
+    font-size: 16px;
+  }
+
+  .roadmap_detalhe .tituloEtapasAcademicas {
+    font-size: 18px;
+  }
+
+  .roadmap_detalhe .paragrafo_percurso {
+    font-size: 16px;
+    width: 100%;
+  }
+}
+
+/* //////////// motion páginas de projeto //////////// */
+
+@keyframes projeto_subir {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes projeto_tag {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* título, "Tags.", tags, "Tools.", tools: entram em sequência */
+.div_content_p4 .content_p4 > * {
+  animation: projeto_subir 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.div_content_p4 .content_p4 > :nth-child(1) { animation-delay: 0.2s; }
+.div_content_p4 .content_p4 > :nth-child(2) { animation-delay: 0.3s; }
+.div_content_p4 .content_p4 > :nth-child(3) { animation-delay: 0.4s; }
+.div_content_p4 .content_p4 > :nth-child(4) { animation-delay: 0.55s; }
+.div_content_p4 .content_p4 > :nth-child(5) { animation-delay: 0.65s; }
+
+/* cada tag aparece uma a uma e reage ao hover */
+.div_content_p4 .content_p4 [class^="tags_"] {
+  animation: projeto_tag 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.div_content_p4 .content_p4 [class^="tags_"]:nth-child(1) { animation-delay: 0.45s; }
+.div_content_p4 .content_p4 [class^="tags_"]:nth-child(2) { animation-delay: 0.5s; }
+.div_content_p4 .content_p4 [class^="tags_"]:nth-child(3) { animation-delay: 0.55s; }
+.div_content_p4 .content_p4 [class^="tags_"]:nth-child(4) { animation-delay: 0.6s; }
+.div_content_p4 .content_p4 [class^="tags_"]:nth-child(5) { animation-delay: 0.65s; }
+.div_content_p4 .content_p4 [class^="tags_"]:nth-child(n + 6) { animation-delay: 0.7s; }
+
+.div_content_p4 .content_p4 [class^="tags_"]:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* imagens ampliáveis: sobem ligeiramente no hover para mostrar que se podem abrir */
+img[aria-haspopup="dialog"] {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+}
+
+img[aria-haspopup="dialog"]:hover,
+img[aria-haspopup="dialog"]:focus-visible {
+  transform: translateY(-4px) scale(1.015);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}

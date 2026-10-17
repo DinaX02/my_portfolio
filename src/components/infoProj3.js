@@ -66,8 +66,8 @@ Em grande parte, devido ao público-alvo, este jogo é de baixa dificuldade, per
 <p className="legendas"><strong>Legenda:</strong> Storyboard Submerso</p> */}
 {/* 
 <div className="btn_next_projects">
-<Link to={"/project_1"}><button className="btn_viewmore">Ver Projeto Koru</button></Link>
-<Link to={"/project_3"}><button className="btn_viewmore">Ver Projeto Submerso</button></Link>
+<Link className="btn_viewmore" to="/project-Koru">Ver Projeto Koru</Link>
+<Link className="btn_viewmore" to="/project3">Ver Projeto Submerso</Link>
 </div>*/}
 </div>
 

@@ -80,7 +80,7 @@ const Year = styled.span`
 
 const ProjectUICard = ({ image, title, year, tags, link }) => (
   <Card>
-    <CardImage src={image} alt={title} />
+    <CardImage src={image} alt="" />
     <CardContent>
       <TitleRow>
         <Title>{title}</Title>
@@ -91,7 +91,7 @@ const ProjectUICard = ({ image, title, year, tags, link }) => (
           <Tag key={index}>{tag}</Tag>
         ))}
       </TagsContainer>
-      <Button to={link}>Ver detalhes</Button>
+      <Button to={link} aria-label={`Ver detalhes do projeto ${title}`}>Ver detalhes</Button>
     </CardContent>
   </Card>
 );

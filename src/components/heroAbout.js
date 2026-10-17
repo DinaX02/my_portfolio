@@ -6,15 +6,15 @@ import ImgDinis from "../assets/foto_dinis.png"
 const HeroAbout = () => {
   return (
     <div className="hero_homepage_div_about">
-<img className="foto_hero_about" src={ImgDinis} alt="coverProfilePicture"/>
-<p className="nome_hero_about">Dinis Antunes</p>
+<img className="foto_hero_about" src={ImgDinis} alt="Fotografia de Dinis Antunes"/>
+<h1 className="nome_hero_about">Dinis Antunes</h1>
 <p className="tecnical_hero_about">UX/UI Designer e Front-end Developer</p>
 <div className="scroll_icon btn_plus btn_minus">
-          <p className="alinhar_p_scroll_2">scroll down</p>
+          <p className="alinhar_p_scroll_2" aria-hidden="true">scroll down</p>
       </div>
       <div className="scroll_icon btn_plus btn_minus">
           {/* <p className="alinhar_p_scroll">scroll down</p> */}
-        <a href="#origens">
+        <a href="#origens" aria-label="Descer para a secção Origens">
          
         <div className="btn_scrolll_2">
          

@@ -21,7 +21,7 @@ const ContactosBoomerang = ()=> {
 
 <div className="container_projectsHp">
 
-<p id="contactos" className="fontsize_tags"><span className="title_marcado_boomerang">Contactos.</span></p>
+<h2 id="contactos" className="fontsize_tags"><span className="title_marcado_boomerang">Contactos.</span></h2>
 
 <p style={{fontSize: "18px"}}>Vamos criar juntos algo incrível! Entre em contacto :)</p>
 </div>  
@@ -33,8 +33,8 @@ const ContactosBoomerang = ()=> {
 
       <div className="icons_contactos">
         <div className="center_content_icon">
-          <img className="icons_size_contact" src={iconEmail} alt="iconEmail"/>
-          <h5 className="responsive_names">dinis.p.antunes2002@gmail.com</h5>
+          <img className="icons_size_contact" src={iconEmail} alt=""/>
+          <p className="responsive_names"><a href="mailto:dinis.p.antunes2002@gmail.com">dinis.p.antunes2002@gmail.com</a></p>
         </div>
       </div>
     </div>
@@ -43,19 +43,19 @@ const ContactosBoomerang = ()=> {
 
     <div className="icons_contactos">
       <div className="center_content_icon">
-        <a href="https://www.linkedin.com/in/dinis-antunes-96b79b276/" target="blank"><img className="icons_size_contact" src={iconLinkdin} alt="iconLinkdIn"/></a>
+        <a href="https://www.linkedin.com/in/dinis-antunes-96b79b276/" target="_blank" rel="noopener noreferrer"><img className="icons_size_contact" src={iconLinkdin} alt="LinkedIn (abre num novo separador)"/></a>
       </div>
     </div>
 
     <div className="icons_contactos">
       <div className="center_content_icon">
-        <a href="https://www.instagram.com/dinisantunes02/" target="blank"><img className="icons_size_contact" src={iconInstagram} alt="iconInstagram"/></a>
+        <a href="https://www.instagram.com/dinisantunes02/" target="_blank" rel="noopener noreferrer"><img className="icons_size_contact" src={iconInstagram} alt="Instagram (abre num novo separador)"/></a>
       </div>
     </div>
 
     <div className="icons_contactos">
       <div className="center_content_icon">
-        <a href="https://github.com/DinaX02" target="blank"> <img className="icons_size_contact" src={iconGitHub} alt="iconGitHub"/></a>
+        <a href="https://github.com/DinaX02" target="_blank" rel="noopener noreferrer"> <img className="icons_size_contact" src={iconGitHub} alt="GitHub (abre num novo separador)"/></a>
       </div>
     </div>
 

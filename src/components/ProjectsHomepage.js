@@ -6,58 +6,76 @@ import UXToolkitBanner from "../assets/ux toolkit_banner.svg";
 import "../App.css";
 import ProjectUICard from "./CardUIProject";
 import styled from "styled-components";
+import { motion } from "framer-motion";
+import Reveal from "./Reveal";
 
-export const CardsContainer = styled.div`
+export const CardsContainer = styled(motion.div)`
   display: flex;
-  flex-wrap: wrap;       
-  justify-content: center; 
-  gap: 2rem; 
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
   padding: 4rem 2rem;
   box-sizing: border-box;
 `;
 
-export const CardWrapper = styled.div`
+export const CardWrapper = styled(motion.div)`
   flex: 0 0 320px;
   max-width: 320px;
 `;
 
+const cardsVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.15 } },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 60, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
+  },
+};
+
 const ProjectsHomePage = () => {
   return (
     <div id="projetos" className="altura_projetos">
-      {/* <p className="introduction">Os meus trabalhos</p>
-     <div className="title-with-marker_2">
-      <p className="big_title">Projetos.</p></div> */}
-
-      <div className="container_projectsHp">
+      <Reveal className="container_projectsHp">
         <div className="instagram-info">
           <p className="paragrafo_intro_sizes">Os meus trabalhos</p>
 
-          <p className="fontsize_tags">
+          <h2 className="fontsize_tags">
             <span className="title_marcado_koru">Projetos.</span>
-          </p>
+          </h2>
         </div>
-      </div>
+      </Reveal>
 
       <div className="instagram-container">
-        <div className="instagram-info">
+        <Reveal from="left" className="instagram-info">
           <p style={{ marginTop: 10, fontSize: 19 }}>
             Os seguintes projetos mostram as minhas competências e experiência
             através de exemplos reais do meu trabalho. Cada projeto apresenta
             uma breve descrição, evidenciando as minhas capacidades e as tarefas
             que fui responsável.
           </p>
-        </div>
-        <div className="other-info">
+        </Reveal>
+        <Reveal from="right" delay={0.15} className="other-info">
           <p style={{ marginTop: 10, fontSize: 19 }}>
             Estes exemplos refletem não só a minha capacidade de resolver
             problemas complexos, trabalhar com diferentes tecnologias e gerir
             projetos de forma eficaz, mas também demonstram a minha dedicação em
             alcançar bons resultados.
           </p>
-        </div>
+        </Reveal>
       </div>
-      <CardsContainer>
-        <CardWrapper>
+      <CardsContainer
+        variants={cardsVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.15 }}
+      >
+        <CardWrapper variants={cardVariants}>
           <ProjectUICard
             image={UXToolkitBanner}
             title="UX Toolkit"
@@ -71,8 +89,7 @@ const ProjectsHomePage = () => {
             link="/project-UXToolkit"
           />
         </CardWrapper>
-        <CardWrapper>
-          {" "}
+        <CardWrapper variants={cardVariants}>
           <ProjectUICard
             image={BoomerangCapa}
             title="Boomerang"
@@ -86,8 +103,7 @@ const ProjectsHomePage = () => {
             link="/project-Boomerang"
           />
         </CardWrapper>
-                <CardWrapper>
-          {" "}
+        <CardWrapper variants={cardVariants}>
           <ProjectUICard
             image={TocareBanner}
             title="ToCare"
@@ -96,8 +112,7 @@ const ProjectsHomePage = () => {
             link="/project-ToCare"
           />
         </CardWrapper>
-        <CardWrapper>
-          {" "}
+        <CardWrapper variants={cardVariants}>
           <ProjectUICard
             image={ProjectKoruImg}
             title="Koru Mobile App"

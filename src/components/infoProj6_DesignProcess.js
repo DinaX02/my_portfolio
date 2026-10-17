@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
+import { ampliavel, useFecharModal } from "./acessibilidade";
 import EmpathyMap from "../assets/empathy map.png";
 import DiagramDesignProcess from "../assets/metodologia_Uxtoolkit.png";
 import ObjetivosEstudo from "../assets/Objetivos_uxtoolkit.png";
@@ -35,19 +36,22 @@ const InfoProj6_DesignProcess = () => {
     setViewImage(null);
   };
 
+    useFecharModal(viewImage, closeImageView);
+
   return (
     <div className="info_uxtoolkit">
       {viewImage && (
-        <ImageViewModal onClick={closeImageView}>
+        <ImageViewModal onClick={closeImageView} role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+          <button type="button" className="modal_fechar" aria-label="Fechar imagem">×</button>
           <ImageView>
             <img src={viewImage} alt="Imagem em tamanho maior" />
           </ImageView>
         </ImageViewModal>
       )}
       <div className="containerDesignProcess">
-        <p className="fontsize_tags">
+        <h2 className="fontsize_tags">
           <span className="title_marcado_uxtoolkit">Metodologia.</span>
-        </p>
+        </h2>
         <p className="paragrafo_design_process">
           A development(al) research permitiu a integração contínua de investigação e desenvolvimento na construção e avaliação de protótipos, assegurando um ciclo permanente de refinamento do artefacto até à sua plena adequação ao contexto de utilização.<br></br><br></br>Para tal, o processo decorreu em cinco fases: levantamento teórico, planeamento e criação dos instrumentos de recolha de dados, desenvolvimento de protótipos e recolha e análise dos dados referentes ao questionário e entrevistas, validação das soluções com utilizadores e refinamento final, e por fim a consolidação e disseminação da informação recolhida ao longo do estudo.
         </p>
@@ -56,30 +60,33 @@ const InfoProj6_DesignProcess = () => {
             className="img_diagram"
             src={DiagramDesignProcess}
             alt="Diagrama processo metodologico"
-            onClick={() => openImageView(DiagramDesignProcess)}
+            {...ampliavel(() => openImageView(DiagramDesignProcess))}
           />
         </ImageContainer>
       </div>
       <div className="containerDesignProcess">
-      <p className="fontsize_tags_tocare">
+      <h2 className="fontsize_tags_tocare">
           <span className="title_marcado_uxtoolkit">Processo.</span>
-      </p>
+      </h2>
       <TabsContainer>
                   <TabButton
             onClick={() => handleTabClick("perguntadeinvestigacao")}
             active={activeTab === "perguntadeinvestigacao"}
+            aria-pressed={activeTab === "perguntadeinvestigacao"}
           >
             Pergunta de Investigação
           </TabButton>
                   <TabButton
             onClick={() => handleTabClick("objetivos")}
             active={activeTab === "objetivos"}
+            aria-pressed={activeTab === "objetivos"}
           >
             Objetivos
           </TabButton>
           <TabButton
             onClick={() => handleTabClick("referencialteorico")}
             active={activeTab === "referencialteorico"}
+            aria-pressed={activeTab === "referencialteorico"}
           >
             Referencial Teórico
           </TabButton>
@@ -87,6 +94,7 @@ const InfoProj6_DesignProcess = () => {
           <TabButton
             onClick={() => handleTabClick("instrumentosrecolhadedados")}
             active={activeTab === "instrumentosrecolhadedados"}
+            aria-pressed={activeTab === "instrumentosrecolhadedados"}
           >
             Instrumentos de recolha de dados
           </TabButton>
@@ -97,7 +105,7 @@ const InfoProj6_DesignProcess = () => {
               className="img_diagram"
               src={EmpathyMap}
               alt="empathy map_tocare"
-              onClick={() => openImageView(EmpathyMap)}
+              {...ampliavel(() => openImageView(EmpathyMap))}
             />
           )}
           {activeTab === "objetivos" && (
@@ -105,7 +113,7 @@ const InfoProj6_DesignProcess = () => {
               className="img_diagram"
               src={ObjetivosEstudo}
               alt="objetivos do estudo ux toolkit"
-              onClick={() => openImageView(ObjetivosEstudo)}
+              {...ampliavel(() => openImageView(ObjetivosEstudo))}
             />
           )}
           {activeTab === "referencialteorico" && (
@@ -113,7 +121,7 @@ const InfoProj6_DesignProcess = () => {
               className="img_diagram"
               src={ReferencialTeorico}
               alt="Referencial teorico do estudo"
-              onClick={() => openImageView(ReferencialTeorico)}
+              {...ampliavel(() => openImageView(ReferencialTeorico))}
             />
           )}
           {activeTab === "hmw" && (
@@ -121,7 +129,7 @@ const InfoProj6_DesignProcess = () => {
               className="img_diagram"
               src={HMWToCare}
               alt="How might we questions"
-              onClick={() => openImageView(HMWToCare)}
+              {...ampliavel(() => openImageView(HMWToCare))}
             />
           )}
             {activeTab === "instrumentosrecolhadedados" && (
@@ -129,7 +137,7 @@ const InfoProj6_DesignProcess = () => {
               className="img_diagram"
               src={InstrumentosRecolhadeDados}
               alt="Instrumentos Recolha de Dados"
-              onClick={() => openImageView(InstrumentosRecolhadeDados)}
+              {...ampliavel(() => openImageView(InstrumentosRecolhadeDados))}
             />
           )}
             {activeTab === "userjourney" && (
@@ -137,7 +145,7 @@ const InfoProj6_DesignProcess = () => {
               className="img_diagram"
               src={UserJourneyMapToCare}
               alt="user journey map"
-              onClick={() => openImageView(UserJourneyMapToCare)}
+              {...ampliavel(() => openImageView(UserJourneyMapToCare))}
             />
           )}
             {activeTab === "userflow" && (
@@ -145,7 +153,7 @@ const InfoProj6_DesignProcess = () => {
               className="img_diagram"
               src={UserFlowToCare}
               alt="user flow"
-              onClick={() => openImageView(UserFlowToCare)}
+              {...ampliavel(() => openImageView(UserFlowToCare))}
             />
           )}
             {activeTab === "perguntadeinvestigacao" && (
@@ -153,7 +161,7 @@ const InfoProj6_DesignProcess = () => {
               className="img_diagram"
               src={PerguntadeInvestigacao}
               alt="pergunta de investigacao"
-              onClick={() => openImageView(PerguntadeInvestigacao)}
+              {...ampliavel(() => openImageView(PerguntadeInvestigacao))}
             />
           )}
         </ImageContainer>
