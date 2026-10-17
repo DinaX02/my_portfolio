@@ -53,7 +53,7 @@ const ProjectsHomePage = () => {
 
       <div className="instagram-container">
         <Reveal from="left" className="instagram-info">
-          <p style={{ marginTop: 10, fontSize: 19 }}>
+          <p className="texto_corrido" style={{ marginTop: 10 }}>
             Os seguintes projetos mostram as minhas competências e experiência
             através de exemplos reais do meu trabalho. Cada projeto apresenta
             uma breve descrição, evidenciando as minhas capacidades e as tarefas
@@ -61,7 +61,7 @@ const ProjectsHomePage = () => {
           </p>
         </Reveal>
         <Reveal from="right" delay={0.15} className="other-info">
-          <p style={{ marginTop: 10, fontSize: 19 }}>
+          <p className="texto_corrido" style={{ marginTop: 10 }}>
             Estes exemplos refletem não só a minha capacidade de resolver
             problemas complexos, trabalhar com diferentes tecnologias e gerir
             projetos de forma eficaz, mas também demonstram a minha dedicação em

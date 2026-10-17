@@ -14,7 +14,7 @@ const About = () => {
 
   return (
     <MotionConfig reducedMotion="user">
-    <div>
+    <div className="pagina_about">
       <motion.div className="scroll_progress_bar" style={{ scaleX: progress }} />
       <NavbarAbout/>
       <main id="conteudo" tabIndex={-1}>

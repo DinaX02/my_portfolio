@@ -115,8 +115,17 @@ const PONTOS = ETAPAS.flatMap((e, etapa) => [
 ]);
 
 // geometria da linha (px)
-// margem igual à do resto do site (.instagram-container: 80px a partir de 1080px, 1em abaixo)
-const margemSite = () => (window.matchMedia("(min-width: 1080px)").matches ? 80 : 16);
+// margem esquerda do texto da página (padding de .instagram-container + .instagram-info):
+// é medida no título "Percurso." para o roadmap ficar sempre alinhado com o resto do site.
+// offsetLeft ignora o transform da animação de entrada, por isso a medição é fiável.
+const MARGEM_FALLBACK = () => (window.matchMedia("(min-width: 1080px)").matches ? 96 : 32);
+const medirMargem = (track) => {
+  const secao = track.closest(".into_divvv");
+  const titulo = secao && secao.querySelector(".instagram-info");
+  if (!titulo || titulo.offsetParent !== track.offsetParent) return MARGEM_FALLBACK();
+  const padding = parseFloat(getComputedStyle(titulo).paddingLeft) || 0;
+  return titulo.offsetLeft + padding - track.offsetLeft;
+};
 const RAIO_ETAPA = 15; // o lado esquerdo do nó fica alinhado com a margem
 // em ecrãs estreitos a linha fica mais larga que o ecrã e faz scroll;
 // 960 / 4 segmentos = 240px entre pontos, mais que os 210px de cada legenda
@@ -164,7 +173,7 @@ const geometria = (largura, margem) => {
 
 const RoadmapAcademico = () => {
   const [ativo, setAtivo] = useState(0);
-  const [dims, setDims] = useState({ largura: 1280, margem: 80 });
+  const [dims, setDims] = useState({ largura: 1280, margem: 96 });
   const ativoRef = useRef(0);
   const trackRef = useRef(null);
   const canvasRef = useRef(null);
@@ -198,7 +207,7 @@ const RoadmapAcademico = () => {
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return;
-    const ro = new ResizeObserver(() => setDims({ largura: track.clientWidth, margem: margemSite() }));
+    const ro = new ResizeObserver(() => setDims({ largura: track.clientWidth, margem: medirMargem(track) }));
     ro.observe(track);
     return () => ro.disconnect();
   }, []);
@@ -355,7 +364,7 @@ const RoadmapAcademico = () => {
             </div>
           </div>
 
-          <div className="roadmap_wrapper">
+          <div className="roadmap_wrapper" style={{ paddingLeft: margem, paddingRight: margem }}>
             <div className="roadmap_controlos">
               <div className="roadmap_botoes">
                 <button

@@ -56,7 +56,7 @@ const InfoProj6UXToolkitDigital = () => {
         <h2 className="fontsize_tags">
           <span className="title_marcado_uxtoolkit">Toolkit Digital.</span>
         </h2>
-              <p style={{width:"80%", fontSize:"19px"}}>A plataforma digital foi desenhada com o objetivo de ser fácil e intuitiva e oferecer recursos 
+              <p className="texto_corrido" style={{width:"80%"}}>A plataforma digital foi desenhada com o objetivo de ser fácil e intuitiva e oferecer recursos 
 adicionais de maneira a complementarem a componente física da toolkit.<br></br><br></br>
 A estrutura da plataforma foi organizada de forma a facilitar a navegação entre as várias 
 páginas, sendo que a navegação está sempre disponível ao utilizador através do menu de 

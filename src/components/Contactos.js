@@ -19,7 +19,7 @@ const Contactos = ()=> {
 
 <h2 id="contactos" className="fontsize_tags"><span className="title_marcado_koru">Contactos.</span></h2>
 
-<p style={{fontSize: "18px"}}>Vamos criar juntos algo incrível! Entre em contacto :)</p>
+<p className="texto_contactos">Vamos criar juntos algo incrível! Entre em contacto :)</p>
 </Reveal>
 
 <Reveal delay={0.15} className="content_contactoss">
