@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from "react";
 import "../App.css";
+import { ampliavel, useFecharModal } from "./acessibilidade";
 import DiagramDesignProcess from "../assets/logos.png";
 // import LogoImage from "../assets/design_process_diagram.png";
 import DownloadIcon from "../assets/download_icon.svg"
@@ -39,6 +40,8 @@ const InfoProj4_4 = () => {
     setViewImage(null);
   };
 
+    useFecharModal(viewImage, closeImageView);
+
   // Função para baixar o PDF
   const downloadPDF = () => {
     const link = document.createElement("a");
@@ -52,16 +55,17 @@ const InfoProj4_4 = () => {
   return (
     <div className="info_p4">
       {viewImage && (
-        <ImageViewModal onClick={closeImageView}>
+        <ImageViewModal onClick={closeImageView} role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+          <button type="button" className="modal_fechar" aria-label="Fechar imagem">×</button>
           <ImageView>
             <img src={viewImage} alt="Imagem em tamanho maior" />
           </ImageView>
         </ImageViewModal>
       )}
       <div className="containerDesignProcess">
-        <p className="fontsize_tags">
+        <h2 className="fontsize_tags">
           <span className="title_marcado_boomerang">Design System.</span>
-        </p>
+        </h2>
         <p className="paragrafo_design_process">
           Para o projeto Boomerang, foi desenvolvido um sistema de design para
           garantir a consistência e a eficiência no processo de criação,
@@ -72,30 +76,35 @@ const InfoProj4_4 = () => {
           <TabButton
             onClick={() => handleTabClick("designSystem")}
             active={activeTab === "designSystem"}
+            aria-pressed={activeTab === "designSystem"}
           >
             Logótipo
           </TabButton>
           <TabButton
             onClick={() => handleTabClick("colors")}
             active={activeTab === "colors"}
+            aria-pressed={activeTab === "colors"}
           >
             Cores
           </TabButton>
           <TabButton
             onClick={() => handleTabClick("typography")}
             active={activeTab === "typography"}
+            aria-pressed={activeTab === "typography"}
           >
             Tipografia
           </TabButton>
           <TabButton
             onClick={() => handleTabClick("iconography")}
             active={activeTab === "iconography"}
+            aria-pressed={activeTab === "iconography"}
           >
             Iconografia
           </TabButton>
           <TabButton
             onClick={() => handleTabClick("components")}
             active={activeTab === "components"}
+            aria-pressed={activeTab === "components"}
           >
             Componentes
           </TabButton>
@@ -106,7 +115,7 @@ const InfoProj4_4 = () => {
               className="img_diagram"
               src={DiagramDesignProcess}
               alt="Logo- Design system"
-              onClick={() => openImageView(DiagramDesignProcess)}
+              {...ampliavel(() => openImageView(DiagramDesignProcess))}
             />
           )}
           {activeTab === "colors" && (
@@ -114,7 +123,7 @@ const InfoProj4_4 = () => {
               className="img_diagram"
               src={ColorsImage}
               alt="Colors- Design system"
-              onClick={() => openImageView(ColorsImage)}
+              {...ampliavel(() => openImageView(ColorsImage))}
             />
           )}
           {activeTab === "typography" && (
@@ -122,7 +131,7 @@ const InfoProj4_4 = () => {
               className="img_diagram"
               src={TypographyImage}
               alt="Typography-Design system"
-              onClick={() => openImageView(TypographyImage)}
+              {...ampliavel(() => openImageView(TypographyImage))}
             />
           )}
           {activeTab === "iconography" && (
@@ -130,7 +139,7 @@ const InfoProj4_4 = () => {
               className="img_diagram"
               src={IconographyImage}
               alt="Iconography- Design system"
-              onClick={() => openImageView(IconographyImage)}
+              {...ampliavel(() => openImageView(IconographyImage))}
             />
           )}
           {activeTab === "components" && (
@@ -138,7 +147,7 @@ const InfoProj4_4 = () => {
               className="img_diagram"
               src={ComponentsImage}
               alt="Components- Design system"
-              onClick={() => openImageView(ComponentsImage)}
+              {...ampliavel(() => openImageView(ComponentsImage))}
             />
           )}
         </ImageContainer>

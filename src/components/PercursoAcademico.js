@@ -70,9 +70,9 @@ const PercursoAcademico = () => {
     <div className="instagram-info">
     <p className="paragrafo_intro_sizes">A nível Académico - Universidade de Aveiro</p>
 
-    <p className="fontsize_tags">
+    <h2 className="fontsize_tags">
       <span className="title_marcado_koru">Percurso.</span>
-    </p>
+    </h2>
     <p className='tituloEtapasAcademicas'>Licenciatura em Multimédia e Tecnologias da Comunicação (2020-2023)</p>
         <p className="paragrafo_percurso">Esta formação apresentou uma articulação entre a teoria e a prática nas várias fases da criação multimédia - da conceção e planeamento ao desenvolvimento e avaliação - dotando-me de competências técnicas (audiovisuais, 3D, criação de jogos, aplicações móveis e páginas Web dinâmicas) e de uma visão crítica sobre os processos comunicacionais e a interação humano-computador. No plano pessoal, fortaleceu a minha curiosidade, capacidade de resolver problemas complexos e de trabalhar em equipa; no profissional, conferiu-me versatilidade para conceber e produzir conteúdos inovadores, adaptáveis a diferentes setores da indústria, promovendo a eficiência, a inovação e a experiência do utilizador.
         </p>

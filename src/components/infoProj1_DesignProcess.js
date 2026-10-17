@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
+import { ampliavel, useFecharModal } from "./acessibilidade";
 import DiagramDesignProcess from "../assets/process_koru.png";
 import styled from "styled-components";
 
@@ -22,19 +23,22 @@ const InfoProj1DesignProcess = () => {
     setViewImage(null);
   };
 
+    useFecharModal(viewImage, closeImageView);
+
   return (
     <div className="info_p1_koru">
       {viewImage && (
-        <ImageViewModal onClick={closeImageView}>
+        <ImageViewModal onClick={closeImageView} role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+          <button type="button" className="modal_fechar" aria-label="Fechar imagem">×</button>
           <ImageView>
             <img src={viewImage} alt="Imagem em tamanho maior" />
           </ImageView>
         </ImageViewModal>
       )}
       <div className="containerDesignProcess">
-        <p className="fontsize_tags">
+        <h2 className="fontsize_tags">
           <span className="title_marcado_koru">Processo.</span>
-        </p>
+        </h2>
         <p className="paragrafo_design_process">
           Este projeto, foi desenvolvido durante <strong>1 semestre</strong>, utilizando um processo de design
           centrado no utilizador (UCD) dando prioridade às necessidades e
@@ -46,11 +50,11 @@ const InfoProj1DesignProcess = () => {
             className="img_diagram"
             src={DiagramDesignProcess}
             alt="Design Process Diagram"
-            onClick={() => openImageView(DiagramDesignProcess)}
+            {...ampliavel(() => openImageView(DiagramDesignProcess))}
           />
         </ImageContainer>
         <div className="links_koruu_2"  style={{marginTop:"2em", marginBottom:"1em"}}>
-<div className="links_koruu" style={{paddingRight:20}}><h3>Link:</h3><a href="https://github.com/DinaX02/Koru_app" target="blank"><p style={{marginLeft:10}}>Repositório Front-end</p></a></div>
+<div className="links_koruu" style={{paddingRight:20}}><h3>Link:</h3><a href="https://github.com/DinaX02/Koru_app" target="_blank" rel="noopener noreferrer"><p style={{marginLeft:10}}>Repositório Front-end</p></a></div>
 </div>  
       </div>
     </div>

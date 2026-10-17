@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
+import { ampliavel, useFecharModal } from "./acessibilidade";
 import DiagramDesignProcess from "../assets/design_process_diagram.png";
 import styled from "styled-components";
 
@@ -22,19 +23,22 @@ const InfoProj4_3 = () => {
     setViewImage(null);
   };
 
+    useFecharModal(viewImage, closeImageView);
+
   return (
     <div className="info_p4">
       {viewImage && (
-        <ImageViewModal onClick={closeImageView}>
+        <ImageViewModal onClick={closeImageView} role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+          <button type="button" className="modal_fechar" aria-label="Fechar imagem">×</button>
           <ImageView>
             <img src={viewImage} alt="Imagem em tamanho maior" />
           </ImageView>
         </ImageViewModal>
       )}
       <div className="containerDesignProcess">
-        <p className="fontsize_tags">
+        <h2 className="fontsize_tags">
           <span className="title_marcado_boomerang">Design Process.</span>
-        </p>
+        </h2>
         <p className="paragrafo_design_process">
           Para o desenvolvimento deste projeto, foi utilizado o processo de
           design thinking, de modo a ajudar a descobrir o processo de design
@@ -48,7 +52,7 @@ const InfoProj4_3 = () => {
             className="img_diagram"
             src={DiagramDesignProcess}
             alt="Design Process Diagram"
-            onClick={() => openImageView(DiagramDesignProcess)}
+            {...ampliavel(() => openImageView(DiagramDesignProcess))}
           />
         </ImageContainer>
       </div>

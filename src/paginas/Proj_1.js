@@ -11,6 +11,8 @@ import InfoProj5 from "../components/infoProj1_5";
 import InfoProj1DesignSystem from "../components/infoProj1_DesignSystem";
 import InfoProj1DesignProcess from "../components/infoProj1_DesignProcess";
 import "../App.css";
+import Reveal from "../components/Reveal";
+import BarraProgresso from "../components/BarraProgresso";
 
 const Project_1 = ()=> {
 
@@ -18,15 +20,18 @@ const Project_1 = ()=> {
     return(
         <div>
             <NavbarProject />
+            <BarraProgresso cor="#5331B2" />
+           <main id="conteudo" tabIndex={-1}>
 <ContentP1/>
-<InfoProj1/>
-<InfoProj5/>
-<InfoProj1DesignProcess/>
-<InfoProj1DesignSystem/>
-<InfoProj12/>
-<InfoProj13/>
-<InfoProj14/>
+<Reveal amount={0.05}><InfoProj1/></Reveal>
+<Reveal amount={0.05}><InfoProj5/></Reveal>
+<Reveal amount={0.05}><InfoProj1DesignProcess/></Reveal>
+<Reveal amount={0.05}><InfoProj1DesignSystem/></Reveal>
+<Reveal amount={0.05}><InfoProj12/></Reveal>
+<Reveal amount={0.05}><InfoProj13/></Reveal>
+<Reveal amount={0.05}><InfoProj14/></Reveal>
 <Contactos/>
+        </main>
         </div>
     )
 }

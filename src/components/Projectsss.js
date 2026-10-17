@@ -9,8 +9,9 @@ import ImgDinisProjetos2 from "../assets/projetos_page_2_v2.svg";
 import TocareBanner from "../assets/Tocare_banner.png";
 import ProjectUICard from "./CardUIProject";
 import styled from "styled-components";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 
-export const CardsContainer = styled.div`
+export const CardsContainer = styled(motion.div)`
   display: flex;
   flex-wrap: wrap;       
   justify-content: center; 
@@ -19,10 +20,54 @@ export const CardsContainer = styled.div`
   box-sizing: border-box;
 `;
 
-export const CardWrapper = styled.div`
+export const CardWrapper = styled(motion.div)`
   flex: 0 0 320px;
   max-width: 320px;
 `;
+
+const cardsVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.15, delayChildren: 0.3 } },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 60, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
+  },
+};
+
+// card que inclina em 3D na direção do rato
+const TiltCard = ({ children }) => {
+  const rx = useMotionValue(0);
+  const ry = useMotionValue(0);
+  const rotateX = useSpring(rx, { stiffness: 150, damping: 15 });
+  const rotateY = useSpring(ry, { stiffness: 150, damping: 15 });
+
+  const onMove = (e) => {
+    const r = e.currentTarget.getBoundingClientRect();
+    ry.set(((e.clientX - r.left) / r.width - 0.5) * 12);
+    rx.set(-((e.clientY - r.top) / r.height - 0.5) * 12);
+  };
+  const onLeave = () => {
+    rx.set(0);
+    ry.set(0);
+  };
+
+  return (
+    <CardWrapper
+      variants={cardVariants}
+      style={{ rotateX, rotateY, transformPerspective: 900 }}
+      onMouseMove={onMove}
+      onMouseLeave={onLeave}
+    >
+      {children}
+    </CardWrapper>
+  );
+};
 
 const ProjectssALONEE = () => {
 
@@ -56,17 +101,25 @@ const ProjectssALONEE = () => {
 
   return (
     <div className="spacee_single_perojts" id="intro">
-      <img
-        className="projetos_foto_circulo"
-        src={hovered ? ImgDinisProjetos2 : ImgDinisProjetos}
+      <div
+        className="projetos_foto_circulo projetos_foto_wrapper"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        alt="projetos_DINIS"
-      />
+      >
+        <img src={ImgDinisProjetos} alt="Fotografia de Dinis Antunes" />
+        {/* a imagem do balão já inclui a foto na mesma posição: só aparece por cima */}
+        <img
+          className={`projetos_foto_balao ${hovered ? "visivel" : ""}`}
+          src={ImgDinisProjetos2}
+          alt=""
+          aria-hidden="true"
+        />
+      </div>
 
 
-      <CardsContainer>
-        <CardWrapper>
+      <h1 className="sr-only">Projetos</h1>
+      <CardsContainer variants={cardsVariants} initial="hidden" animate="visible">
+        <TiltCard>
           <ProjectUICard
             image={UXToolkitBanner}
             title="UX Toolkit"
@@ -79,9 +132,8 @@ const ProjectssALONEE = () => {
             ]}
             link="/project-UXToolkit"
           />
-        </CardWrapper>
-        <CardWrapper>
-          {" "}
+        </TiltCard>
+        <TiltCard>
           <ProjectUICard
             image={BoomerangCapa}
             title="Boomerang"
@@ -94,9 +146,8 @@ const ProjectssALONEE = () => {
             ]}
             link="/project-Boomerang"
           />
-        </CardWrapper>
-                <CardWrapper>
-          {" "}
+        </TiltCard>
+        <TiltCard>
           <ProjectUICard
             image={TocareBanner}
             title="ToCare"
@@ -104,9 +155,8 @@ const ProjectssALONEE = () => {
             tags={["Case Study", "1 Week Challenge", "UX/UI Design"]}
             link="/project-ToCare"
           />
-        </CardWrapper>
-        <CardWrapper>
-          {" "}
+        </TiltCard>
+        <TiltCard>
           <ProjectUICard
             image={ProjectKoruImg}
             title="Koru Mobile App"
@@ -119,7 +169,7 @@ const ProjectssALONEE = () => {
             ]}
             link="/project-Koru"
           />
-        </CardWrapper>
+        </TiltCard>
       </CardsContainer>
     </div>
   );

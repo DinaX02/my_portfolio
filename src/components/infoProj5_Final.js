@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from "react";
 import "../App.css";
+import { ampliavel, useFecharModal } from "./acessibilidade";
 import RequisitosToCare from "../assets/requesitos_tocare.png";
 import SolutionToCare from "../assets/solucao_tocare.png";
 import InovationToCare from "../assets/inovacao_tocare.png";
@@ -34,24 +35,28 @@ const InfoProj5Final = () => {
     setViewImage(null);
   };
 
+    useFecharModal(viewImage, closeImageView);
+
   return (
     <div className="info_tocare">
       {viewImage && (
-        <ImageViewModal onClick={closeImageView}>
+        <ImageViewModal onClick={closeImageView} role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+          <button type="button" className="modal_fechar" aria-label="Fechar imagem">×</button>
           <ImageView>
             <img src={viewImage} alt="Imagem em tamanho maior" />
           </ImageView>
         </ImageViewModal>
       )}
       <div className="containerDesignProcess">
-        <p className="fontsize_tags">
+        <h2 className="fontsize_tags">
           <span className="title_marcado_tocare">ToCare.</span>
-        </p>
+        </h2>
 
         <TabsContainer>
           <TabButton
             onClick={() => handleTabClick("solucao")}
             active={activeTab === "solucao"}
+            aria-pressed={activeTab === "solucao"}
           >
             Solução
           </TabButton>
@@ -59,6 +64,7 @@ const InfoProj5Final = () => {
           <TabButton
             onClick={() => handleTabClick("requisitos")}
             active={activeTab === "requisitos"}
+            aria-pressed={activeTab === "requisitos"}
           >
             Requisitos
           </TabButton>
@@ -66,6 +72,7 @@ const InfoProj5Final = () => {
           <TabButton
             onClick={() => handleTabClick("inovacao")}
             active={activeTab === "inovacao"}
+            aria-pressed={activeTab === "inovacao"}
           >
             Inovação
           </TabButton>
@@ -77,7 +84,7 @@ const InfoProj5Final = () => {
               className="img_diagram"
               src={SolutionToCare}
               alt="solucao"
-              onClick={() => openImageView(SolutionToCare)}
+              {...ampliavel(() => openImageView(SolutionToCare))}
             />
           )}
             {activeTab === "requisitos" && (
@@ -85,7 +92,7 @@ const InfoProj5Final = () => {
               className="img_diagram"
               src={RequisitosToCare}
               alt="requisitos"
-              onClick={() => openImageView(RequisitosToCare)}
+              {...ampliavel(() => openImageView(RequisitosToCare))}
             />
           )}
             {activeTab === "inovacao" && (
@@ -93,7 +100,7 @@ const InfoProj5Final = () => {
               className="img_diagram"
               src={InovationToCare}
               alt="inocação"
-              onClick={() => openImageView(InovationToCare)}
+              {...ampliavel(() => openImageView(InovationToCare))}
             />
           )}
         </ImageContainer>

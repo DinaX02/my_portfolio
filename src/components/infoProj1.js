@@ -13,7 +13,7 @@ const InfoProj1 = ()=> {
 <div className="instagram-container">
 
 <div className="instagram-info"> 
-<p className="fontsize_tags"><span className="title_marcado_koru">Overview.</span></p>
+<h2 className="fontsize_tags"><span className="title_marcado_koru">Overview.</span></h2>
 <p className="paragrafo_origens">Este projeto visa desenvolver uma plataforma de votação desenhada principalmente para concursos onde os organizadores pretendem adicionar uma componente de interatividade para aumentar a participação e investimento em, por exemplo, projetos ou ideias.
 <br></br><br></br>
 Esta aplicação foi desenvolvida no âmbito do Projeto Koru, é uma plataforma de acompanhamento de eventos que permite aos seus organizadores criar e gerir eventos de forma eficiente, enquanto fornece aos participantes do mesmo uma experiência personalizada e interativa.
@@ -29,8 +29,8 @@ O foco da aplicação é a dinâmica de votação nos projetos exibidos no event
         <div className="tags_koru">Front-end</div>
         </div>
 <div className="links_koruu_2"  style={{marginTop:"2em", marginBottom:"1em"}}>
-<div className="links_koruu" style={{paddingRight:20}}><h3>Link:</h3><a href="https://jovial-salamander-313a31.netlify.app/" target="blank"><p style={{marginLeft:10}}>Website</p></a></div>
-<div className="links_koruu"><h3>Link:</h3><a href="https://www.instagram.com/koru.app/" target="blank"><p style={{marginLeft:10}}>Instagram</p></a></div></div>        
+<div className="links_koruu" style={{paddingRight:20}}><h3>Link:</h3><a href="https://jovial-salamander-313a31.netlify.app/" target="_blank" rel="noopener noreferrer"><p style={{marginLeft:10}}>Website</p></a></div>
+<div className="links_koruu"><h3>Link:</h3><a href="https://www.instagram.com/koru.app/" target="_blank" rel="noopener noreferrer"><p style={{marginLeft:10}}>Instagram</p></a></div></div>        
 </div>
 
 

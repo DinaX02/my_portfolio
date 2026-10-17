@@ -1,14 +1,13 @@
 import React, { useState, useEffect} from "react";
 import "../App.css";
+import { ampliavel, useFecharModal } from "./acessibilidade";
 import HiFi1 from "../assets/hifi_screens_tocare_1.png";
 import HiFi2 from "../assets/hifi_screens_tocare_2.png";
-import { FaArrowUp} from "react-icons/fa";
 import styled from "styled-components";
 
 const InfoProj5Screens = () => {
   const [activeTab, setActiveTab] = useState("designSystem");
   const [viewImage, setViewImage] = useState(null);
-  const [showScrollToTop, setShowScrollToTop] = useState(false);
 
   useEffect(() => {
 
@@ -23,25 +22,6 @@ const InfoProj5Screens = () => {
     };
   }, [viewImage]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const contentP5Height = document.querySelector('.contentP5')?.offsetHeight || 0;
-      const contentP5Top = document.querySelector('.contentP5')?.offsetTop || 0;
-      const scrollPosition = window.scrollY;
-
-      if (scrollPosition > contentP5Top + contentP5Height) {
-        setShowScrollToTop(true);
-      } else {
-        setShowScrollToTop(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
@@ -55,42 +35,36 @@ const InfoProj5Screens = () => {
     setViewImage(null);
   };
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  };
+    useFecharModal(viewImage, closeImageView);
+
 
   return (
     <div className="info_tocare">
-        {showScrollToTop && (
-        <ScrollToTopButton onClick={scrollToTop}>
-          <FaArrowUp />
-        </ScrollToTopButton>
-      )}
       {viewImage && (
-        <ImageViewModal onClick={closeImageView}>
+        <ImageViewModal onClick={closeImageView} role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+          <button type="button" className="modal_fechar" aria-label="Fechar imagem">×</button>
           <ImageView>
             <img src={viewImage} alt="Imagem em tamanho maior" />
           </ImageView>
         </ImageViewModal>
       )}
       <div className="containerDesignProcess">
-        <p className="fontsize_tags">
+        <h2 className="fontsize_tags">
           <span className="title_marcado_tocare">Ecrãs.</span>
-        </p>
+        </h2>
 
         <TabsContainer>
           <TabButton
             onClick={() => handleTabClick("designSystem")}
             active={activeTab === "designSystem"}
+            aria-pressed={activeTab === "designSystem"}
           >
             Homepage, Criar Tarefas e Lista de Tarefas
           </TabButton>
           <TabButton
             onClick={() => handleTabClick("colors")}
             active={activeTab === "colors"}
+            aria-pressed={activeTab === "colors"}
           >
             Calendário, Dados Biométricos e Lista de Medicamentos
           </TabButton>
@@ -101,7 +75,7 @@ const InfoProj5Screens = () => {
               className="img_diagram"
               src={HiFi1}
               alt="ecrãs homepage, adicionar tarefa e lista de tarefas"
-              onClick={() => openImageView(HiFi1)}
+              {...ampliavel(() => openImageView(HiFi1))}
             />
           )}
           {activeTab === "colors" && (
@@ -109,7 +83,7 @@ const InfoProj5Screens = () => {
               className="img_diagram"
               src={HiFi2}
               alt="Criar conta- wireframes"
-              onClick={() => openImageView(HiFi2)}
+              {...ampliavel(() => openImageView(HiFi2))}
             />
           )}
         </ImageContainer>
@@ -171,25 +145,6 @@ const ImageContainer = styled.div`
   justify-content: center;
 `;
 
-const ScrollToTopButton = styled.button`
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  background-color: #0097B2;
-  color: white;
-  border: none;
-  padding: 0.5rem;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-  &:hover {
-    background-color: #34A2B6;
-  }
-`;
 
 
 export default InfoProj5Screens;

@@ -1,5 +1,7 @@
 import React from "react";
 import "../App.css";
+import Reveal from "../components/Reveal";
+import BarraProgresso from "../components/BarraProgresso";
 // import HeroProject4 from "../components/hero_proj4.js";
 import NavbarProjectBoomerang from "../components/Navbar_projectBoomerang.js";
 import ContentP4 from "../components/content_proj4.js";
@@ -16,16 +18,19 @@ const Project_4 = ()=> {
     return(
         <div>
            <NavbarProjectBoomerang/> 
+           <BarraProgresso cor="#00C17C" />
+           <main id="conteudo" tabIndex={-1}>
            {/* <HeroProject4/> */}
            <ContentP4/>
-            <InfoProj4/>
-          <InfoProj42/>
-          <InfoProj43/>
-          <InfoProj44/>
-          <InfoProj45/>
-          <InfoProj41DesignProcess/>
+            <Reveal amount={0.05}><InfoProj4/></Reveal>
+          <Reveal amount={0.05}><InfoProj42/></Reveal>
+          <Reveal amount={0.05}><InfoProj43/></Reveal>
+          <Reveal amount={0.05}><InfoProj44/></Reveal>
+          <Reveal amount={0.05}><InfoProj45/></Reveal>
+          <Reveal amount={0.05}><InfoProj41DesignProcess/></Reveal>
            <ContactosBoomerang/>
    
+        </main>
         </div>
     )
 }

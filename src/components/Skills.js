@@ -2,6 +2,17 @@ import React from "react";
 import webDesignicon from "../assets/web design.png";
 import frontendICON from "../assets/icon_front_end.png";
 import "../App.css";
+import { motion } from "framer-motion";
+import Reveal from "./Reveal";
+
+// as barras enchem da esquerda para a direita quando entram no ecrã
+const barAnim = {
+  initial: { scaleX: 0 },
+  whileInView: { scaleX: 1 },
+  viewport: { once: true, amount: 0.8 },
+  transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] },
+  style: { transformOrigin: "left" },
+};
 
 const Skills = () => {
   const linhaStyle = {
@@ -39,12 +50,12 @@ const Skills = () => {
     <h1 className="big_title">Skills.</h1>
     </div> */}
       <div className="instagram-container">
-        <div className="instagram-info">
+        <Reveal from="left" className="instagram-info">
           <p className="paragrafo_intro_sizes">A nível Técnico</p>
 
-          <p className="fontsize_tags">
+          <h2 className="fontsize_tags">
             <span className="title_marcado_koru">Skills.</span>
-          </p>
+          </h2>
 
           <p style={{ marginTop: 40, fontSize: 19 }}>
             Através do{" "}
@@ -57,12 +68,13 @@ const Skills = () => {
             desenvolvimento de soluções web que cativam e satisfazem os seus
             utilizadores.
           </p>
-        </div>
+        </Reveal>
         <div className="other-info">
           {/* <img className="img_vision" src={imgVisaoGeRAL}/>  */}
         </div>
       </div>
 
+      <Reveal delay={0.1}>
       <section className="skills_geral skills section">
         <div className="skills_container container grid">
           <div>
@@ -76,7 +88,7 @@ const Skills = () => {
                       src={webDesignicon}
                       alt="IconWebDesign"
                     />
-                    <h1 className="skills_title">UX/ UI Design</h1>
+                    <h3 className="skills_title">UX/ UI Design</h3>
                     {/*  <img className="arrow_ajust" src={arrowDown}/>*/}
                   </div>
                   <div className="skills_list grid">
@@ -87,7 +99,7 @@ const Skills = () => {
                       </div>
 
                       <div className="skills_bar">
-                        <span className="skills_percentage skills_sketch"></span>
+                        <motion.span className="skills_percentage skills_sketch" {...barAnim}></motion.span>
                       </div>
                     </div>
 
@@ -98,7 +110,7 @@ const Skills = () => {
                       </div>
 
                       <div className="skills_bar">
-                        <span className="skills_percentage skills_sketch"></span>
+                        <motion.span className="skills_percentage skills_sketch" {...barAnim}></motion.span>
                       </div>
                     </div>
 
@@ -108,7 +120,7 @@ const Skills = () => {
                         <span className="skills_number">75%</span>
                       </div>
                       <div className="skills_bar">
-                        <span className="skills_percentage skills_invision"></span>
+                        <motion.span className="skills_percentage skills_invision" {...barAnim}></motion.span>
                       </div>
                     </div>
 
@@ -118,7 +130,7 @@ const Skills = () => {
                       <span className="skills_number">85%</span>
                     </div>
                     <div className="skills_bar">
-                      <span className="skills_percentage skills_bootstrap"></span>
+                      <motion.span className="skills_percentage skills_bootstrap" {...barAnim}></motion.span>
                     </div>
                   </div>
 
@@ -128,7 +140,7 @@ const Skills = () => {
       <span className="skills_number">60%</span>
     </div>
     <div className="skills_bar">
-    <span className="skills_percentage skills_photoshop"></span>
+    <motion.span className="skills_percentage skills_photoshop" {...barAnim}></motion.span>
     </div>
   </div> */}
                   </div>
@@ -143,7 +155,7 @@ const Skills = () => {
                     src={frontendICON}
                     alt="IconFrontEnd"
                   />
-                  <h1 className="skills_title">Desenvolvimento Front-end</h1>
+                  <h3 className="skills_title">Desenvolvimento Front-end</h3>
                   {/* <img className="arrow_ajust" src={arrowDown}/>*/}
                 </div>
                 <div className="skills_list grid">
@@ -154,7 +166,7 @@ const Skills = () => {
                     </div>
 
                     <div className="skills_bar">
-                      <span className="skills_percentage skills_html"></span>
+                      <motion.span className="skills_percentage skills_html" {...barAnim}></motion.span>
                     </div>
                   </div>
 
@@ -164,7 +176,7 @@ const Skills = () => {
       <span className="skills_number">80%</span>
     </div>
     <div className="skills_bar">
-    <span className="skills_percentage skills_css"></span>
+    <motion.span className="skills_percentage skills_css" {...barAnim}></motion.span>
     </div>
   </div> */}
 
@@ -174,7 +186,7 @@ const Skills = () => {
                       <span className="skills_number">85%</span>
                     </div>
                     <div className="skills_bar">
-                      <span className="skills_percentage skills_bootstrap"></span>
+                      <motion.span className="skills_percentage skills_bootstrap" {...barAnim}></motion.span>
                     </div>
                   </div>
 
@@ -184,7 +196,7 @@ const Skills = () => {
                       <span className="skills_number">80%</span>
                     </div>
                     <div className="skills_bar">
-                      <span className="skills_percentage skills_illustrator"></span>
+                      <motion.span className="skills_percentage skills_illustrator" {...barAnim}></motion.span>
                     </div>
                   </div>
 
@@ -194,7 +206,7 @@ const Skills = () => {
                       <span className="skills_number">85%</span>
                     </div>
                     <div className="skills_bar">
-                      <span className="skills_percentage skills_bootstrap"></span>
+                      <motion.span className="skills_percentage skills_bootstrap" {...barAnim}></motion.span>
                     </div>
                   </div>
                 </div>
@@ -204,6 +216,7 @@ const Skills = () => {
           </div>
         </div>
       </section>
+      </Reveal>
     </div>
   );
 };

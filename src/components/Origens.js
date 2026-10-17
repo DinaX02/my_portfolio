@@ -4,6 +4,8 @@ import "../App.css";
 // import icon2 from "../assets/web design icon white.png"
 // import {Tilt} from "react-tilt";
 import imgOrigens from "../assets/origenss.png"
+import ImagemCamadas from "./ImagemCamadas";
+import Reveal from "./Reveal";
 
 const Origens = ()=> {
 
@@ -41,11 +43,11 @@ const Origens = ()=> {
     </div>   */}
       <div className="instagram-container">
 
-      <div className="instagram-info"> 
+      <Reveal from="left" className="instagram-info"> 
    
       <p className="paragrafo_intro_sizes">Sobre mim</p>
 
-<p className="fontsize_tags"><span className="title_marcado_koru">Origens.</span></p>
+<h2 className="fontsize_tags"><span className="title_marcado_koru">Origens.</span></h2>
         <p className="paragrafo_origens">Devido ao facto de viver numa zona costeira sempre fui muito ligado ao mar, simultaneamente pratiquei desporto, tendo sido atleta federado em natação
 pura. Mais tarde, fiz curso elementar de juízes de natação pura, natação adaptada e águas abertas.
 
@@ -56,10 +58,14 @@ Ao longo do meu percurso académico foram as áreas relacionadas com artes e tec
         </p>
         
 
-      </div>
-      <div className="other-info">
-<img className="img_vision" src={imgOrigens} alt="OrigensImgCover"/> 
-      </div>
+      </Reveal>
+      <Reveal from="right" delay={0.15} className="other-info">
+<ImagemCamadas
+  src={imgOrigens}
+  altA="Ondas a rebentar junto a um rochedo no mar"
+  altB="Falésia com ondas a bater nas rochas"
+/>
+      </Reveal>
     </div>  
 </div>
     )

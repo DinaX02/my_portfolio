@@ -12,12 +12,14 @@ const Project_3 = ()=> {
     return(
         <div>
            <NavbarProject/> 
+           <main id="conteudo" tabIndex={-1}>
            <HeroProject3/>
            <ContentP3/>
            <InfoProj3/>
            <InfoProj32/>
            <Contactos/>
    
+        </main>
         </div>
     )
 }

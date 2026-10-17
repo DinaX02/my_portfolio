@@ -7,9 +7,9 @@ const InfoProj5 = () => {
       <div className="instagram-container">
         <div className="instagram-info">
           <p className="paragrafo_intro_sizes">Identidade de Marca</p>
-          <p className="fontsize_tags">
+          <h2 className="fontsize_tags">
             <span className="title_marcado_koru">Visão.</span>
-          </p>
+          </h2>
           <p className="paragrafo_missonBrand_Koru">
             Ser a solução para o investimento nos projetos do futuro.
           </p>
@@ -39,9 +39,9 @@ const InfoProj5 = () => {
 
         <div className="instagram-info">
           <p className="paragrafo_intro_sizes">Identidade de Marca</p>
-          <p className="fontsize_tags">
+          <h2 className="fontsize_tags">
             <span className="title_marcado_koru">Propósito.</span>
-          </p>
+          </h2>
           <p className="paragrafo_missonBrand_Koru">
             Dar plataforma a todas as ideias inovadoras.
           </p>
@@ -51,9 +51,9 @@ const InfoProj5 = () => {
             possibilitando a concretização de ideias.
           </p>
 
-          <p className="fontsize_tags">
+          <h2 className="fontsize_tags">
             <span className="title_marcado_koru">Princípios.</span>
-          </p>
+          </h2>
           <p className="paragrafo_origens">
             <span className="paragrafo_missonBrand_Koru">Dinâmica</span> - Melhorar a experiência dos participantes
           </p>

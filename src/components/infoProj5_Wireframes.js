@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from "react";
 import "../App.css";
+import { ampliavel, useFecharModal } from "./acessibilidade";
 import LowFi1 from "../assets/Lofi-protypes1.jpg";
 import LowFi2 from "../assets/LowFi-prototypes2.jpg"
 import styled from "styled-components";
@@ -33,30 +34,35 @@ const InfoProj5Wireframes = () => {
     setViewImage(null);
   };
 
+    useFecharModal(viewImage, closeImageView);
+
   return (
     <div className="info_tocare">
       {viewImage && (
-        <ImageViewModal onClick={closeImageView}>
+        <ImageViewModal onClick={closeImageView} role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+          <button type="button" className="modal_fechar" aria-label="Fechar imagem">×</button>
           <ImageView>
             <img src={viewImage} alt="Imagem em tamanho maior" />
           </ImageView>
         </ImageViewModal>
       )}
       <div className="containerDesignProcess">
-        <p className="fontsize_tags">
+        <h2 className="fontsize_tags">
           <span className="title_marcado_tocare">Wireframes.</span>
-        </p>
+        </h2>
 
         <TabsContainer>
           <TabButton
             onClick={() => handleTabClick("designSystem")}
             active={activeTab === "designSystem"}
+            aria-pressed={activeTab === "designSystem"}
           >
             Low-fi (Crazy 8) 1
           </TabButton>
           <TabButton
             onClick={() => handleTabClick("colors")}
             active={activeTab === "colors"}
+            aria-pressed={activeTab === "colors"}
           >
             Low-fi (Crazy 8) 2
           </TabButton>
@@ -67,7 +73,7 @@ const InfoProj5Wireframes = () => {
               className="img_diagram"
               src={LowFi1}
               alt="onboarding- wireframes"
-              onClick={() => openImageView(LowFi1)}
+              {...ampliavel(() => openImageView(LowFi1))}
             />
           )}
           {activeTab === "colors" && (
@@ -75,7 +81,7 @@ const InfoProj5Wireframes = () => {
               className="img_diagram"
               src={LowFi2}
               alt="Criar conta- wireframes"
-              onClick={() => openImageView(LowFi2)}
+              {...ampliavel(() => openImageView(LowFi2))}
             />
           )}
         </ImageContainer>

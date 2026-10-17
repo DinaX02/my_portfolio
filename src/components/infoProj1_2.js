@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
+import { ampliavel, useFecharModal } from "./acessibilidade";
 import Persona from "../assets/benchmarking_koru.png"
 import styled from "styled-components";
 
@@ -25,12 +26,15 @@ const InfoProj1_2 = ()=> {
     const closeImageView = () => {
       setViewImage(null);
     };
+
+    useFecharModal(viewImage, closeImageView);
   
     return(
 
 <div className="info_p22222">
 {viewImage && (
-        <ImageViewModal onClick={closeImageView}>
+        <ImageViewModal onClick={closeImageView} role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+          <button type="button" className="modal_fechar" aria-label="Fechar imagem">×</button>
           <ImageView>
             <img src={viewImage} alt="Imagem em tamanho maior" />
           </ImageView>
@@ -40,7 +44,7 @@ const InfoProj1_2 = ()=> {
 
 <div className="instagram-info"> 
 
-<p className="fontsize_tags"><span className="title_marcado_koru">Benchmarking.</span></p>
+<h2 className="fontsize_tags"><span className="title_marcado_koru">Benchmarking.</span></h2>
 
 <p className="paragrafo_origens">Para o levantamento de requisitos necessários para o desenho desta aplicação, uma das fontes de informação foi a pesquisa de mercado, para compreender quais são as funcionalidades priorizadas em soluções já existentes de outras empresas ou iniciativas que oferecem algo semelhante ao que era idealizado para este projeto.
 <br></br><br></br>
@@ -56,7 +60,7 @@ Para isto foram estudadas empresas de organização de eventos com investimento 
             className="img_vision"
             src={Persona}
             alt="personaImg"
-            onClick={() => openImageView(Persona)}
+            {...ampliavel(() => openImageView(Persona))}
           />
         </div>
 </div>  

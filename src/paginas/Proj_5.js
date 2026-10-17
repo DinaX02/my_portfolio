@@ -1,5 +1,7 @@
 import React from "react";
 import "../App.css";
+import Reveal from "../components/Reveal";
+import BarraProgresso from "../components/BarraProgresso";
 import NavbarProjectToCare from "../components/Navbar_projectToCare.js";
 import ContentP5 from "../components/content_proj5.js";
 import InfoProj5 from "../components/infoProj5.js";
@@ -16,15 +18,18 @@ const Project5 = ()=> {
     return(
         <div>
            <NavbarProjectToCare/> 
+           <BarraProgresso cor="#0097B2" />
+           <main id="conteudo" tabIndex={-1}>
            <ContentP5/>
-            <InfoProj5/>
-          <InfoProj52/>
-          <InfoProj5DesignProcess/>
-          <InfoProj5Wireframes/>
-          <InfoProj5Screens/>
-          <InfoProj5Final/>
+            <Reveal amount={0.05}><InfoProj5/></Reveal>
+          <Reveal amount={0.05}><InfoProj52/></Reveal>
+          <Reveal amount={0.05}><InfoProj5DesignProcess/></Reveal>
+          <Reveal amount={0.05}><InfoProj5Wireframes/></Reveal>
+          <Reveal amount={0.05}><InfoProj5Screens/></Reveal>
+          <Reveal amount={0.05}><InfoProj5Final/></Reveal>
            <ContactosToCare/>
    
+        </main>
         </div>
     )
 }
