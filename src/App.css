@@ -3456,14 +3456,9 @@ right: -15px;
   font-weight: bold;
 }
 
+/* as margens laterais são definidas no componente, iguais às do texto da página */
 .roadmap_wrapper {
-  padding: 0 16px 3em;
-}
-
-@media (min-width: 1080px) {
-  .roadmap_wrapper {
-    padding: 0 80px 3em;
-  }
+  padding-bottom: 3em;
 }
 
 .roadmap_track {
@@ -3878,11 +3873,6 @@ a.btn_viewmore_3 {
   .roadmap_detalhe .tituloEtapasAcademicas {
     font-size: 18px;
   }
-
-  .roadmap_detalhe .paragrafo_percurso {
-    font-size: 16px;
-    width: 100%;
-  }
 }
 
 /* //////////// motion páginas de projeto //////////// */
@@ -3945,4 +3935,35 @@ img[aria-haspopup="dialog"]:hover,
 img[aria-haspopup="dialog"]:focus-visible {
   transform: translateY(-4px) scale(1.015);
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* texto das Skills (antes era estilo inline) */
+.paragrafo_skills {
+  margin-top: 40px;
+  font-size: 19px;
+}
+
+/* texto corrido que antes tinha o tamanho inline */
+.texto_corrido {
+  font-size: 19px;
+}
+
+.texto_contactos {
+  font-size: 18px;
+}
+
+/* ecrãs pequenos: todo o texto corrido do site a 16px */
+@media (max-width: 450px) {
+  .paragrafo_origens,
+  .paragrafo_percurso,
+  .paragrafo_skills,
+  .paragrafo_design_process,
+  .paragrafo_tocare_context,
+  .paragrafo_missonBrand,
+  .paragrafo_missonBrand_Koru,
+  .content_proj11111,
+  .texto_corrido,
+  .texto_contactos {
+    font-size: 16px;
+  }
 }

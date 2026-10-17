@@ -57,7 +57,7 @@ const Skills = () => {
             <span className="title_marcado_koru">Skills.</span>
           </h2>
 
-          <p style={{ marginTop: 40, fontSize: 19 }}>
+          <p className="paragrafo_skills">
             Através do{" "}
             <span className="title_marcado_skills">UX/UI Design</span> e do{" "}
             <span className="title_marcado_skills">

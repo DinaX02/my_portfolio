@@ -55,7 +55,7 @@ const InfoProj6UXToolkitFisica = () => {
         <h2 className="fontsize_tags">
           <span className="title_marcado_uxtoolkit">Toolkit Física.</span>
         </h2>
-              <p style={{width:"80%", fontSize:"19px"}}>A componente física da toolkit consiste num conjunto de trinta e sete (37) cartas, 
+              <p className="texto_corrido" style={{width:"80%"}}>A componente física da toolkit consiste num conjunto de trinta e sete (37) cartas, 
 construídas a partir da categorização feita no âmbito deste estudo. Além destas cartas, 
 a toolkit inclui um manual de utilização que tem o intuito de explicar aos utilizadores como a 
 toolkit funciona, e um conjunto extra de três (3) exercícios práticos desenhados para estimular 
