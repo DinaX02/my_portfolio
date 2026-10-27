@@ -4007,11 +4007,16 @@ img[aria-haspopup="dialog"]:focus-visible {
   gap: 2.25rem;
 }
 
-/* cópia invisível usada para medir se os separadores cabem numa linha */
+/* cópia invisível usada para medir se os separadores cabem numa linha.
+   width 0 + overflow hidden: não ocupa espaço (senão alargava a página em mobile),
+   mas o scrollWidth continua a dar a largura total dos separadores */
 .separadores_medida {
   position: absolute;
   top: 0;
   left: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
   display: flex;
   gap: 2.25rem;
   visibility: hidden;
@@ -4106,3 +4111,13 @@ img[aria-haspopup="dialog"]:focus-visible {
   text-align: center;
 }
 
+
+/* nada pode alargar a página em mobile (senão o telemóvel encolhe a página toda e
+   as imagens ampliadas deixam de caber no ecrã):
+   - imagens em camadas (Visão Geral / Origens): as fotos deslizam até 40px para os lados
+   - balão da página Projetos: imagem de 340px que fica na página mesmo invisível
+   "clip" corta na borda da secção sem criar uma área de scroll */
+.into_divvv,
+.spacee_single_perojts {
+  overflow-x: clip;
+}
