@@ -3,69 +3,15 @@ import iconEmail from '../assets/email_green.svg';
 import iconLinkdin from '../assets/linkedin_green.svg';
 import iconInstagram from '../assets/instagram_green.svg';
 import iconGitHub from '../assets/github_green.svg';
-import "../App.css";
+import Contactos from "./Contactos";
 
-const ContactosBoomerang = ()=> {
+// mesmo módulo (e motion) da homepage, com as cores do projeto
+const ContactosBoomerang = () => (
+  <Contactos
+    icones={{ email: iconEmail, linkedin: iconLinkdin, instagram: iconInstagram, github: iconGitHub }}
+    classeSecao="space_contacto_boomerang"
+    classeTitulo="title_marcado_boomerang"
+  />
+);
 
-    return(
-        <div className="space_contacto_boomerang">
-                 {/* <p id="projetos" className="introduction">
-        Como me contactar{" "}
-      </p> */}
-
-{/* <div className="title-with-marker">
-    
-
-<h1  className="big_title">Contactos.</h1>
-</div> */}
-
-<div className="container_projectsHp">
-
-<h2 id="contactos" className="fontsize_tags"><span className="title_marcado_boomerang">Contactos.</span></h2>
-
-<p className="texto_contactos">Vamos criar juntos algo incrível! Entre em contacto :)</p>
-</div>  
-
-<div className="content_contactoss">
-
-  <div className="conct_geral_text_img">
-    <div className="text_contaaa">
-
-      <div className="icons_contactos">
-        <div className="center_content_icon">
-          <img className="icons_size_contact" src={iconEmail} alt=""/>
-          <p className="responsive_names"><a href="mailto:dinis.p.antunes2002@gmail.com">dinis.p.antunes2002@gmail.com</a></p>
-        </div>
-      </div>
-    </div>
-
-<div className="three_icons">
-
-    <div className="icons_contactos">
-      <div className="center_content_icon">
-        <a href="https://www.linkedin.com/in/dinis-antunes-96b79b276/" target="_blank" rel="noopener noreferrer"><img className="icons_size_contact" src={iconLinkdin} alt="LinkedIn (abre num novo separador)"/></a>
-      </div>
-    </div>
-
-    <div className="icons_contactos">
-      <div className="center_content_icon">
-        <a href="https://www.instagram.com/dinisantunes02/" target="_blank" rel="noopener noreferrer"><img className="icons_size_contact" src={iconInstagram} alt="Instagram (abre num novo separador)"/></a>
-      </div>
-    </div>
-
-    <div className="icons_contactos">
-      <div className="center_content_icon">
-        <a href="https://github.com/DinaX02" target="_blank" rel="noopener noreferrer"> <img className="icons_size_contact" src={iconGitHub} alt="GitHub (abre num novo separador)"/></a>
-      </div>
-    </div>
-
-</div>
-
-  </div>
-</div>
-
-        </div>
-    )
-}
-
-export default ContactosBoomerang
+export default ContactosBoomerang;
