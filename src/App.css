@@ -111,8 +111,9 @@ max-width: 600px;
   overflow: hidden !important;
   justify-content: space-between;
   align-items: center;
-  margin-right: 2em;
-  margin-left: 20px;
+  /* mesmo espaçamento da navbar da homepage e do About */
+  padding-right: 2em;
+  padding-left: 36px;
   position: relative;
   border-bottom: 5px solid #5331B2;
 }
@@ -123,8 +124,9 @@ max-width: 600px;
   overflow: hidden !important;
   justify-content: space-between;
   align-items: center;
-  margin-right: 2em;
-  margin-left: 20px;
+  /* mesmo espaçamento da navbar da homepage e do About */
+  padding-right: 2em;
+  padding-left: 36px;
   position: relative;
   border-bottom: 5px solid #00C17C;
 }
@@ -135,8 +137,9 @@ max-width: 600px;
   overflow: hidden !important;
   justify-content: space-between;
   align-items: center;
-  margin-right: 2em;
-  margin-left: 20px;
+  /* mesmo espaçamento da navbar da homepage e do About */
+  padding-right: 2em;
+  padding-left: 36px;
   position: relative;
   border-bottom: 5px solid #0097B2;
 }
@@ -147,8 +150,9 @@ max-width: 600px;
   overflow: hidden !important;
   justify-content: space-between;
   align-items: center;
-  margin-right: 2em;
-  margin-left: 20px;
+  /* mesmo espaçamento da navbar da homepage e do About */
+  padding-right: 2em;
+  padding-left: 36px;
   position: relative;
   border-bottom: 5px solid #CA9050;
 }
@@ -499,7 +503,6 @@ width: 80% !important;
 
   .content_contactoss{
     max-width: 100% !important;
-    padding-left: 15px !important;
   }
 
 
@@ -1830,13 +1833,21 @@ width: 60%;
 }
 
 
+/* margens laterais iguais às do título da secção (.container_projectsHp: 1em = 16px);
+   em px porque aqui 1em seria 19px (o font-size deste bloco) */
 .content_contactoss{
-  padding-left: 30px;
-  /* padding-right: 11px; */
+  padding-left: 16px;
+  padding-right: 16px;
   font-size: 19px;
   padding-bottom: 1em; 
-  width: 95%;
   margin-top: 0.5em;
+}
+
+@media (min-width: 1080px) {
+  .content_contactoss{
+    padding-left: 80px;
+    padding-right: 80px;
+  }
 }
 
 
