@@ -3656,9 +3656,13 @@ right: -15px;
   transition: background 0.2s, color 0.2s;
 }
 
-.roadmap_btn:hover:not(:disabled) {
-  background: #1c1c2e;
-  color: #D9BCFF;
+/* fundo escuro só em dispositivos com hover real (rato/trackpad);
+   em ecrãs táteis o :hover ficava "preso" depois do toque */
+@media (hover: hover) {
+  .roadmap_btn:hover:not(:disabled) {
+    background: #1c1c2e;
+    color: #D9BCFF;
+  }
 }
 
 .roadmap_btn:disabled {
@@ -3978,3 +3982,127 @@ img[aria-haspopup="dialog"]:focus-visible {
     font-size: 18px;
   }
 }
+
+/* //////////// separadores (estilo underline, inspirado no Storybook) //////////// */
+
+.separadores {
+  width: 100%;
+  margin-top: 1.5em;
+}
+
+/* a linha tem a mesma largura do texto da secção (80%, como .paragrafo_design_process) */
+.separadores_barra {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+  border-top: 1px solid rgba(28, 28, 46, 0.18);
+}
+
+.separadores_lista {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 2.25rem;
+}
+
+/* cópia invisível usada para medir se os separadores cabem numa linha */
+.separadores_medida {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  gap: 2.25rem;
+  visibility: hidden;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* setas: só no modo compacto; o aspeto vem de .roadmap_btn (igual ao roadmap do About) */
+.separadores_seta {
+  display: none;
+  flex: 0 0 auto;
+  align-self: center;
+  margin-top: 8px;
+}
+
+.separadores_tab {
+  position: relative;
+  flex: 0 0 auto;
+  background: none;
+  border: 0;
+  padding: 16px 2px 12px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  white-space: nowrap;
+  color: #6b6b78;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.separadores_tab:hover {
+  color: #1c1c2e;
+}
+
+.separadores_tab.ativo {
+  color: #1c1c2e;
+  font-weight: 500;
+}
+
+/* barra do separador ativo, por cima da linha (desliza entre separadores) */
+.separadores_indicador {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  border-radius: 0 0 3px 3px;
+  background: var(--separador-cor);
+}
+
+/* todos os painéis na mesma célula: a altura não salta e as imagens já estão prontas */
+.separadores_paineis {
+  display: grid;
+  justify-items: center;
+}
+
+.separadores_painel {
+  grid-area: 1 / 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0s linear 0.25s;
+}
+
+.separadores_painel.ativo {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.25s ease, visibility 0s;
+}
+
+.separadores_painel img {
+  height: auto;
+}
+
+/* modo compacto (quando os separadores não cabem numa linha, ex.: mobile):
+   1 separador de cada vez, entre setas (como o Storybook) */
+.separadores.compacto .separadores_seta {
+  display: flex;
+}
+
+.separadores.compacto .separadores_lista .separadores_tab:not(.ativo) {
+  display: none;
+}
+
+.separadores.compacto .separadores_lista .separadores_tab {
+  /* encolhe e parte o texto entre as setas, em vez de passar por baixo delas */
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0 12px;
+  white-space: normal;
+  text-align: center;
+}
+

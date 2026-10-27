@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
 import { ampliavel, useFecharModal } from "./acessibilidade";
+import Separadores from "./Separadores";
 import { QRCodeCanvas } from "qrcode.react";
-import TecnologiasUtilizadas from "../assets/tecnologias_usadas_boomerang.png";
-import AcessibilidadeBommerang from "../assets/Acessibilidade_boomerang.png";
-import ResultadosAcessibilidadeBoomerang from "../assets/Resultados_Acessibilidade_boomerang.png";
+import TecnologiasUtilizadas from "../assets/tecnologias_usadas_boomerang.webp";
+import AcessibilidadeBommerang from "../assets/Acessibilidade_boomerang.webp";
+import ResultadosAcessibilidadeBoomerang from "../assets/Resultados_Acessibilidade_boomerang.webp";
 import DiagramDesenvolvimentoProcess from "../assets/process_desenvolvimento_boomerang.png";
 import styled from "styled-components";
 
 const InfoProj4DesignProcess = () => {
-  const [activeTab, setActiveTab] = useState("tecnologias");
   const [viewImage, setViewImage] = useState(null);
 
   useEffect(() => {
@@ -31,9 +31,6 @@ const InfoProj4DesignProcess = () => {
     useFecharModal(viewImage, closeImageView);
 
   
-  const handleTabClick = (tab) => {
-    setActiveTab(tab);
-  };
 
   return (
     <div className="info_p4">
@@ -62,55 +59,16 @@ const InfoProj4DesignProcess = () => {
         </ImageContainer>
 
 
-        <TabsContainer>
-          <TabButton
-            onClick={() => handleTabClick("tecnologias")}
-            active={activeTab === "tecnologias"}
-            aria-pressed={activeTab === "tecnologias"}
-          >
-            Tecnologias Utilizadas
-          </TabButton>
-          <TabButton
-            onClick={() => handleTabClick("acessibilidade")}
-            active={activeTab === "acessibilidade"}
-            aria-pressed={activeTab === "acessibilidade"}
-          >
-            Detalhes da Acessibilidade
-          </TabButton>
-          <TabButton
-            onClick={() => handleTabClick("resultadosAcessibilidade")}
-            active={activeTab === "resultadosAcessibilidade"}
-            aria-pressed={activeTab === "resultadosAcessibilidade"}
-          >
-            Resutlados Acessibilidade
-          </TabButton>
-        </TabsContainer>
-        <ImageContainer>
-          {activeTab === "tecnologias" && (
-            <img
-              className="img_diagram"
-              src={TecnologiasUtilizadas}
-              alt="Tecnologias utilizadas no desenbvolvimento da Boomerang"
-              {...ampliavel(() => openImageView(TecnologiasUtilizadas))}
-            />
-          )}
-          {activeTab === "acessibilidade" && (
-            <img
-              className="img_diagram"
-              src={AcessibilidadeBommerang}
-              alt="Ferramentas utilizadas para meder a Acessibilidade da Boomerang"
-              {...ampliavel(() => openImageView(AcessibilidadeBommerang))}
-            />
-          )}
-          {activeTab === "resultadosAcessibilidade" && (
-            <img
-              className="img_diagram"
-              src={ResultadosAcessibilidadeBoomerang}
-              alt="Resultados obtidos na Acessibilidade do Projeto Boomerang"
-              {...ampliavel(() => openImageView(ResultadosAcessibilidadeBoomerang))}
-            />
-          )}
-        </ImageContainer>
+        <Separadores
+          rotulo="Desenvolvimento"
+          cor="#00c17c"
+          onAmpliar={openImageView}
+          itens={[
+          { id: "tecnologias", rotulo: "Tecnologias Utilizadas", imagem: TecnologiasUtilizadas, alt: "Tecnologias utilizadas no desenbvolvimento da Boomerang", largura: 1812, altura: 905 },
+          { id: "acessibilidade", rotulo: "Detalhes da Acessibilidade", imagem: AcessibilidadeBommerang, alt: "Ferramentas utilizadas para meder a Acessibilidade da Boomerang", largura: 1812, altura: 905 },
+          { id: "resultadosAcessibilidade", rotulo: "Resutlados Acessibilidade", imagem: ResultadosAcessibilidadeBoomerang, alt: "Resultados obtidos na Acessibilidade do Projeto Boomerang", largura: 1812, altura: 905 },
+          ]}
+        />
 
            <div className="links_koruu_2" style={{ marginTop: "2em", marginBottom: "1em", display:"flex", flexDirection:"column"}}>
           <div className="links_boomerang" style={{ paddingRight: 20 }}>
@@ -163,22 +121,5 @@ const ImageContainer = styled.div`
   justify-content: center;
 `;
 
-const TabsContainer = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 1em;
-    justify-content: center;
-`;
-const TabButton = styled.button`
-  background-color: ${(props) => (props.active ? "#00c17c" : "transparent")};
-  color: ${(props) => (props.active ? "#fff" : "#2E2E2E")};
-  border: 2px solid ${(props) => (props.active ? "transparent" : "#ccc")};
-  font-family: 'Poppins', sans-serif;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-right: 10px;
-  margin-bottom: 1em;
-`;
 
 export default InfoProj4DesignProcess;

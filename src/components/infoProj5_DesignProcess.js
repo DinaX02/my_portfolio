@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
 import { ampliavel, useFecharModal } from "./acessibilidade";
-import EmpathyMap from "../assets/empathy map.png";
+import Separadores from "./Separadores";
+import EmpathyMap from "../assets/empathy map.webp";
 import DiagramDesignProcess from "../assets/design_thinking_grafico_tocare.png";
-import BenchmarkingToCare from "../assets/benchmarking.png";
-import HMWToCare from "../assets/HMWtocare.png";
-import PersonaToCare from "../assets/PersonaToCare.png";
-import InsightsToCare from "../assets/Insights.png";
-import UserJourneyMapToCare from "../assets/User Journey Map_tocare.png";
-import UserFlowToCare from "../assets/User Flow_tocare.png";
+import BenchmarkingToCare from "../assets/benchmarking.webp";
+import HMWToCare from "../assets/HMWtocare.webp";
+import PersonaToCare from "../assets/PersonaToCare.webp";
+import InsightsToCare from "../assets/Insights.webp";
+import UserJourneyMapToCare from "../assets/User Journey Map_tocare.webp";
+import UserFlowToCare from "../assets/User Flow_tocare.webp";
 import MatrizPriority from "../assets/matriz_prioridade.svg";
 import styled from "styled-components";
 
 const InfoProj5_DesignProcess = () => {
-  const [activeTab, setActiveTab] = useState("empathymap");
   const [viewImage, setViewImage] = useState(null);
 
   useEffect(() => {
@@ -24,9 +24,6 @@ const InfoProj5_DesignProcess = () => {
     }
   }, [viewImage]);
 
-  const handleTabClick = (tab) => {
-    setActiveTab(tab);
-  };
 
   const openImageView = (imageUrl) => {
     setViewImage(imageUrl);
@@ -68,136 +65,21 @@ const InfoProj5_DesignProcess = () => {
       <h2 className="fontsize_tags_tocare">
           <span className="title_marcado_tocare">Processo.</span>
       </h2>
-      <TabsContainer>
-          <TabButton
-            onClick={() => handleTabClick("empathymap")}
-            active={activeTab === "empathymap"}
-            aria-pressed={activeTab === "empathymap"}
-          >
-            Empathy Map
-          </TabButton>
-          <TabButton
-            onClick={() => handleTabClick("designSystem")}
-            active={activeTab === "designSystem"}
-            aria-pressed={activeTab === "designSystem"}
-          >
-            Benchmarking
-          </TabButton>
-
-          <TabButton
-            onClick={() => handleTabClick("persona")}
-            active={activeTab === "persona"}
-            aria-pressed={activeTab === "persona"}
-          >
-            Persona
-          </TabButton>
-
-          <TabButton
-            onClick={() => handleTabClick("hmw")}
-            active={activeTab === "hmw"}
-            aria-pressed={activeTab === "hmw"}
-          >
-            How might we? 
-          </TabButton>
-  
-          <TabButton
-            onClick={() => handleTabClick("insights")}
-            active={activeTab === "insights"}
-            aria-pressed={activeTab === "insights"}
-          >
-            Insights 
-          </TabButton>
-
-          <TabButton
-            onClick={() => handleTabClick("userjourney")}
-            active={activeTab === "userjourney"}
-            aria-pressed={activeTab === "userjourney"}
-          >
-            User Journey Map 
-          </TabButton>
-
-          <TabButton
-            onClick={() => handleTabClick("userflow")}
-            active={activeTab === "userflow"}
-            aria-pressed={activeTab === "userflow"}
-          >
-            User Flow 
-          </TabButton>
-          <TabButton
-            onClick={() => handleTabClick("matrizprioridade")}
-            active={activeTab === "matrizprioridade"}
-            aria-pressed={activeTab === "matrizprioridade"}
-          >
-            Matriz de Prioridade 
-          </TabButton>
-
-        </TabsContainer>
-        <ImageContainer>
-        {activeTab === "empathymap" && (
-            <img
-              className="img_diagram"
-              src={EmpathyMap}
-              alt="empathy map_tocare"
-              {...ampliavel(() => openImageView(EmpathyMap))}
-            />
-          )}
-          {activeTab === "designSystem" && (
-            <img
-              className="img_diagram"
-              src={BenchmarkingToCare}
-              alt="benchmarking_tocare"
-              {...ampliavel(() => openImageView(BenchmarkingToCare))}
-            />
-          )}
-          {activeTab === "persona" && (
-            <img
-              className="img_diagram"
-              src={PersonaToCare}
-              alt="persona"
-              {...ampliavel(() => openImageView(PersonaToCare))}
-            />
-          )}
-          {activeTab === "hmw" && (
-            <img
-              className="img_diagram"
-              src={HMWToCare}
-              alt="How might we questions"
-              {...ampliavel(() => openImageView(HMWToCare))}
-            />
-          )}
-            {activeTab === "insights" && (
-            <img
-              className="img_diagram"
-              src={InsightsToCare}
-              alt="Insights"
-              {...ampliavel(() => openImageView(InsightsToCare))}
-            />
-          )}
-            {activeTab === "userjourney" && (
-            <img
-              className="img_diagram"
-              src={UserJourneyMapToCare}
-              alt="user journey map"
-              {...ampliavel(() => openImageView(UserJourneyMapToCare))}
-            />
-          )}
-            {activeTab === "userflow" && (
-            <img
-              className="img_diagram"
-              src={UserFlowToCare}
-              alt="user flow"
-              {...ampliavel(() => openImageView(UserFlowToCare))}
-            />
-          )}
-            {activeTab === "matrizprioridade" && (
-            <img
-              className="img_diagram"
-              src={MatrizPriority}
-              alt="matriz de prioridade"
-              {...ampliavel(() => openImageView(MatrizPriority))}
-            />
-          )}
-        </ImageContainer>
+      <Separadores
+        rotulo="Processo"
+        cor="#2EA7BA"
+        onAmpliar={openImageView}
+        itens={[
+        { id: "empathymap", rotulo: "Empathy Map", imagem: EmpathyMap, alt: "empathy map_tocare", largura: 1812, altura: 905 },
+        { id: "designSystem", rotulo: "Benchmarking", imagem: BenchmarkingToCare, alt: "benchmarking_tocare", largura: 1812, altura: 905 },
+        { id: "persona", rotulo: "Persona", imagem: PersonaToCare, alt: "persona", largura: 1812, altura: 905 },
+        { id: "hmw", rotulo: "How might we?", imagem: HMWToCare, alt: "How might we questions", largura: 1812, altura: 905 },
+        { id: "insights", rotulo: "Insights", imagem: InsightsToCare, alt: "Insights", largura: 1812, altura: 905 },
+        { id: "userjourney", rotulo: "User Journey Map", imagem: UserJourneyMapToCare, alt: "user journey map", largura: 1812, altura: 905 },
+        { id: "userflow", rotulo: "User Flow", imagem: UserFlowToCare, alt: "user flow", largura: 1812, altura: 905 },
+        { id: "matrizprioridade", rotulo: "Matriz de Prioridade", imagem: MatrizPriority, alt: "matriz de prioridade" },
+        ]}
+      />
         </div>
     </div>
   );
@@ -216,24 +98,7 @@ const ImageViewModal = styled.div`
   z-index: 9999;
 `;
 
-const TabsContainer = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 1em;
-    justify-content: center;
-`;
 
-const TabButton = styled.button`
-  background-color: ${(props) => (props.active ? "#2EA7BA" : "transparent")};
-  color: ${(props) => (props.active ? "#fff" : "#2E2E2E")};
-  border: 2px solid ${(props) => (props.active ? "transparent" : "#ccc")};
-  font-family: 'Poppins', sans-serif;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-right: 10px;
-  margin-bottom: 1em;
-`;
 
 const ImageView = styled.div`
   max-width: 90%;

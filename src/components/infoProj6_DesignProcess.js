@@ -1,19 +1,15 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
 import { ampliavel, useFecharModal } from "./acessibilidade";
-import EmpathyMap from "../assets/empathy map.png";
+import Separadores from "./Separadores";
 import DiagramDesignProcess from "../assets/metodologia_Uxtoolkit.png";
 import ObjetivosEstudo from "../assets/Objetivos_uxtoolkit.png";
-import HMWToCare from "../assets/HMWtocare.png";
-import ReferencialTeorico from "../assets/referencialTeorico_uxtoolkit.png";
+import ReferencialTeorico from "../assets/referencialTeorico_uxtoolkit.webp";
 import InstrumentosRecolhadeDados from "../assets/instrumentoRecolhadeDados.png";
-import UserJourneyMapToCare from "../assets/User Journey Map_tocare.png";
-import UserFlowToCare from "../assets/User Flow_tocare.png";
 import PerguntadeInvestigacao from "../assets/pergunta de investigacao_uxtoolkit.png";
 import styled from "styled-components";
 
 const InfoProj6_DesignProcess = () => {
-  const [activeTab, setActiveTab] = useState("perguntadeinvestigacao");
   const [viewImage, setViewImage] = useState(null);
 
   useEffect(() => {
@@ -24,9 +20,6 @@ const InfoProj6_DesignProcess = () => {
     }
   }, [viewImage]);
 
-  const handleTabClick = (tab) => {
-    setActiveTab(tab);
-  };
 
   const openImageView = (imageUrl) => {
     setViewImage(imageUrl);
@@ -68,103 +61,17 @@ const InfoProj6_DesignProcess = () => {
       <h2 className="fontsize_tags_tocare">
           <span className="title_marcado_uxtoolkit">Processo.</span>
       </h2>
-      <TabsContainer>
-                  <TabButton
-            onClick={() => handleTabClick("perguntadeinvestigacao")}
-            active={activeTab === "perguntadeinvestigacao"}
-            aria-pressed={activeTab === "perguntadeinvestigacao"}
-          >
-            Pergunta de Investigação
-          </TabButton>
-                  <TabButton
-            onClick={() => handleTabClick("objetivos")}
-            active={activeTab === "objetivos"}
-            aria-pressed={activeTab === "objetivos"}
-          >
-            Objetivos
-          </TabButton>
-          <TabButton
-            onClick={() => handleTabClick("referencialteorico")}
-            active={activeTab === "referencialteorico"}
-            aria-pressed={activeTab === "referencialteorico"}
-          >
-            Referencial Teórico
-          </TabButton>
-  
-          <TabButton
-            onClick={() => handleTabClick("instrumentosrecolhadedados")}
-            active={activeTab === "instrumentosrecolhadedados"}
-            aria-pressed={activeTab === "instrumentosrecolhadedados"}
-          >
-            Instrumentos de recolha de dados
-          </TabButton>
-        </TabsContainer>
-        <ImageContainer>
-        {activeTab === "empathymap" && (
-            <img
-              className="img_diagram"
-              src={EmpathyMap}
-              alt="empathy map_tocare"
-              {...ampliavel(() => openImageView(EmpathyMap))}
-            />
-          )}
-          {activeTab === "objetivos" && (
-            <img
-              className="img_diagram"
-              src={ObjetivosEstudo}
-              alt="objetivos do estudo ux toolkit"
-              {...ampliavel(() => openImageView(ObjetivosEstudo))}
-            />
-          )}
-          {activeTab === "referencialteorico" && (
-            <img
-              className="img_diagram"
-              src={ReferencialTeorico}
-              alt="Referencial teorico do estudo"
-              {...ampliavel(() => openImageView(ReferencialTeorico))}
-            />
-          )}
-          {activeTab === "hmw" && (
-            <img
-              className="img_diagram"
-              src={HMWToCare}
-              alt="How might we questions"
-              {...ampliavel(() => openImageView(HMWToCare))}
-            />
-          )}
-            {activeTab === "instrumentosrecolhadedados" && (
-            <img
-              className="img_diagram"
-              src={InstrumentosRecolhadeDados}
-              alt="Instrumentos Recolha de Dados"
-              {...ampliavel(() => openImageView(InstrumentosRecolhadeDados))}
-            />
-          )}
-            {activeTab === "userjourney" && (
-            <img
-              className="img_diagram"
-              src={UserJourneyMapToCare}
-              alt="user journey map"
-              {...ampliavel(() => openImageView(UserJourneyMapToCare))}
-            />
-          )}
-            {activeTab === "userflow" && (
-            <img
-              className="img_diagram"
-              src={UserFlowToCare}
-              alt="user flow"
-              {...ampliavel(() => openImageView(UserFlowToCare))}
-            />
-          )}
-            {activeTab === "perguntadeinvestigacao" && (
-            <img
-              className="img_diagram"
-              src={PerguntadeInvestigacao}
-              alt="pergunta de investigacao"
-              {...ampliavel(() => openImageView(PerguntadeInvestigacao))}
-            />
-          )}
-        </ImageContainer>
+      <Separadores
+        rotulo="Processo da investigação"
+        cor="#CA9050"
+        onAmpliar={openImageView}
+        itens={[
+        { id: "perguntadeinvestigacao", rotulo: "Pergunta de Investigação", imagem: PerguntadeInvestigacao, alt: "pergunta de investigacao", largura: 1812, altura: 905 },
+        { id: "objetivos", rotulo: "Objetivos", imagem: ObjetivosEstudo, alt: "objetivos do estudo ux toolkit", largura: 1812, altura: 905 },
+        { id: "referencialteorico", rotulo: "Referencial Teórico", imagem: ReferencialTeorico, alt: "Referencial teorico do estudo", largura: 1812, altura: 905 },
+        { id: "instrumentosrecolhadedados", rotulo: "Instrumentos de recolha de dados", imagem: InstrumentosRecolhadeDados, alt: "Instrumentos Recolha de Dados", largura: 1812, altura: 905 },
+        ]}
+      />
         </div>
     </div>
   );
@@ -183,24 +90,7 @@ const ImageViewModal = styled.div`
   z-index: 9999;
 `;
 
-const TabsContainer = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 1em;
-    justify-content: center;
-`;
 
-const TabButton = styled.button`
-  background-color: ${(props) => (props.active ? "#CA9050" : "transparent")};
-  color: ${(props) => (props.active ? "#fff" : "#2E2E2E")};
-  border: 2px solid ${(props) => (props.active ? "transparent" : "#ccc")};
-  font-family: 'Poppins', sans-serif;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-right: 10px;
-  margin-bottom: 1em;
-`;
 
 const ImageView = styled.div`
   max-width: 90%;
