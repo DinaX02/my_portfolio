@@ -1,16 +1,16 @@
 import React, { useState, useEffect} from "react";
 import "../App.css";
-import { ampliavel, useFecharModal } from "./acessibilidade";
-import FuncionalidadeTiersCustomPlan from "../assets/FuncionalidadeTiersCustomPlan.png";
-import FuncionalidadeCustomPlan from "../assets/FuncionalidadeCustomPlan.png";
-import FuncionalidadeDigitalFerramentasDesign from "../assets/FuncionalidadeDigitalFerramentasDesign.png";
-import FuncionalidadeCatalogoDigital from "../assets/FuncionalidadeCatalogoDigital.png";
-import ExerciciosPraticosSite from "../assets/FuncionalidadeDigitalExerciciosPraticos.png";
-import SitemapUXToolkitDigital from "../assets/SitemapUXToolkitDigital.png";
+import { useFecharModal } from "./acessibilidade";
+import Separadores from "./Separadores";
+import FuncionalidadeTiersCustomPlan from "../assets/FuncionalidadeTiersCustomPlan.webp";
+import FuncionalidadeCustomPlan from "../assets/FuncionalidadeCustomPlan.webp";
+import FuncionalidadeDigitalFerramentasDesign from "../assets/FuncionalidadeDigitalFerramentasDesign.webp";
+import FuncionalidadeCatalogoDigital from "../assets/FuncionalidadeCatalogoDigital.webp";
+import ExerciciosPraticosSite from "../assets/FuncionalidadeDigitalExerciciosPraticos.webp";
+import SitemapUXToolkitDigital from "../assets/SitemapUXToolkitDigital.webp";
 import styled from "styled-components";
 
 const InfoProj6UXToolkitDigital = () => {
-  const [activeTab, setActiveTab] = useState("sitemapuxtoolkit");
   const [viewImage, setViewImage] = useState(null);
 
   useEffect(() => {
@@ -27,9 +27,6 @@ const InfoProj6UXToolkitDigital = () => {
   }, [viewImage]);
 
 
-  const handleTabClick = (tab) => {
-    setActiveTab(tab);
-  };
 
   const openImageView = (imageUrl) => {
     setViewImage(imageUrl);
@@ -63,123 +60,25 @@ páginas, sendo que a navegação está sempre disponível ao utilizador atravé
 navegação lateral (aside) que permite o acesso direto às quatro páginas principais da 
 plataforma. 
         </p>
-        <TabsContainer>
-          <TabButton
-            onClick={() => handleTabClick("sitemapuxtoolkit")}
-            active={activeTab === "sitemapuxtoolkit"}
-            aria-pressed={activeTab === "sitemapuxtoolkit"}
-          >
-            Sitemap
-          </TabButton>
-          <TabButton
-            onClick={() => handleTabClick("catalogouxtoolkitdigital")}
-            active={activeTab === "catalogouxtoolkitdigital"}
-            aria-pressed={activeTab === "catalogouxtoolkitdigital"}
-          >
-           Catálogo
-          </TabButton>
-                    <TabButton
-            onClick={() => handleTabClick("funcionalidadedigitalferramentasdesign")}
-            active={activeTab === "funcionalidadedigitalferramentasdesign"}
-            aria-pressed={activeTab === "funcionalidadedigitalferramentasdesign"}
-          >
-           Design Tools
-          </TabButton>
-                              <TabButton
-            onClick={() => handleTabClick("exerciciospraticostoolkitdigital")}
-            active={activeTab === "exerciciospraticostoolkitdigital"}
-            aria-pressed={activeTab === "exerciciospraticostoolkitdigital"}
-          >
-           Exercícios Práticos
-          </TabButton>
-                    <TabButton
-            onClick={() => handleTabClick("funcionalidadetierscustomplan")}
-            active={activeTab === "funcionalidadetierscustomplan"}
-            aria-pressed={activeTab === "funcionalidadetierscustomplan"}
-          >
-           Sugestões de como criar um Custom Plan
-          </TabButton>
-                              <TabButton
-            onClick={() => handleTabClick("funcionalidadescustomplan")}
-            active={activeTab === "funcionalidadescustomplan"}
-            aria-pressed={activeTab === "funcionalidadescustomplan"}
-          >
-            Custom Plan
-          </TabButton>
-        </TabsContainer>
-        <ImageContainer>
-                    {activeTab === "sitemapuxtoolkit" && (
-            <img
-              className="img_diagram"
-              src={SitemapUXToolkitDigital}
-              alt="sitemap da toolkit digital"
-              {...ampliavel(() => openImageView(SitemapUXToolkitDigital))}
-            />
-          )}
-          {activeTab === "exerciciospraticostoolkitdigital" && (
-            <img
-              className="img_diagram"
-              src={ExerciciosPraticosSite}
-              alt="exercicios praticos toolkit digital"
-              {...ampliavel(() => openImageView(ExerciciosPraticosSite))}
-            />
-          )}
-              {activeTab === "catalogouxtoolkitdigital" && (
-            <img
-              className="img_diagram"
-              src={FuncionalidadeCatalogoDigital}
-              alt="funcionalidade de catalogo da toolkit digital"
-              {...ampliavel(() => openImageView(FuncionalidadeCatalogoDigital))}
-            />
-          )}
-                    {activeTab === "funcionalidadedigitalferramentasdesign" && (
-            <img
-              className="img_diagram"
-              src={FuncionalidadeDigitalFerramentasDesign}
-              alt="funcionalidade pagina de ferramentas de design toolkit digital"
-              {...ampliavel(() => openImageView(FuncionalidadeDigitalFerramentasDesign))}
-            />
-          )}
-                    {activeTab === "funcionalidadescustomplan" && (
-            <img
-              className="img_diagram"
-              src={FuncionalidadeCustomPlan}
-              alt="Funcionalidade Custom Plan da toolkit digital"
-              {...ampliavel(() => openImageView(FuncionalidadeCustomPlan))}
-            />
-          )}
-          {activeTab === "funcionalidadetierscustomplan" && (
-            <img
-              className="img_diagram"
-              src={FuncionalidadeTiersCustomPlan}
-              alt="Funcionalidade Tiers Custom Plan da toolkit digital"
-              {...ampliavel(() => openImageView(FuncionalidadeTiersCustomPlan))}
-            />
-          )}
-        </ImageContainer>
+        <Separadores
+          rotulo="Componente digital da toolkit"
+          cor="#CA9050"
+          onAmpliar={openImageView}
+          itens={[
+          { id: "sitemapuxtoolkit", rotulo: "Sitemap", imagem: SitemapUXToolkitDigital, alt: "sitemap da toolkit digital", largura: 1812, altura: 905 },
+          { id: "catalogouxtoolkitdigital", rotulo: "Catálogo", imagem: FuncionalidadeCatalogoDigital, alt: "funcionalidade de catalogo da toolkit digital", largura: 1812, altura: 905 },
+          { id: "funcionalidadedigitalferramentasdesign", rotulo: "Design Tools", imagem: FuncionalidadeDigitalFerramentasDesign, alt: "funcionalidade pagina de ferramentas de design toolkit digital", largura: 1812, altura: 905 },
+          { id: "exerciciospraticostoolkitdigital", rotulo: "Exercícios Práticos", imagem: ExerciciosPraticosSite, alt: "exercicios praticos toolkit digital", largura: 1812, altura: 905 },
+          { id: "funcionalidadetierscustomplan", rotulo: "Sugestões de Plano", imagem: FuncionalidadeTiersCustomPlan, alt: "Funcionalidade Tiers Custom Plan da toolkit digital", largura: 1812, altura: 905 },
+          { id: "funcionalidadescustomplan", rotulo: "Custom Plan", imagem: FuncionalidadeCustomPlan, alt: "Funcionalidade Custom Plan da toolkit digital", largura: 1812, altura: 905 },
+          ]}
+        />
       </div>
     </div>
   );
 };
 
-const TabsContainer = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 1em;
-    justify-content: center;
-`;
 
-const TabButton = styled.button`
-  background-color: ${(props) => (props.active ? "#CA9050" : "transparent")};
-  color: ${(props) => (props.active ? "#fff" : "#2E2E2E")};
-  border: 2px solid ${(props) => (props.active ? "transparent" : "#ccc")};
-  font-family: 'Poppins', sans-serif;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-right: 10px;
-  margin-bottom: 1em;
-`;
 
 const ImageViewModal = styled.div`
   position: fixed;
@@ -209,11 +108,6 @@ const ImageView = styled.div`
   }
 `;
 
-const ImageContainer = styled.div`
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-`;
 
 
 

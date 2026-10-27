@@ -1,19 +1,19 @@
 import React, { useState, useEffect} from "react";
 import "../App.css";
-import { ampliavel, useFecharModal } from "./acessibilidade";
+import { useFecharModal } from "./acessibilidade";
+import Separadores from "./Separadores";
 import OnBoardingImage from "../assets/onboarding.png";
-import EntrarCriarContaImage from "../assets/Entrar_criarconta.png"
-import HomepageWireframes from "../assets/homepage_wireframess.png";
+import EntrarCriarContaImage from "../assets/Entrar_criarconta.webp"
+import HomepageWireframes from "../assets/homepage_wireframess.webp";
 import PesquisaWireframes from "../assets/pesquisa_wireframess.png";
 import ArigoeChatImage from "../assets/artigo_wireframess.png";
-import AlugarArtigoImage from "../assets/rent_wireframess_2.png";
+import AlugarArtigoImage from "../assets/rent_wireframess_2.webp";
 import PublicarImage from "../assets/publicar_wireframess.png";
 import CaixadeEntradeImage from "../assets/caixa de entrada_wireframess.png";
-import PerfilImage from "../assets/perfil_wireframess.png";
+import PerfilImage from "../assets/perfil_wireframess.webp";
 import styled from "styled-components";
 
 const InfoProj4_5 = () => {
-  const [activeTab, setActiveTab] = useState("designSystem");
   const [viewImage, setViewImage] = useState(null);
 
   useEffect(() => {
@@ -30,9 +30,6 @@ const InfoProj4_5 = () => {
   }, [viewImage]);
 
 
-  const handleTabClick = (tab) => {
-    setActiveTab(tab);
-  };
 
   const openImageView = (imageUrl) => {
     setViewImage(imageUrl);
@@ -60,176 +57,28 @@ const InfoProj4_5 = () => {
           <span className="title_marcado_boomerang">Ecrãs.</span>
         </h2>
 
-        <TabsContainer>
-          <TabButton
-            onClick={() => handleTabClick("designSystem")}
-            active={activeTab === "designSystem"}
-            aria-pressed={activeTab === "designSystem"}
-          >
-            OnBoarding
-          </TabButton>
-          <TabButton
-            onClick={() => handleTabClick("colors")}
-            active={activeTab === "colors"}
-            aria-pressed={activeTab === "colors"}
-          >
-            Entrar/ Criar Conta
-          </TabButton>
-          <TabButton
-            onClick={() => handleTabClick("typography")}
-            active={activeTab === "typography"}
-            aria-pressed={activeTab === "typography"}
-          >
-            Homepage
-          </TabButton>
-          <TabButton
-            onClick={() => handleTabClick("iconography")}
-            active={activeTab === "iconography"}
-            aria-pressed={activeTab === "iconography"}
-          >
-            Pesquisa
-          </TabButton>
-          <TabButton
-            onClick={() => handleTabClick("components")}
-            active={activeTab === "components"}
-            aria-pressed={activeTab === "components"}
-          >
-            Artigo + Chat
-          </TabButton>
-
-          <TabButton
-            onClick={() => handleTabClick("rent")}
-            active={activeTab === "rent"}
-            aria-pressed={activeTab === "rent"}
-          >
-            Alugar Artigo
-          </TabButton>
-
-          <TabButton
-            onClick={() => handleTabClick("publicar")}
-            active={activeTab === "publicar"}
-            aria-pressed={activeTab === "publicar"}
-          >
-            Publicar Artigo
-          </TabButton>
-
-          <TabButton
-            onClick={() => handleTabClick("notifications")}
-            active={activeTab === "notifications"}
-            aria-pressed={activeTab === "notifications"}
-          >
-            Caixa de Entrada
-          </TabButton>
-
-          <TabButton
-            onClick={() => handleTabClick("perfil")}
-            active={activeTab === "perfil"}
-            aria-pressed={activeTab === "perfil"}
-          >
-            Perfil
-          </TabButton>
-
-        </TabsContainer>
-        <ImageContainer>
-          {activeTab === "designSystem" && (
-            <img
-              className="img_diagram"
-              src={OnBoardingImage}
-              alt="onboarding- wireframes"
-              {...ampliavel(() => openImageView(OnBoardingImage))}
-            />
-          )}
-          {activeTab === "colors" && (
-            <img
-              className="img_diagram"
-              src={EntrarCriarContaImage}
-              alt="Criar conta- wireframes"
-              {...ampliavel(() => openImageView(EntrarCriarContaImage))}
-            />
-          )}
-          {activeTab === "typography" && (
-            <img
-              className="img_diagram"
-              src={HomepageWireframes}
-              alt="homepage-wireframes"
-              {...ampliavel(() => openImageView(HomepageWireframes))}
-            />
-          )}
-          {activeTab === "iconography" && (
-            <img
-              className="img_diagram"
-              src={PesquisaWireframes}
-              alt="pesquisa- wireframes"
-              {...ampliavel(() => openImageView(PesquisaWireframes))}
-            />
-          )}
-          {activeTab === "components" && (
-            <img
-              className="img_diagram"
-              src={ArigoeChatImage}
-              alt="artigo + Chat- wireframes"
-              {...ampliavel(() => openImageView(ArigoeChatImage))}
-            />
-          )}
-                    {activeTab === "rent" && (
-            <img
-              className="img_diagram"
-              src={AlugarArtigoImage}
-              alt="alugar artigo- wireframes"
-              {...ampliavel(() => openImageView(AlugarArtigoImage))}
-            />
-          )}
-
-{activeTab === "publicar" && (
-            <img
-              className="img_diagram"
-              src={PublicarImage}
-              alt="publicar- wireframes"
-              {...ampliavel(() => openImageView(PublicarImage))}
-            />
-          )}
-
-{activeTab === "notifications" && (
-            <img
-              className="img_diagram"
-              src={CaixadeEntradeImage}
-              alt="caixa de entrada- wireframes"
-              {...ampliavel(() => openImageView(CaixadeEntradeImage))}
-            />
-          )}
-
-{activeTab === "perfil" && (
-            <img
-              className="img_diagram"
-              src={PerfilImage}
-              alt="perfil- wireframes"
-              {...ampliavel(() => openImageView(PerfilImage))}
-            />
-          )}
-        </ImageContainer>
+        <Separadores
+          rotulo="Ecrãs"
+          cor="#00c17c"
+          onAmpliar={openImageView}
+          itens={[
+          { id: "designSystem", rotulo: "OnBoarding", imagem: OnBoardingImage, alt: "onboarding- wireframes", largura: 1812, altura: 905 },
+          { id: "colors", rotulo: "Entrar/ Criar Conta", imagem: EntrarCriarContaImage, alt: "Criar conta- wireframes", largura: 1812, altura: 905 },
+          { id: "typography", rotulo: "Homepage", imagem: HomepageWireframes, alt: "homepage-wireframes", largura: 1812, altura: 905 },
+          { id: "iconography", rotulo: "Pesquisa", imagem: PesquisaWireframes, alt: "pesquisa- wireframes", largura: 1812, altura: 905 },
+          { id: "components", rotulo: "Artigo + Chat", imagem: ArigoeChatImage, alt: "artigo + Chat- wireframes", largura: 1812, altura: 905 },
+          { id: "rent", rotulo: "Alugar Artigo", imagem: AlugarArtigoImage, alt: "alugar artigo- wireframes", largura: 1812, altura: 905 },
+          { id: "publicar", rotulo: "Publicar Artigo", imagem: PublicarImage, alt: "publicar- wireframes", largura: 1812, altura: 905 },
+          { id: "notifications", rotulo: "Caixa de Entrada", imagem: CaixadeEntradeImage, alt: "caixa de entrada- wireframes", largura: 1812, altura: 905 },
+          { id: "perfil", rotulo: "Perfil", imagem: PerfilImage, alt: "perfil- wireframes", largura: 1812, altura: 905 },
+          ]}
+        />
       </div>
     </div>
   );
 };
 
-const TabsContainer = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 1em;
-    justify-content: center;
-`;
 
-const TabButton = styled.button`
-  background-color: ${(props) => (props.active ? "#00c17c" : "transparent")};
-  color: ${(props) => (props.active ? "#fff" : "#2E2E2E")};
-  border: 2px solid ${(props) => (props.active ? "transparent" : "#ccc")};
-  font-family: 'Poppins', sans-serif;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-right: 10px;
-  margin-bottom: 1em;
-`;
 
 const ImageViewModal = styled.div`
   position: fixed;
@@ -259,11 +108,6 @@ const ImageView = styled.div`
   }
 `;
 
-const ImageContainer = styled.div`
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-`;
 
 
 export default InfoProj4_5;

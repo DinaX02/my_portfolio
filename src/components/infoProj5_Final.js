@@ -1,13 +1,13 @@
 import React, { useState, useEffect} from "react";
 import "../App.css";
-import { ampliavel, useFecharModal } from "./acessibilidade";
-import RequisitosToCare from "../assets/requesitos_tocare.png";
+import { useFecharModal } from "./acessibilidade";
+import Separadores from "./Separadores";
+import RequisitosToCare from "../assets/requesitos_tocare.webp";
 import SolutionToCare from "../assets/solucao_tocare.png";
 import InovationToCare from "../assets/inovacao_tocare.png";
 import styled from "styled-components";
 
 const InfoProj5Final = () => {
-  const [activeTab, setActiveTab] = useState("solucao");
   const [viewImage, setViewImage] = useState(null);
 
   useEffect(() => {
@@ -23,9 +23,6 @@ const InfoProj5Final = () => {
     };
   }, [viewImage]);
 
-  const handleTabClick = (tab) => {
-    setActiveTab(tab);
-  };
 
   const openImageView = (imageUrl) => {
     setViewImage(imageUrl);
@@ -52,81 +49,22 @@ const InfoProj5Final = () => {
           <span className="title_marcado_tocare">ToCare.</span>
         </h2>
 
-        <TabsContainer>
-          <TabButton
-            onClick={() => handleTabClick("solucao")}
-            active={activeTab === "solucao"}
-            aria-pressed={activeTab === "solucao"}
-          >
-            Solução
-          </TabButton>
-
-          <TabButton
-            onClick={() => handleTabClick("requisitos")}
-            active={activeTab === "requisitos"}
-            aria-pressed={activeTab === "requisitos"}
-          >
-            Requisitos
-          </TabButton>
-
-          <TabButton
-            onClick={() => handleTabClick("inovacao")}
-            active={activeTab === "inovacao"}
-            aria-pressed={activeTab === "inovacao"}
-          >
-            Inovação
-          </TabButton>
-
-        </TabsContainer>
-        <ImageContainer>
-        {activeTab === "solucao" && (
-            <img
-              className="img_diagram"
-              src={SolutionToCare}
-              alt="solucao"
-              {...ampliavel(() => openImageView(SolutionToCare))}
-            />
-          )}
-            {activeTab === "requisitos" && (
-            <img
-              className="img_diagram"
-              src={RequisitosToCare}
-              alt="requisitos"
-              {...ampliavel(() => openImageView(RequisitosToCare))}
-            />
-          )}
-            {activeTab === "inovacao" && (
-            <img
-              className="img_diagram"
-              src={InovationToCare}
-              alt="inocação"
-              {...ampliavel(() => openImageView(InovationToCare))}
-            />
-          )}
-        </ImageContainer>
+        <Separadores
+          rotulo="ToCare"
+          cor="#2EA7BA"
+          onAmpliar={openImageView}
+          itens={[
+          { id: "solucao", rotulo: "Solução", imagem: SolutionToCare, alt: "solucao", largura: 1812, altura: 905 },
+          { id: "requisitos", rotulo: "Requisitos", imagem: RequisitosToCare, alt: "requisitos", largura: 1812, altura: 905 },
+          { id: "inovacao", rotulo: "Inovação", imagem: InovationToCare, alt: "inocação", largura: 1812, altura: 905 },
+          ]}
+        />
       </div>
     </div>
   );
 };
 
-const TabsContainer = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 1em;
-    justify-content: center;
-`;
 
-const TabButton = styled.button`
-  background-color: ${(props) => (props.active ? "#2EA7BA" : "transparent")};
-  color: ${(props) => (props.active ? "#fff" : "#2E2E2E")};
-  border: 2px solid ${(props) => (props.active ? "transparent" : "#ccc")};
-  font-family: 'Poppins', sans-serif;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-right: 10px;
-  margin-bottom: 1em;
-`;
 
 const ImageViewModal = styled.div`
   position: fixed;
@@ -156,10 +94,5 @@ const ImageView = styled.div`
   }
 `;
 
-const ImageContainer = styled.div`
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-`;
 
 export default InfoProj5Final;

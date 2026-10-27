@@ -1,12 +1,12 @@
 import React, { useState, useEffect} from "react";
 import "../App.css";
-import { ampliavel, useFecharModal } from "./acessibilidade";
+import { useFecharModal } from "./acessibilidade";
+import Separadores from "./Separadores";
 import LowFi1 from "../assets/Lofi-protypes1.jpg";
 import LowFi2 from "../assets/LowFi-prototypes2.jpg"
 import styled from "styled-components";
 
 const InfoProj5Wireframes = () => {
-  const [activeTab, setActiveTab] = useState("designSystem");
   const [viewImage, setViewImage] = useState(null);
 
   useEffect(() => {
@@ -22,9 +22,6 @@ const InfoProj5Wireframes = () => {
     };
   }, [viewImage]);
 
-  const handleTabClick = (tab) => {
-    setActiveTab(tab);
-  };
 
   const openImageView = (imageUrl) => {
     setViewImage(imageUrl);
@@ -51,63 +48,21 @@ const InfoProj5Wireframes = () => {
           <span className="title_marcado_tocare">Wireframes.</span>
         </h2>
 
-        <TabsContainer>
-          <TabButton
-            onClick={() => handleTabClick("designSystem")}
-            active={activeTab === "designSystem"}
-            aria-pressed={activeTab === "designSystem"}
-          >
-            Low-fi (Crazy 8) 1
-          </TabButton>
-          <TabButton
-            onClick={() => handleTabClick("colors")}
-            active={activeTab === "colors"}
-            aria-pressed={activeTab === "colors"}
-          >
-            Low-fi (Crazy 8) 2
-          </TabButton>
-        </TabsContainer>
-        <ImageContainer>
-          {activeTab === "designSystem" && (
-            <img
-              className="img_diagram"
-              src={LowFi1}
-              alt="onboarding- wireframes"
-              {...ampliavel(() => openImageView(LowFi1))}
-            />
-          )}
-          {activeTab === "colors" && (
-            <img
-              className="img_diagram"
-              src={LowFi2}
-              alt="Criar conta- wireframes"
-              {...ampliavel(() => openImageView(LowFi2))}
-            />
-          )}
-        </ImageContainer>
+        <Separadores
+          rotulo="Wireframes"
+          cor="#2EA7BA"
+          onAmpliar={openImageView}
+          itens={[
+          { id: "designSystem", rotulo: "Low-fi (Crazy 8) 1", imagem: LowFi1, alt: "onboarding- wireframes", largura: 1812, altura: 905 },
+          { id: "colors", rotulo: "Low-fi (Crazy 8) 2", imagem: LowFi2, alt: "Criar conta- wireframes", largura: 1812, altura: 905 },
+          ]}
+        />
       </div>
     </div>
   );
 };
 
-const TabsContainer = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 1em;
-    justify-content: center;
-`;
 
-const TabButton = styled.button`
-  background-color: ${(props) => (props.active ? "#2EA7BA" : "transparent")};
-  color: ${(props) => (props.active ? "#fff" : "#2E2E2E")};
-  border: 2px solid ${(props) => (props.active ? "transparent" : "#ccc")};
-  font-family: 'Poppins', sans-serif;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-right: 10px;
-  margin-bottom: 1em;
-`;
 
 const ImageViewModal = styled.div`
   position: fixed;
@@ -137,10 +92,5 @@ const ImageView = styled.div`
   }
 `;
 
-const ImageContainer = styled.div`
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-`;
 
 export default InfoProj5Wireframes;

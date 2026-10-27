@@ -1,18 +1,18 @@
 import React, { useState, useEffect} from "react";
 import "../App.css";
-import { ampliavel, useFecharModal } from "./acessibilidade";
-import DiagramDesignProcess from "../assets/logos.png";
+import { useFecharModal } from "./acessibilidade";
+import Separadores from "./Separadores";
+import DiagramDesignProcess from "../assets/logos.webp";
 // import LogoImage from "../assets/design_process_diagram.png";
 import DownloadIcon from "../assets/download_icon.svg"
-import ColorsImage from "../assets/cores.png";
-import TypographyImage from "../assets/tipografia.png";
-import IconographyImage from "../assets/iconografia.png";
-import ComponentsImage from "../assets/Components.png";
+import ColorsImage from "../assets/cores.webp";
+import TypographyImage from "../assets/tipografia.webp";
+import IconographyImage from "../assets/iconografia.webp";
+import ComponentsImage from "../assets/Components.webp";
 import ManualPDF from "../assets/Portfolio_Boomerang.pdf"
 import styled from "styled-components";
 
 const InfoProj4_4 = () => {
-  const [activeTab, setActiveTab] = useState("designSystem");
   const [viewImage, setViewImage] = useState(null);
 
   useEffect(() => {
@@ -28,9 +28,6 @@ const InfoProj4_4 = () => {
     };
   }, [viewImage]);
 
-  const handleTabClick = (tab) => {
-    setActiveTab(tab);
-  };
 
   const openImageView = (imageUrl) => {
     setViewImage(imageUrl);
@@ -72,85 +69,18 @@ const InfoProj4_4 = () => {
           conhecido por Design System.
         </p>
 
-        <TabsContainer>
-          <TabButton
-            onClick={() => handleTabClick("designSystem")}
-            active={activeTab === "designSystem"}
-            aria-pressed={activeTab === "designSystem"}
-          >
-            Logótipo
-          </TabButton>
-          <TabButton
-            onClick={() => handleTabClick("colors")}
-            active={activeTab === "colors"}
-            aria-pressed={activeTab === "colors"}
-          >
-            Cores
-          </TabButton>
-          <TabButton
-            onClick={() => handleTabClick("typography")}
-            active={activeTab === "typography"}
-            aria-pressed={activeTab === "typography"}
-          >
-            Tipografia
-          </TabButton>
-          <TabButton
-            onClick={() => handleTabClick("iconography")}
-            active={activeTab === "iconography"}
-            aria-pressed={activeTab === "iconography"}
-          >
-            Iconografia
-          </TabButton>
-          <TabButton
-            onClick={() => handleTabClick("components")}
-            active={activeTab === "components"}
-            aria-pressed={activeTab === "components"}
-          >
-            Componentes
-          </TabButton>
-        </TabsContainer>
-        <ImageContainer>
-          {activeTab === "designSystem" && (
-            <img
-              className="img_diagram"
-              src={DiagramDesignProcess}
-              alt="Logo- Design system"
-              {...ampliavel(() => openImageView(DiagramDesignProcess))}
-            />
-          )}
-          {activeTab === "colors" && (
-            <img
-              className="img_diagram"
-              src={ColorsImage}
-              alt="Colors- Design system"
-              {...ampliavel(() => openImageView(ColorsImage))}
-            />
-          )}
-          {activeTab === "typography" && (
-            <img
-              className="img_diagram"
-              src={TypographyImage}
-              alt="Typography-Design system"
-              {...ampliavel(() => openImageView(TypographyImage))}
-            />
-          )}
-          {activeTab === "iconography" && (
-            <img
-              className="img_diagram"
-              src={IconographyImage}
-              alt="Iconography- Design system"
-              {...ampliavel(() => openImageView(IconographyImage))}
-            />
-          )}
-          {activeTab === "components" && (
-            <img
-              className="img_diagram"
-              src={ComponentsImage}
-              alt="Components- Design system"
-              {...ampliavel(() => openImageView(ComponentsImage))}
-            />
-          )}
-        </ImageContainer>
+        <Separadores
+          rotulo="Design System"
+          cor="#00c17c"
+          onAmpliar={openImageView}
+          itens={[
+          { id: "designSystem", rotulo: "Logótipo", imagem: DiagramDesignProcess, alt: "Logo- Design system", largura: 1812, altura: 489 },
+          { id: "colors", rotulo: "Cores", imagem: ColorsImage, alt: "Colors- Design system", largura: 1813, altura: 489 },
+          { id: "typography", rotulo: "Tipografia", imagem: TypographyImage, alt: "Typography-Design system", largura: 1812, altura: 489 },
+          { id: "iconography", rotulo: "Iconografia", imagem: IconographyImage, alt: "Iconography- Design system", largura: 1812, altura: 489 },
+          { id: "components", rotulo: "Componentes", imagem: ComponentsImage, alt: "Components- Design system", largura: 1812, altura: 489 },
+          ]}
+        />
 
         <p className="paragrahseemore">Para ver mais detalhadamente: </p>
         <div style={{display:"flex", alignItems:"center", justifyContent:"center"}}>
@@ -160,24 +90,7 @@ const InfoProj4_4 = () => {
   );
 };
 
-const TabsContainer = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 1em;
-    justify-content: center;
-`;
 
-const TabButton = styled.button`
-  background-color: ${(props) => (props.active ? "#00c17c" : "transparent")};
-  color: ${(props) => (props.active ? "#fff" : "#2E2E2E")};
-  border: 2px solid ${(props) => (props.active ? "transparent" : "#ccc")};
-  font-family: 'Poppins', sans-serif;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-right: 10px;
-  margin-bottom: 1em;
-`;
 
 const ImageViewModal = styled.div`
   position: fixed;
@@ -207,10 +120,5 @@ const ImageView = styled.div`
   }
 `;
 
-const ImageContainer = styled.div`
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-`;
 
 export default InfoProj4_4;
